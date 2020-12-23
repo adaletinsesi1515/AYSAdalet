@@ -1,0 +1,143 @@
+﻿
+<!DOCTYPE html>
+
+
+
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>İdari İşler Müdürlüğü & Bilgi İşlem Şefliği => Arıza Takip</title>
+
+    <link href="~/Content/Giris/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Giris/css/loading.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <link href="~/Content/Giris/css/animate.css" rel="stylesheet" />
+    <link href="~/Content/Giris/css/form-style.css" rel="stylesheet" />
+    <link href="~/Content/Giris/css/css.css" rel="stylesheet" />
+
+
+
+    <!-- Template js -->
+
+    <script src="~/Content/Giris/js/jquery-2.1.1.min.js"></script>
+    <script src="~/Content/Giris/js/bootstrap.min.js"></script>
+    <script src="~/Content/Giris/js/jquery.appear.js"></script>
+    <script src="~/Content/Giris/js/jqBootstrapValidation.js"></script>
+    <script src="~/Content/Giris/js/modernizr.custom.js"></script>
+    <script src="~/Content/Giris/js/script.js"></script>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="loading" id="loading" style="display: none"></div>
+    <!-- Start Logo Section -->
+    <section id="logo-section" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logo text-center">
+                        <h2 style="font-family: sans-serif; color:white">Talep & Arıza Takip Bildirim</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Logo Section -->
+    <!-- Start Main Body Section -->
+    <center>
+        <div class="mainbody-section text-center">
+            <div class="container">
+                @RenderBody()
+            </div>
+        </div>
+    </center>
+    <!-- End Main Body Section -->
+    <div class="modal modal-success fade in" id="modal-electricity-control">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="panel-title" style="background-color:#FF432E">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" style="padding: 10px; color:white"><center>Bilgilendirme</center></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <p>Uzun bir süredir kullanmakta olduğumuz Adliye Telefon Rehberi, yeni tasarım ve yeni fonksiyonel özellikler eklenmek suretiyle güncellenmiştir. Karşılaşılan sorunların <span> Bilgi İşlem Şefliği'</span>ne bildirilmesi halinde en kısa sürede çözüme kavuşturulacaktır. <hr /> İyi Çalışmalar Dileriz</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-md-6" style="float: right"><a href="#" class="btn btn-danger" onclick="loading()">Rehberi Göster</a></div>
+                        <div class="col-md-6" style="text-align: left; float: left; color:lavender">Özgür</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade in" id="modal-red">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#72bf48">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" style="padding: 10px"><center>.:: BİLGİLENDİRME ::.</center></h4>
+                </div>
+                <div class="modal-body">
+                    <p><font size="3.5">Etkileşimli Tahta arızaları için lütfen <b>0850 222 4870</b>  veya <b>0850 222 4123</b> numaralı Çağrı Merkezini arayınız.</font></p>
+                    <p><font size="3.5">Çok Fonksiyonlu Yazıcı arızaları için lütfen <b>444 0141</b> numaralı Çağrı Merkezini arayınız.</font></p>
+                    <p><font size="3.5">Tablet arızaları için lütfen <b>pybs.eba.gov.tr</b> adresinden arıza kaydı oluşturunuz.</font></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-success fade in" id="modal-domainfilter">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="panel-title" style="background-color:red">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" style="padding: 10px"><center>.:: HATA ::.</center></h4>
+                </div>
+                <div class="modal-body">
+                    <p><center><b>Beklenmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyiniz.</b></center>
+                    <p><center><b>Hata : </b></center>
+                </div>
+                <div class="modal-footer">
+                    <!--<a href="" data-toggle="modal" data-target="#modal-green" class="btn btn-danger pull-left">HAYIR</a>-->
+                    <a href="/" class="btn btn-default" onclick="loading()">Pencereyi Kapat</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function loading() {
+            document.getElementById("loading").style.display = "block";
+        }
+    </script>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            if () {
+                $('#modal-domainfilter').modal('show');
+            }
+        });
+    </script>
+</body>
+</html>
