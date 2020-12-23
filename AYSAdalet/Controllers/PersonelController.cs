@@ -82,9 +82,40 @@ namespace AYSAdalet.Controllers
             db.Entry(b).State = EntityState.Modified;
             db.SaveChanges();
 
-            return RedirectToAction("PersonelEkle");
+            return RedirectToAction("Index");
         }
 
+        public ActionResult PersonelBilgiGetir(int id)
+        {
+            var iddegeri = db.Personel.Find(id);
+            ViewBag.UnvanID = new SelectList(db.Unvanlar, "UnvanID", "Unvani");
+            ViewBag.BirimID = new SelectList(db.Birimler, "BirimID", "BirimAdi");
+
+            return View("PersonelBilgiGetir", iddegeri);
+        }
+
+        public ActionResult PersonelGuncelle(Personel c)
+        {
+            var deger = db.Personel.Find(c.PersonelID);
+            deger.UnvanID = c.UnvanID;
+            deger.BirimID = c.BirimID;
+            //ViewBag.UnvanID1 = new SelectList(db.Unvanlar, "UnvanID", "Unvani");
+            //ViewBag.BirimID1 = new SelectList(db.Birimler, "BirimID", "BirimAdi");
+            deger.PersonelSicil = c.PersonelSicil;
+            deger.PersonelAdSoyad= c.PersonelAdSoyad;
+            
+            //deger.Birimler.BirimAdi = c.Birimler.BirimAdi;
+            //deger.Unvanlar.Unvani = c.Unvanlar.Unvani;
+            deger.CepTelefonu = c.CepTelefonu;
+            deger.DahiliNo1 = c.DahiliNo1;
+            deger.DahiliNo2 = c.DahiliNo2;
+            deger.Durum= true;
+            db.SaveChanges();
+
+            db.Entry(deger).State = EntityState.Modified;
+            return RedirectToAction("Index");
+            
+        }
 
     }
 }

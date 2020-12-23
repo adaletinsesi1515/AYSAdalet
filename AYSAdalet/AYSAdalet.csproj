@@ -468,6 +468,10 @@
     <Compile Include="Migrations\202012231632161_BilgiIslemDonanim_Tablolari_Eklendi1.designer.cs">
       <DependentUpon>202012231632161_BilgiIslemDonanim_Tablolari_Eklendi1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012232152110_Personel.cs" />
+    <Compile Include="Migrations\202012232152110_Personel.Designer.cs">
+      <DependentUpon>202012232152110_Personel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
     <Compile Include="Models\Modeller\Bilgi_Bilgisayarlar.cs" />
@@ -513,6 +517,8 @@
     <Content Include="Views\Personel\PersonelEklePartial.cshtml" />
     <Content Include="Views\Personel\PersonelEkle.cshtml" />
     <Content Include="Views\Personel\Index.cshtml" />
+    <Content Include="Views\Personel\PersonelBilgiGetir.cshtml" />
+    <Content Include="Views\Personel\PersonelGuncelle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -538,6 +544,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012231632161_BilgiIslemDonanim_Tablolari_Eklendi1.resx">
       <DependentUpon>202012231632161_BilgiIslemDonanim_Tablolari_Eklendi1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012232152110_Personel.resx">
+      <DependentUpon>202012232152110_Personel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

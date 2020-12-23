@@ -120,3 +120,4 @@ C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.CoreCompi
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.CopyComplete
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.dll
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.pdb
+C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Personel.resources
