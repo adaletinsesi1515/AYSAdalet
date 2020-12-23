@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+
+
+
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+    <title>Arıza Takip Sistemi</title>
+    <link href="assets/ats/bower_components/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/ats/dist/css/loading.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/ats/bower_components/css/animate.css" rel="stylesheet">
+    <link href="assets/ats/bower_components/css/form-style.css" rel="stylesheet">
+    <link href="css.css?family=Lobster" rel="stylesheet" type="text/css">
+    <!-- Template js -->
+    <script src="assets/ats/bower_components/js/jquery-2.1.1.min.js"></script>
+    <script src="assets/ats/bower_components/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/ats/bower_components/js/jquery.appear.js"></script>
+    <script src="assets/ats/bower_components/js/jqBootstrapValidation.js"></script>
+    <script src="assets/ats/bower_components/js/modernizr.custom.js"></script>
+    <script src="assets/ats/bower_components/js/script.js"></script>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head> 
+<body>
+<div class="loading" id="loading" style="display: none"></div>
+<!-- Start Logo Section -->
+<section id="logo-section" class="text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="logo text-center">
+                    <h1>Arıza Takip Sistemi</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Logo Section -->
+<!-- Start Main Body Section -->
+<center>
+    <div class="mainbody-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="menu-item red">
+                        <a href="#modal-electricity-control" data-toggle="modal">
+                            <i class="fa fa-wifi"></i>
+                            <p><font size="5">Erişim Arızası Bildir</font></p>
+                        </a>
+                    </div>
+
+                    <div class="menu-item light-orange">
+                        <a href="infrastructureform.html" onclick="loading()">
+                            <i class="fa fa-random"></i>
+                            <p><font size="5">Altyapı Arızası Bildir</font></p>
+                        </a>
+                    </div>
+                    </div>
+                            <div class="col-md-6">
+                    <div class="menu-item green">
+                        <a href="" data-toggle="modal" data-target="#modal-red">
+                            <i class="fa fa-wrench"></i>
+                            <p><font size="5">Donanım Arızası Bildir</font></p>
+                        </a>
+                    </div>
+                    <div class="menu-item blue">
+                        <a href="ssologinBIDB.aspx.html?id=72&URL=http://giris.eba.gov.tr/EBA_GIRIS/GirisKontrol/fatihdestek" onclick="loading()">
+                            <i class="fa fa-filter"></i>
+                            <p><font size="5">İnternet Sitesi Açılma/Engelleme Talebi Bildir</font></p>
+                        </a>
+                    </div>
+                    <!-- /.modal -->
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+<!-- End Main Body Section --> 
+<div class="modal modal-success fade in" id="modal-electricity-control">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="panel-title" style="background-color:#FF432E">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="padding: 10px"><center>.:: KONTROL EDİNİZ ::.</center></h4>
+            </div>
+            <div class="modal-body">
+                <p><center><b>Okulunuzun interneti tamamen (kablolu ve kablosuz olarak) yoksa, sistem odasında bulunan kabinet içindeki cihazlar ve 
+				güç kaynağınız (UPS) da sorunsuz bir şekilde çalıyorsa "Evet" butonuna tıklayarak "Erişim Arızası" bildirebilirsiniz. 
+				Bunun dışında, okul içerisindeki bazı bölümlerde internet kesilmesi yaşıyorsanız, sorun okul içi sistemlerdedir ve 
+				bu durumda "Ağ Altyapı Arızası Bildir" Kısmından arıza kaydı açmanız gerekmektedir. Bundan dolayı "Hayır" butonuna tıklayarak 
+				Ağ Altyapı Arızası bildirebilirsiniz.</b></center>
+				<p><center><b>Ayrıca, PORT ÇOKLAMA talepleri "Ağ Altyapı" birimi tarafından yapılmaktadır. Bu konu için Ağ Altyapı bölümünden arıza kaydı açabilirsiniz.</b></center>
+                <p><center><b>(Okulunuzun Kesintisiz Güç Kaynağında (UPS) sorun var ise lütfen "Altyapı Arıza Bildir" alanından arıza açınız.)</b></center>
+            </p></div>
+            <div class="modal-footer">
+                <a href="infrastructureform.html" style="background-color: #FF432E;" class="btn btn-danger pull-left" onclick="loading()">HAYIR</a>
+                <a href="accessform.html" class="btn btn-info" onclick="loading()">EVET</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in" id="modal-red">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#72bf48">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="padding: 10px"><center>.:: BİLGİLENDİRME ::.</center></h4>
+            </div>
+            <div class="modal-body">
+                <p><font size="3.5">Etkileşimli Tahta arızaları için lütfen <b>0850 222 4870</b>  veya <b>0850 222 4123</b> numaralı Çağrı Merkezini arayınız.</font></p>
+                <p><font size="3.5">Çok Fonksiyonlu Yazıcı arızaları için lütfen <b>444 0141</b> numaralı Çağrı Merkezini arayınız.</font></p>
+                <p><font size="3.5">Tablet arızaları için lütfen <b>pybs.eba.gov.tr</b> adresinden arıza kaydı oluşturunuz.</font></p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-success fade in" id="modal-domainfilter">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="panel-title" style="background-color:red">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="padding: 10px"><center>.:: HATA ::.</center></h4>
+            </div>
+            <div class="modal-body">
+                <p><center><b>Beklenmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyiniz.</b></center>
+                <p><center><b>Hata : </b></center>
+            </p></div>
+            <div class="modal-footer">
+                <!--<a href="" data-toggle="modal" data-target="#modal-green" class="btn btn-danger pull-left">HAYIR</a>-->
+                <a href="index.htm" class="btn btn-default" onclick="loading()">Pencereyi Kapat</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function loading() {
+        document.getElementById("loading").style.display = "block";
+    }
+</script>
+<script type="text/javascript">
+    $(window).on('load', function () {
+        if () {
+            $('#modal-domainfilter').modal('show');
+        }
+    });
+</script>
+</body>    
+</html>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<AYSAdalet.Models.Modeller.Bilgi_Tarayicilar>
+
+
+@{
+    ViewBag.Title = "TarayiciEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="col-lg-12 col-md-12 col-sm-12">
+
+    <div class="card">
+        <div class="header">
+            <h2><strong>Tarayıcı</strong> Ekle</h2>
+        </div>
+        <div class="body">
+            <h1>@TempData["Uyari"] </h1>
+
+            @Html.Action("TarayiciEklePartial", "Bilgi_Donanim")
+
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Tarayıcı</strong> Listesi</h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <table class="table m-b-0 table-primary" id="kasalistesi">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Tarayıcı Marka</th>
+                        <th scope="col">Tarayıcı Model</th>
+                        <th scope="col">Tarayıcı Seri No</th>
+
+                        <th scope="col">İşlem Türü</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.TarayiciID</td>
+                            <td>@item.TarayiciMarka</td>
+                            <td>@item.TarayiciModel</td>
+                            <td>@item.TarayiciSeriNo</td>
+
+                            <td>
+                                <a title="Düzenle" href="/Bilgi_Donanim/TarayiciBilgiGetir/@item.TarayiciID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
+                                <a title="Pasif Et" href="/Bilgi_Donanim/PasifEtTarayici/@item.TarayiciID" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></a>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

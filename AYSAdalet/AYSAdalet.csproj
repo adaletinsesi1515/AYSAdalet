@@ -216,6 +216,30 @@
     <Content Include="Content\RehberAssets\img\rehber.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\TalepAssets\img\bg.jpg" />
+    <Content Include="fatihdestek.eba.gov.tr\accessform.html" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\bootstrap\css\bootstrap.min.css" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\bootstrap\js\bootstrap.min.js" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\css\animate.css" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\css\background.jpg" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\css\form-style.css" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\js\jqBootstrapValidation.js" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\js\jquery-2.1.1.min.js" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\js\jquery.appear.js" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\js\modernizr.custom.js" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\js\script.js" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\dist\css\loading.css" />
+    <Content Include="fatihdestek.eba.gov.tr\assets\ats\dist\img\error.gif" />
+    <Content Include="fatihdestek.eba.gov.tr\bootstrap\3.3.4\css\bootstrap.min.css" />
+    <Content Include="fatihdestek.eba.gov.tr\bower_components\font-awesome\css\font-awesome.min.css" />
+    <Content Include="fatihdestek.eba.gov.tr\bower_components\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="fatihdestek.eba.gov.tr\css.css" />
+    <Content Include="fatihdestek.eba.gov.tr\index.htm" />
+    <Content Include="fatihdestek.eba.gov.tr\infrastructureform.html" />
+    <Content Include="fatihdestek.eba.gov.tr\main.html" />
+    <Content Include="fatihdestek.eba.gov.tr\ssologinBIDB.aspx.html" />
+    <Content Include="fatihdestek.eba.gov.tr\webcopy-origin.txt" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -324,6 +348,11 @@
     <Content Include="Content\Login\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
     <Content Include="Content\Login\fonts\poppins\Poppins-Thin.ttf" />
     <Content Include="Content\Login\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="fatihdestek.eba.gov.tr\bower_components\font-awesome\fonts\fontawesome-webfont-1.eot" />
+    <Content Include="fatihdestek.eba.gov.tr\bower_components\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="fatihdestek.eba.gov.tr\bower_components\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="fatihdestek.eba.gov.tr\bower_components\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="fatihdestek.eba.gov.tr\bower_components\font-awesome\fonts\fontawesome-webfont.woff2" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -418,6 +447,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\Bilgi_DonanimController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -450,6 +482,26 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.5.1.min.map" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Notlar.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\Index.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\BilgisayarEkle.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\BilgisayarEklePartial.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\BilgisayarBilgiGetir.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\BilgisayarGuncelle.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\MonitorEkle.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\MonitorEklePartial.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\MonitorBilgiGetir.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\MonitorGuncelle.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\YaziciEkle.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\YaziciEklePartial.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\YaziciBilgiGetir.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\YaziciGuncelle.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\TarayiciEkle.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\TarayiciEklePartial.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\TarayiciBilgiGetir.cshtml" />
+    <Content Include="Views\Bilgi_Donanim\TarayiciGuncelle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -459,7 +511,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

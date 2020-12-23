@@ -1,0 +1,35 @@
+﻿@model AYSAdalet.Models.Modeller.Bilgi_Yazicilar
+
+@{
+    ViewBag.Title = "YaziciBilgiGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("YaziciGuncelle", "Bilgi_Donanim", FormMethod.Post))
+{
+    <div class="card">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="body">
+            <label>Yazıcı ID Nosu</label>
+            @Html.TextBoxFor(model => model.YaziciID, new { @class = "form-control" })
+
+            <label>Yazıcı Markası</label>
+            @Html.TextBoxFor(model => model.YaziciMarka, htmlAttributes: new { @class = "form-control" })
+
+            <label>Yazıcı Modeli</label>
+            @Html.TextBoxFor(model => model.YaziciModel, new { @class = "form-control" })
+
+            <label>Yazıcı Seri No</label>
+            @Html.TextBoxFor(model => model.YaziciSeriNo, new { @class = "form-control" })
+
+
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12 ">
+                <button type="submit" class="btn btn-raised btn-primary btn-round waves-effect">Kayıt Düzenle</button>
+            </div>
+        </div>
+    </div>
+}

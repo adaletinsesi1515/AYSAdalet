@@ -1,0 +1,35 @@
+﻿@model AYSAdalet.Models.Modeller.Bilgi_Monitorler
+
+@{
+    ViewBag.Title = "MonitorBilgiGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("MonitorGuncelle", "Bilgi_Donanim", FormMethod.Post))
+{
+    <div class="card">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="body">
+            <label>Monitor ID Nosu</label>
+            @Html.TextBoxFor(model => model.MonitorID, new { @class = "form-control" })
+
+            <label>Monitor Markası</label>
+            @Html.TextBoxFor(model => model.MonitorMarka, htmlAttributes: new { @class = "form-control" })
+
+            <label>Monitor Modeli</label>
+            @Html.TextBoxFor(model => model.MonitorModel, new { @class = "form-control" })
+
+            <label>Monitor Seri No</label>
+            @Html.TextBoxFor(model => model.MonitorSeriNo, new { @class = "form-control" })
+
+
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12 ">
+                <button type="submit" class="btn btn-raised btn-primary btn-round waves-effect">Kayıt Düzenle</button>
+            </div>
+        </div>
+    </div>
+}

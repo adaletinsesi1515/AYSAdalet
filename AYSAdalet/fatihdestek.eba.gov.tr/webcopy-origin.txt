@@ -1,0 +1,108 @@
+Uri: https://fatihdestek.eba.gov.tr/
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\index.htm
+Content Type: text/html
+
+Uri: https://static.eba.gov.tr/assets/ats/bower_components/bootstrap/css/bootstrap.min.css
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\assets\ats\bower_components\bootstrap\css\bootstrap.min.css
+Content Type: text/css
+
+Uri: https://static.eba.gov.tr/assets/ats/dist/css/loading.css
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\assets\ats\dist\css\loading.css
+Content Type: text/css
+
+Uri: https://fatihdestek.eba.gov.tr/bower_components/font-awesome/css/font-awesome.min.css
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\bower_components\font-awesome\css\font-awesome.min.css
+Content Type: text/css
+
+Uri: https://static.eba.gov.tr/assets/ats/bower_components/css/animate.css
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\assets\ats\bower_components\css\animate.css
+Content Type: text/css
+
+Uri: https://static.eba.gov.tr/assets/ats/bower_components/css/form-style.css
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\assets\ats\bower_components\css\form-style.css
+Content Type: text/css
+
+Uri: https://fonts.googleapis.com/css?family=Lobster
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\css.css
+Content Type: text/css
+
+Uri: https://fatihdestek.eba.gov.tr/infrastructureform
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\infrastructureform.html
+Content Type: text/html
+
+Uri: https://mebbis.meb.gov.tr/ssologinBIDB.aspx?id=72&URL=http://giris.eba.gov.tr/EBA_GIRIS/GirisKontrol/fatihdestek
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\ssologinBIDB.aspx.html
+Content Type: text/html
+
+Uri: https://fatihdestek.eba.gov.tr/accessform
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\accessform.html
+Content Type: text/html
+
+Uri: https://static.eba.gov.tr/assets/ats/bower_components/js/jquery-2.1.1.min.js
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\assets\ats\bower_components\js\jquery-2.1.1.min.js
+Content Type: application/javascript
+
+Uri: https://static.eba.gov.tr/assets/ats/bower_components/bootstrap/js/bootstrap.min.js
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\assets\ats\bower_components\bootstrap\js\bootstrap.min.js
+Content Type: application/javascript
+
+Uri: https://static.eba.gov.tr/assets/ats/bower_components/js/jquery.appear.js
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\assets\ats\bower_components\js\jquery.appear.js
+Content Type: application/javascript
+
+Uri: https://static.eba.gov.tr/assets/ats/bower_components/js/jqBootstrapValidation.js
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\assets\ats\bower_components\js\jqBootstrapValidation.js
+Content Type: application/javascript
+
+Uri: https://static.eba.gov.tr/assets/ats/bower_components/js/modernizr.custom.js
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\assets\ats\bower_components\js\modernizr.custom.js
+Content Type: application/javascript
+
+Uri: https://static.eba.gov.tr/assets/ats/bower_components/js/script.js
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\assets\ats\bower_components\js\script.js
+Content Type: application/javascript
+
+Uri: https://fatihdestek.eba.gov.tr/bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\bower_components\font-awesome\fonts\fontawesome-webfont.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://fatihdestek.eba.gov.tr/bower_components/font-awesome/fonts/fontawesome-webfont.eot?
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\bower_components\font-awesome\fonts\fontawesome-webfont-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://fatihdestek.eba.gov.tr/bower_components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\bower_components\font-awesome\fonts\fontawesome-webfont.woff2
+Content Type: font/woff2
+
+Uri: https://fatihdestek.eba.gov.tr/bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\bower_components\font-awesome\fonts\fontawesome-webfont.woff
+Content Type: font/woff
+
+Uri: https://fatihdestek.eba.gov.tr/bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\bower_components\font-awesome\fonts\fontawesome-webfont.ttf
+Content Type: font/ttf
+
+Uri: https://fatihdestek.eba.gov.tr/bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\bower_components\font-awesome\fonts\fontawesome-webfont.svg
+Content Type: image/svg+xml
+
+Uri: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\bootstrap\3.3.4\css\bootstrap.min.css
+Content Type: text/css
+
+Uri: https://fatihdestek.eba.gov.tr/main
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\main.html
+Content Type: text/html
+
+Uri: https://static.eba.gov.tr/assets/ats/bower_components/jquery/dist/jquery.min.js
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\assets\ats\bower_components\jquery\dist\jquery.min.js
+Content Type: application/javascript
+
+Uri: https://static.eba.gov.tr/assets/ats/bower_components/bootstrap/dist/js/bootstrap.min.js
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\assets\ats\bower_components\bootstrap\dist\js\bootstrap.min.js
+Content Type: application/javascript
+
+Uri: https://static.eba.gov.tr/assets/ats/dist/img/error.gif
+File Name: C:\Downloaded Web Sites\fatihdestek.eba.gov.tr\assets\ats\dist\img\error.gif
+Content Type: image/gif
+

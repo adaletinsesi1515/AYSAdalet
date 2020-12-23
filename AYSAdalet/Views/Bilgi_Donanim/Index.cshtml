@@ -1,0 +1,240 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Donanım İşlemleri</strong></h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <a href="/Bilgi_Donanim/BilgisayarEkle/" class="btn btn-success btn-primary btn-round waves-effect">Bilgisayar Kasası</a>
+            <a href="/Bilgi_Donanim/MonitorEkle/" class="btn btn-danger btn-primary btn-round waves-effect">Bilgisayar Monitörü</a>
+            <a href="/Bilgi_Donanim/YaziciEkle/" class="btn btn-dark btn-primary btn-round waves-effect">      Yazıcı       </a>
+            <a href="/Bilgi_Donanim/TarayiciEkle/" class="btn btn-warning btn-primary btn-round waves-effect">     Tarayıcı      </a>
+            <hr />
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Envanter Donanım İstatistiği</strong></h2>
+    </div>
+    <div class="row clearfix">
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 big_icon fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:9px">PC Kasası</h6>
+                    <h2>@ViewBag.kasaturu1 <small class="info"> / @ViewBag.kasaturu1</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.kasaturu1" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.kasaturu1%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 big_icon fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:9px">PC Monitörü</h6>
+                    <h2>@ViewBag.monitorturu1 <small class="info"> / @ViewBag.monitorturu1</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.monitorturu1" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.monitorturu1%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 big_icon fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:9px">Yazıcılar</h6>
+                    <h2>@ViewBag.yazicituru1 <small class="info"> / @ViewBag.yazicituru1</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.yazicituru1" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.yazicituru1%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 big_icon fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:9px">Tarayıcılar</h6>
+                    <h2>@ViewBag.tarayicituru1  <small class="info"> / @ViewBag.tarayicituru1 </small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.tarayicituru1 " aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.kastarayicituru1%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+</div>
+
+<div class="card">
+    <div class="header">
+        <h2><strong>PC Kasa Markalarına Göre İstatistik</strong></h2>
+    </div>
+    <div class="row clearfix">
+
+
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:10px">Fujitsu P5731 Model</h6>
+                    <h2>@ViewBag.fup5731sayisi <small class="info"> / @ViewBag.fup5731sayisi</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.fup5731sayisi" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.fup5731sayisi%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:10px">Fujitsu P700 Model</h6>
+                    <h2>@ViewBag.fup700sayisi <small class="info"> / @ViewBag.fup700sayisi</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.fup700sayisi" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.fup700sayisi%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:10px">Fujitsu P710 Model</h6>
+                    <h2>@ViewBag.fup710sayisi <small class="info"> / @ViewBag.fup710sayisi</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.fup710sayisi" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.fup710sayisi%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:10px">Fujitsu P920 Model</h6>
+                    <h2>@ViewBag.fup920sayisi <small class="info"> / @ViewBag.fup920sayisi</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.fup920sayisi" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.fup920sayisi%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:10px">Adli Sicil PC</h6>
+                    <h2>@ViewBag.adlisicilsayisi <small class="info"> / @ViewBag.adlisicilsayisi</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.adlisicilsayisi" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.adlisicilsayisi%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:10px">Adli Tıp PC</h6>
+                    <h2>@ViewBag.adlitipsayisi <small class="info"> / @ViewBag.adlitipsayisi </small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.adlitipsayisi " aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.adlitipsayisi%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:10px">HP Elite 8300 Model</h6>
+                    <h2>@ViewBag.hp8300sayisi <small class="info"> / @ViewBag.hp8300sayisi</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.hp8300sayisi" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.hp8300sayisi%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:10px">HP G1 Model</h6>
+                    <h2>@ViewBag.hpg1sayisi <small class="info"> / @ViewBag.hpg1sayisi</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.hpg1sayisi" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.hpg1sayisi%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:10px">HP G2 Model</h6>
+                    <h2>@ViewBag.hpg2sayisi <small class="info"> / @ViewBag.hpg2sayisi</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.hpg2sayisi" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.hpg2sayisi%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:10px">Lenovo M93P Model</h6>
+                    <h2>@ViewBag.lenm93psayisi <small class="info"> / @ViewBag.lenm93psayisi</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.lenm93psayisi" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.lenm93psayisi%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:10px">Lenovo M715Q Model</h6>
+                    <h2>@ViewBag.lenm715qsayisi <small class="info"> / @ViewBag.lenm715qsayisi</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.lenm715qsayisi" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.lenm715qsayisi%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:10px">Lenovo M920X Model</h6>
+                    <h2>@ViewBag.lenm920xsayisi <small class="info"> / @ViewBag.lenm920xsayisi</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.lenm920xsayisi" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.lenm920xsayisi%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

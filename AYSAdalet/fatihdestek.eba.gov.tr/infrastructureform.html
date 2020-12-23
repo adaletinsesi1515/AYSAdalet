@@ -1,0 +1,1176 @@
+﻿<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Arıza Takip Sistemi | Altyapı Arıza Formu</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"> 
+    <link href="assets/ats/bower_components/css/form-style.css" rel="stylesheet">
+    <link href="assets/ats/dist/css/loading.css" rel="stylesheet">
+    <link href="bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/ats/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="assets/ats/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--<script src="//www.google.com/recaptcha/api.js?render=6LfryI8UAAAAAPDWEhJK0c9SwGCDl9UQRLkNzPRp"></script>-->
+    <style type="text/css">
+        .formMinimal .form-group{
+            margin-bottom: 5px;
+        }
+        @media (max-width: 767px) {
+            .formMinimal input, .formMinimal select{
+                margin-bottom: 5px;
+            }
+            .formMinimal label{
+                margin-bottom: 0;
+            }
+            .col-md-1{
+                width: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="loading" id="loading" style="display: none"></div>
+<!------ Include the above in your HEAD tag ---------->
+<div class="login-box">    
+    <div id="signupbox" class="login-box-body">
+        <div class="panel panel-info" style="margin: 30px">
+            <div class="panel-heading">
+                <div class="panel-title" style="text-align: center; padding: 10px"><b>ALTYAPI ARIZA KAYIT FORMU</b></div>
+            </div>  
+            <div class="panel-body" style="padding-right: 50px; padding-top: 25px">
+                <form id="infrastructureFault" class="form-horizontal formMinimal" action="/infrastructureform" method="POST">
+                    <input id="id" name="id" type="hidden" value="">
+
+                    <div class="form-group required">
+                        <label for="nameSurname" class="control-label col-md-3  requiredField">AD SOYAD<span class="asteriskField" style="color: red">*</span> </label>
+                        <div class="controls col-md-8 ">
+                            <input id="nameSurname" name="nameSurname" name="username" placeholder="Adınızı ve soyadınızı giriniz." type="text" class="input-md  textinput textInput form-control" required="true" value="" maxlength="30">
+                        </div>
+                    </div>
+                    <div id="phoneErrorDiv" class="form-group" style="margin-bottom: 0px; margin-top: 5px; display: none">
+                        <label for="phoneErrorDiv" class="control-label col-md-3"><span class="asteriskField" style="color: red"></span> </label>
+                        <div class="controls col-md-8 "> 
+                            <div type="text" style="color: red; font-weight: bold;">
+                                <img src="assets/ats/dist/img/error.gif" alt="" style="height: 20px">
+                                Cep telefonu numaranızı 05XXXXXXXXX biçiminde giriniz.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="phone" class="control-label col-md-3  requiredField">CEP TEL. NO.<span class="asteriskField" style="color: red">*</span> </label>
+                        <div class="controls col-md-8 ">
+                            <input id="phone" name="phone" onkeyup="validate(this.value)" onkeypress="if(this.value.length==11) return false;" placeholder="Telefon numaranızı 05XXXXXXXXX bi&ccedil;iminde giriniz." type="number" class="input-md  textinput textInput form-control" required="true" value="">
+                        </div>
+                    </div>
+                    <div id="emailErrorDiv" class="form-group" style="margin-bottom: 0px; margin-top: 5px; display: none">
+                        <label for="emailErrorDiv" class="control-label col-md-3"><span class="asteriskField" style="color: red"></span> </label>
+                        <div class="controls col-md-8 "> 
+                            <div type="text" style="color: red; font-weight: bold;">
+                                <img src="assets/ats/dist/img/error.gif" alt="" style="height: 20px">
+                                Lütfen meb.k12.tr uzantılı e-posta adresinizi giriniz.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="email" class="control-label col-md-3  requiredField">E-POSTA<span class="asteriskField" style="color: red">*</span> </label>
+                        <div class="controls col-md-8 "> 
+                            <input id="email" name="email" placeholder="E-posta giriniz." type="email" class="input-md  textinput textInput form-control" required="true" value="">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="city" class="control-label col-md-3  requiredField">İL<span class="asteriskField" style="color: red">*</span> </label>
+                        <div class="controls col-md-8">
+                            <div class="row">
+                                <div class="col-md-6"> 
+                                    <select id="city" name="cityId" class="input-md textinput textInput form-control" required="required">
+                                        <option value="">İl seçiniz.</option>
+                                        <option value="1">Adana</option><option value="2">Adıyaman</option><option value="3">Afyonkarahisar</option><option value="4">Ağrı</option><option value="68">Aksaray</option><option value="5">Amasya</option><option value="6">Ankara</option><option value="7">Antalya</option><option value="75">Ardahan</option><option value="8">Artvin</option><option value="9">Aydın</option><option value="10">Balıkesir</option><option value="74">Bartın</option><option value="72">Batman</option><option value="69">Bayburt</option><option value="11">Bilecik</option><option value="12">Bing&ouml;l</option><option value="13">Bitlis</option><option value="14">Bolu</option><option value="15">Burdur</option><option value="16">Bursa</option><option value="17">&Ccedil;anakkale</option><option value="18">&Ccedil;ankırı</option><option value="19">&Ccedil;orum</option><option value="20">Denizli</option><option value="21">Diyarbakır</option><option value="81">D&uuml;zce</option><option value="22">Edirne</option><option value="23">El&acirc;zığ</option><option value="24">Erzincan</option><option value="25">Erzurum</option><option value="26">Eskişehir</option><option value="27">Gaziantep</option><option value="28">Giresun</option><option value="29">G&uuml;m&uuml;şhane</option><option value="30">Hakk&acirc;ri</option><option value="31">Hatay</option><option value="76">Iğdır</option><option value="32">Isparta</option><option value="34">İstanbul</option><option value="35">İzmir</option><option value="46">Kahramanmaraş</option><option value="78">Karab&uuml;k</option><option value="70">Karaman</option><option value="36">Kars</option><option value="37">Kastamonu</option><option value="38">Kayseri</option><option value="79">Kilis</option><option value="71">Kırıkkale</option><option value="39">Kırklareli</option><option value="40">Kırşehir</option><option value="41">Kocaeli</option><option value="42">Konya</option><option value="43">K&uuml;tahya</option><option value="44">Malatya</option><option value="45">Manisa</option><option value="47">Mardin</option><option value="33">Mersin</option><option value="48">Muğla</option><option value="49">Muş</option><option value="50">Nevşehir</option><option value="51">Niğde</option><option value="52">Ordu</option><option value="80">Osmaniye</option><option value="53">Rize</option><option value="54">Sakarya</option><option value="55">Samsun</option><option value="63">Şanlıurfa</option><option value="56">Siirt</option><option value="57">Sinop</option><option value="73">Şırnak</option><option value="58">Sivas</option><option value="59">Tekirdağ</option><option value="60">Tokat</option><option value="61">Trabzon</option><option value="62">Tunceli</option><option value="64">Uşak</option><option value="65">Van</option><option value="77">Yalova</option><option value="66">Yozgat</option><option value="67">Zonguldak</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="input-md textinput textInput form-control" style="background-color: #e6e9e9" type="text" id="cityText" readonly/="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="borough" class="control-label col-md-3  requiredField">İLÇE<span class="asteriskField" style="color: red">*</span> </label>
+                        <div class="controls col-md-8">  
+                            <div class="row">
+                                <div class="col-md-6"> 
+                                    <select id="borough" name="boroughId" class="input-md  textinput textInput form-control" required="required">
+                                        <option value="">İlçe seçiniz.</option>
+                                        
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="input-md  textinput textInput form-control" style="background-color: #e6e9e9" type="text" id="boroughText" readonly/="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="schoolType" class="control-label col-md-3  requiredField">OKUL TÜRÜ<span class="asteriskField" style="color: red">*</span> </label>
+                        <div class="controls col-md-8"> 
+                            <div class="row">
+                                <div class="col-md-6"> 
+                                    <select id="schoolType" name="schoolTypeId" class="input-md  textinput textInput form-control" required="required">
+                                        <option value="">Okul türünü seçiniz. </option>
+                                        <option value="1">İlkokul</option><option value="2">Ortaokul</option><option value="3">Lise</option><option value="4">Eğitim Merkezi</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="input-md  textinput textInput form-control" style="background-color: #e6e9e9" type="text" id="schoolTypeText" readonly/="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="school" class="control-label col-md-3  requiredField">OKUL ADI<span class="asteriskField" style="color: red">*</span> </label>
+                        <div class="controls col-md-8">
+                            <div class="row">
+                                <div class="col-md-6"> 
+                                    <select id="school" name="schoolId" class="input-md  textinput textInput form-control" required="required">
+                                        <option value="">Okul seçiniz.</option>
+                                        <options items="" itemvalue="id" itemlabel="name"></options>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="input-md  textinput textInput form-control" style="background-color: #e6e9e9" type="text" id="schoolText" readonly/="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-info" style="background-color: #e9ecef">
+                        <div class="panel-heading">
+                            <div style="text-align: center"><b>OKUL BİLGİLERİ</b></div>
+                        </div>  
+                        <div class="panel-body">
+                            <div id="schoolInfo" class="form-group required">
+                                <input id="schoolId" type="hidden">
+                                <label for="info" class="control-label col-md-3"><b>Okul Adı:</b></label>
+                                <div class="controls col-md-8">
+                                    <input id="schoolUpdateable" type="text" class="input-md  textinput textInput form-control" style="font-weight: bold; background-color: #e6e9e9" readonly/="">
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label for="cityUpdateable" class="control-label col-md-3">İl: </label>
+                                <div class="controls col-md-8 "> 
+                                    <input id="cityUpdateable" class="input-md  textinput textInput form-control" style="background-color: #e6e9e9" type="text" readonly/="">
+                                </div>
+                            </div>           
+                            <div class="form-group required">
+                                <label for="boroughUpdateable" class="control-label col-md-3">İlçe: </label>
+                                <div class="controls col-md-8 "> 
+                                    <input id="boroughUpdateable" class="input-md  textinput textInput form-control" type="text" style="background-color: #e6e9e9" readonly/="">
+                                </div>
+                            </div>    
+                            <div type="text" id="addressErrorDiv" class="form-group" style="margin-bottom: 0px; margin-top: 5px; display: none">
+                                <label for="addressErrorDiv" class="control-label col-md-3"><span class="asteriskField" style="color: red"></span> </label>
+                                <div class="controls col-md-8 "> 
+                                    <div type="text" style="color: red; font-weight: bold;">
+                                        <img src="assets/ats/dist/img/error.gif" alt="" style="height: 20px">
+                                        Okul adresini giriniz.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label for="addressUpdateable" class="control-label col-md-3">Adres: </label>
+                                <div class="controls col-md-8 "> 
+                                    <input id="addressUpdateable" type="text" class="input-md  textinput textInput form-control" style="background-color: #e6e9e9" readonly/="">
+                                </div>
+                            </div>   
+                            <div type="number" id="phoneUpdateErrorDiv" class="form-group" style="margin-bottom: 0px; margin-top: 5px; display: none">
+                                <label for="phoneUpdateErrorDiv" class="control-label col-md-3"><span class="asteriskField" style="color: red"></span> </label>
+                                <div class="controls col-md-8 "> 
+                                    <div type="text" style="color: red; font-weight: bold;">
+                                        <img src="assets/ats/dist/img/error.gif" alt="" style="height: 20px">
+                                        Okul telefon numarasını 0XXXXXXXXXX biçiminde giriniz.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label for="phoneUpdateable" class="control-label col-md-3">Telefon: </label>
+                                <div class="controls col-md-8 "> 
+                                    <input id="phoneUpdateable" type="number" class="input-md  textinput textInput form-control" onkeypress="if (this.value.length === 11)
+                                                return false;" onkeyup="validateUpdatePhone(this.value)" style="background-color: #e6e9e9" readonly/="">
+                                </div>
+                            </div>    
+                            <div id="emailUpdateErrorDiv" class="form-group" style="margin-bottom: 0px; margin-top: 5px; display: none">
+                                <label for="emailUpdateErrorDiv" class="control-label col-md-3"><span class="asteriskField" style="color: red"></span> </label>
+                                <div class="controls col-md-8 "> 
+                                    <div type="text" style="color: red; font-weight: bold;">
+                                        <img src="assets/ats/dist/img/error.gif" alt="" style="height: 20px">
+                                        Lütfen meb.k12.tr uzantılı e-posta adresinizi giriniz.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label for="emailUpdateable" class="control-label col-md-3">E-Posta: </label>
+                                <div class="controls col-md-8 "> 
+                                    <input id="emailUpdateable" type="email" class="input-md  textinput textInput form-control" style="background-color: #e6e9e9" readonly/="">
+                                </div>
+                            </div> 
+                            <div class="form-group required">
+                                <label for="schoolCodeUpdateable" class="control-label col-md-3">Kurum Kodu: </label>
+                                <div class="controls col-md-8 "> 
+                                    <input id="schoolCodeUpdateable" type="number" class="input-md  textinput textInput form-control" style="background-color: #e6e9e9" readonly/="">
+                                </div>
+                            </div> 
+                            <div class="form-group">
+                                <label for="facilityCodeUpdateable" class="control-label col-md-3">Tesis Kodu: </label>
+                                <div class="controls col-md-8 "> 
+                                    <input id="facilityCodeUpdateable" type="text" class="input-md  textinput textInput form-control" style="background-color: #e6e9e9" readonly/="">
+                                </div>
+                            </div> 
+                            <div class="form-group required">
+                                <label for="phaseUpdateable" class="control-label col-md-3 ">Faz: </label>
+                                <div class="controls col-md-8 "> 
+                                    <input id="phaseUpdateable" type="text" class="input-md  textinput textInput form-control" style="background-color: #e6e9e9" readonly/="">
+                                </div> 
+                            </div> 
+                            <div class="form-group required">
+                                <label for="phaseUpdateable" class="control-label col-md-3 ">Lot: </label>
+                                <div class="controls col-md-8 "> 
+                                    <input id="lotUpdateable" type="text" class="input-md  textinput textInput form-control" style="background-color: #e6e9e9" readonly/="">
+                                </div> 
+                            </div> 
+                            <div class="form-group required">
+                                <span class="control-label col-md-3">
+                                </span>
+                                <div class="controls col-md-8" style="text-align: center"> 
+                                    <font color="red">Okulunuza hızlı ve doğru servis hizmeti sunulabilmesi için lütfen okulunuza ilişkin hatalı gördüğünüz kısımları güncelleyerek arıza oluşturma işlemine devam edin.</font>
+                                    <br>
+                                    <button id="updateSchoolBtn" type="button" class="btn btn-warning" onclick="loading(); findSameInfrastructureUpdateSchool()"> Okul Bilgilerini Güncelle </button>
+                                    <button type="button" id="saveSchoolBtn" class="btn btn-success" style="display: none; padding: 6px 12px" onclick="return validateUpdateEmailAndPhone()">Kaydet</button>
+                                    &nbsp;
+                                    <button id="cancelSchoolBtn" type="button" class="btn btn-danger" style="display: none; padding: 6px 18px 6px" onclick="loading(); cancelSchool()"> İptal </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="faultDesc" class="control-label col-md-3  requiredField">ARIZA TANIMI<span class="asteriskField" style="color: red">*</span> </label>
+                        <div class="controls col-md-8 ">    
+                            <select id="fault" name="faultDesc" class="input-md  textinput textInput form-control" required="required">
+                                <option value="">Arıza tanımı seçiniz.</option>
+                                <option value="1">Etkileşimli Tahta altındaki Fatih enerji prizi &ccedil;alışmıyor</option><option value="2">&Ouml;ğretmen masası arkasındaki Fatih Data prizi &ccedil;alışmıyor</option><option value="3">Sınıf i&ccedil;indeki Fatih plastik kablo kanalı kırıldı</option><option value="4">Sistem odasında bulunan Fatih Fanı bozuldu</option><option value="5">Sistem odasında bulunan Fatih kabinetinde en alttaki g&uuml;&ccedil; kaynağı &ccedil;alışmıyor</option><option value="6">Okul i&ccedil;inde iki bina arasındaki Fatih internet kablosu koptu</option><option value="7">Diğer</option>
+                            </select>
+                            <div class="has-error">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label id="faultDetailLabel" for="faultDetail" class="control-label col-md-3  requiredField">ARIZA DETAYI</label>
+                        <div class="controls col-md-8 "> 
+                            <textarea id="faultDetail" name="faultDetail" style="margin-bottom: 5px; height: 77px" placeholder="Arıza detayı giriniz." class="input-md  textinput textInput form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="faultImage" class="control-label col-md-3  requiredField">ARIZA GÖRSELİ</label>
+                        <div class="controls col-md-8 ">
+                            <img id="extImg" style="display: none; height: 20px" src="assets/ats/dist/img/error.gif" alt="">
+                            <span style="color: red" id="fileUploadedExtNote"><b>*Arıza görseli 'jpeg', 'jpg', 'png' veya 'gif' uzantılı olmalıdır.</b> </span>
+                            <br>
+                            <input type='file' id="imgInp" style="margin-top: 5px">                                                    
+                            <img type="hidden" id="image" style="width: 200px; margin-top: 5px"> 
+                            <input id="imageHidden" name="image" type="hidden" class="input-md  textinput textInput form-control" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="box-footer" style="text-align: right">
+                            <div class="form-actions">
+                                <a href="main.html" class="btn btn-default btn-sm" style="padding: 10px 40px ; font-size: 13px; background-color: #f5f5f5 ">İPTAL</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="submit" id="submitBtn" style="padding: 10px 40px; font-size: 13px" value="GÖNDER" class="btn btn-primary btn-default" onclick="return validate(); loading()">
+                            </div>
+                        </div>
+                    </div>
+                    <input type='hidden' id='csrfToken' value=''>
+                <div>
+</div></form>
+            </div>
+
+            <!--                <style>
+                                /* already defined in bootstrap4 */
+                                .text-xs-center {
+                                    text-align: center;
+                                }
+            
+                                .g-recaptcha {
+                                    display: inline-block;
+                                }
+                            </style>-->
+            <!--                <div class="text-xs-center">
+                                <div id="recaptcha"></div>
+                            </div>-->
+            <!--<input type="hidden" name="recaptcha" id="recaptchaValidator" />-->
+
+        </div>
+    </div>
+</div> 
+<div class="modal fade in" id="updateInfoError">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="panel-title" style="background-color:#f0ad4e">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="padding: 10px"><center>.:: UYARI ::.</center></h4>
+            </div>
+            <div class="modal-body">
+                <center>Lütfen <b>AD SOYAD</b>, <b>CEP TEL. NO.</b> ve <b>E-POSTA</b> alanlarını doldurunuz.</center>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div class="modal fade in" id="updateSchoolError">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="panel-title" style="background-color:#f0ad4e">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="padding: 10px"><center>.:: UYARI ::.</center></h4>
+            </div>
+            <div class="modal-body">
+                <p><center><b> Herhangi bir okul seçilmedi!</b></center>
+                <br><center>Okul bilgilerini günceleyebilmeniz için zorunlu alanların doldurulması gerekmektedir.</center>
+            </p></div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div class="modal fade in" id="formError">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="panel-title" style="background-color:red">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="padding: 10px"><center>.:: HATA ::.</center></h4>
+            </div>
+            <div class="modal-body">
+                <p><center><b> Arıza kaydı açılamadı!</b></center>
+                <br><center>Lütfen gerekli tüm alanları uygun biçimde doldurup tekrar arıza kaydı açınız.</center>
+            </p></div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div class="modal fade in" id="emailError">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="panel-title" style="background-color:red">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="padding: 10px"><center>.:: HATA ::.</center></h4>
+            </div>
+            <div class="modal-body">
+                <p><center><b> E- posta adresinizi "meb.k12.tr" uzantılı olarak girmediniz.</b></center>
+                <br><center>Lütfen gerekli tüm alanları uygun biçimde doldurup tekrar arıza kaydı açınız.</center>
+            </p></div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div class="modal fade in" id="phoneError">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="panel-title" style="background-color:red">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="padding: 10px"><center>.:: HATA ::.</center></h4>
+            </div>
+            <div class="modal-body">
+                <p><center><b> Cep telefon numaranızı 0XXXXXXXXXX biçiminde girmediniz.</b></center>
+                <br><center>Lütfen gerekli tüm alanları uygun biçimde doldurup tekrar arıza kaydı açınız.</center>
+            </p></div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div class="modal modal-success fade in" id="updateSchoolSuccess">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="panel-title" style="background-color:#00a65a">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="padding: 10px"><center>.:: GÜNCELLEME İSTEĞİ BAŞARILI ::.</center></h4>
+            </div>
+            <div class="modal-body">
+                <p><center><b> Okul bilgileri güncelleme talebiniz ilgili birime iletilmiştir.</b></center>
+                <br><center>Uygun bulunması durumunda okul bilgileriniz güncellenecektir.</center>
+            </p></div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div class="modal fade in" id="errorPhaseLot">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="panel-title" style="background-color:orangered">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="padding: 10px"><center>.:: UYARI ::.</center></h4>
+            </div>
+            <div class="modal-body">
+                <p><center><b> Pilot okullarımızın garanti süresi bittiği için teknik destek verilememektedir. </b></center>
+            </p></div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div class="modal fade in" id="duplicateRequest" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="panel-title" style="background-color:orange">
+                <h4 class="modal-title" style="padding: 10px"><center>.:: UYARI ::.</center></h4>
+            </div>
+            <div class="modal-body">
+                <p>Sayın İlgili,
+                    <br><br>Kurumunuz için gün içerisinde <b id="repeatedNameSurname"></b> tarafından "<b id="repeatedFaultDesc"></b>" başlığı ile açılmış bir arıza kaydı bulunmaktadır.
+                    <br><br>Bu sebeple gün içerisinde sadece 1 adet altyapı arızası açabilirsiniz.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="index.htm" class="btn btn-danger custom-width" onclick="loading()">TAMAM</a>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div class="modal fade in" id="duplicateUpdateSchoolRequest">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="panel-title" style="background-color:orange">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="padding: 10px"><center>.:: UYARI ::.</center></h4>
+            </div>
+            <div class="modal-body">
+                <p>Sayın İlgili,
+                    <br><br>Gün içerisinde sadece 1 adet okul bilgisi güncelleme talebi gönderebilirsiniz.
+                    <br><br>Kurumunuz için gün içerisinde <b id="repeatedUpdateSchoolNameSurname"></b> tarafından okul bilgisi güncelleme talebi oluşturulmuş olup, telebiniz değerlendirme sonrası onaylanacaktır.
+                </p>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!--<div class="modal fade in" id="reCaptchaError">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="panel-title" style="background-color:red">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="padding: 10px"><center>.:: HATA ::.</center></h4>
+            </div>
+            <div class="modal-body">
+                <p><center><b> Arıza kaydı açılamadı!</b></center>
+                <br><center>Lütfen bu tarayıcıyı kapatıp farklı bir tarayıcıdan https://fatihdestek.eba.gov.tr adresine giriş yaparak arıza kaydını tekrar oluşturunuz.</center>
+            </div>
+        </div>
+         /.modal-content 
+    </div>
+     /.modal-dialog 
+</div>-->
+<script>
+    $(document).ready(function () {
+        $("#nameSurname").keyup(function () {
+            var regex = /^[a-zA-Z\sğĞüÜşŞıİÖöÇç\b\0]*$/;
+            if ((regex.test($("#nameSurname").val()))) {
+
+            } else {
+                $("#nameSurname").val("");
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        var typingTimer;
+        var doneTypingInterval = 0;
+        var $input = $('#email');
+        $input.on('keyup', function () {
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(doneTyping, doneTypingInterval);
+        });
+        $input.on('keydown', function () {
+            clearTimeout(typingTimer);
+        });
+        function doneTyping() {
+            if (!/@meb.k12.tr\s*$/.test($('#email').val())) {
+                $('#emailErrorDiv').show();
+                $('#submitBtn').attr("disabled", true);
+            } else {
+                $('#emailErrorDiv').hide();
+                $('#submitBtn').attr("disabled", false);
+            }
+        }
+    });
+</script>
+<script type="text/javascript">
+    function loading() {
+        if ($("#city option:selected").val()
+                && $("#borough option:selected").val()
+                && $("#schoolType option:selected").val()
+                && $("#school option:selected").val()
+                && $("#fault option:selected").val()
+                && document.getElementById("nameSurname").value.trim()
+                && document.getElementById("phone").value.trim()
+                && document.getElementById("email").value.trim()) {
+            if ($("#fault option:selected").val() === "7") {
+                if (document.getElementById("faultDetail").value.trim()) {
+                    document.getElementById("loading").style.display = "block";
+                }
+            } else {
+                document.getElementById("loading").style.display = "block";
+            }
+        }
+    }
+</script>
+<script type="text/javascript">
+    $(window).bind("pageshow", function () {
+        $("#city option:eq(0)").prop("selected", true);
+        $("#borough option:eq(0)").prop("selected", true);
+        $("#schoolType option:eq(0)").prop("selected", true);
+        $("#school option:eq(0)").prop("selected", true);
+        $("#fault option:eq(0)").prop("selected", true);
+        $('#nameSurname').val("");
+        $('#phone').val("");
+        $('#email').val("");
+        $('#imgInp').val("");
+        $('#imageHidden').val("");
+        $('#schoolUpdateable').val("");
+        $('#cityUpdateable').val("");
+        $('#boroughUpdateable').val("");
+        $('#addressUpdateable').val("");
+        $('#phoneUpdateable').val("");
+        $('#emailUpdateable').val("");
+        $('#schoolCodeUpdateable').val("");
+        $('#phaseUpdateable').val("");
+        $('#lotUpdateable').val("");
+    });
+</script>
+<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (false) {
+            $("#errorPhaseLot").modal("show");
+        }
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (false) {
+            if (false) {
+                $("#formError").modal("show");
+            }
+        }
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (true) {
+            if () {
+                $("#emailError").modal("show");
+            }
+        }
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (true) {
+            if () {
+                $("#phoneError").modal("show");
+            }
+        }
+    });
+</script>
+<!--<script type="text/javascript">
+    $(document).ready(function () {
+        if (true) {
+            if () {
+                $("#reCaptchaError").modal("show");
+            }
+        }
+    });
+</script>-->
+<script type="text/javascript">
+    $("#city").on("change", function () {
+        var cityId = $("#city").val();
+        var citySelected = $("#city option:selected").text();
+        $("#boroughText").val("");
+        $("#schoolTypeText").val("");
+        $("#schoolText").val("");
+        $("#cityText").val(citySelected);
+        $("#city option:selected").text();
+        $("#borough").find('option').remove();
+        $("#borough").append("<option value>İlçe seçiniz.</option>");
+        $("#schoolType").val("");
+        $("#school").find("option").remove();
+        $("#school").val("");
+        $.ajax({
+            type: 'GET',
+            url: '/borough',
+            contentType: 'application/json; charset=utf-8',
+            data: {cityId: cityId},
+            success: function (data) {
+                showBoroughs(data);
+            },
+            error: function () {
+            }
+        });
+        function showBoroughs(data) {
+            $('#school').append("<option value>Okul adı seçiniz.</option>");
+            for (var i = 0, len = data.length; i < len; ++i) {
+                var borough = data[i];
+                $('#borough').append("<option value=\"" + borough.id + "\">" + borough.name + "</option>");
+            }
+        }
+    });
+</script>
+<script type="text/javascript">
+    $("#borough").on("change", function () {
+        var boroughSelected = $("#borough option:selected").text();
+        $("#schoolTypeText").val("");
+        $("#schoolText").val("");
+        $("#boroughText").val(boroughSelected);
+        $('#schoolType').val("");
+        $('#school').find('option').remove();
+        $('#school').val("");
+        $('#school').append("<option value>Okul adı seçiniz.</option>");
+    });
+</script>
+<script type="text/javascript">
+    $("#schoolType").on("change", function () {
+        var cityName = $("#city option:selected").text();
+        var boroughName = $("#borough option:selected").text();
+        var schoolType = $("#schoolType option:selected").text();
+        var schoolTypeSelected = $("#schoolType option:selected").text();
+        $("#schoolText").val("");
+        $("#schoolTypeText").val(schoolTypeSelected);
+        $('#school').find('option').remove();
+        $('#school').append("<option value>Okul adı seçiniz.</option>");
+        $.ajax({
+            type: 'GET',
+            url: '/school',
+            contentType: 'application/json; charset=utf-8',
+            data: {cityName: cityName, boroughName: boroughName, schoolType: schoolType},
+            success: function (data) {
+                showSchools(data);
+            },
+            error: function () {
+
+            }
+        });
+        function showSchools(data) {
+            if (data.length === 0) {
+
+                $('#school').find("option").remove();
+                $('#school').append("<option value>Okul Bulunamadı!</option>");
+
+            } else {
+
+                for (var i = 0, len = data.length; i < len; ++i) {
+                    var school = data[i];
+                    $('#school').append("<option value=\"" + school.id + "\">" + school.kurumAdi + "</option>");
+
+                }
+            }
+        }
+    });
+</script>
+<script type="text/javascript">
+    $("#school").on("change", function () {
+        var citySelected = $("#city option:selected").text();
+        var boroughSelected = $("#borough option:selected").text();
+        var typeSelected = $("#schoolType option:selected").text();
+        var schoolSelected = $("#school option:selected").text();
+
+        if (schoolSelected !== "Okul adı seçiniz." && schoolSelected !== "Okul Bulunamadı!") {
+            $("#schoolText").val(schoolSelected);
+            $("#schoolUpdateable").val($("#school option:selected").text());
+            $.ajax({
+                type: 'GET',
+                url: '/schoolInfo',
+                contentType: 'application/json; charset=utf-8',
+                data: {cityName: citySelected, boroughName: boroughSelected, schoolType: typeSelected, schoolId: schoolSelected},
+                success: function (data) {
+                    $("#schoolId").val(data.id);
+                    $("#cityUpdateable").val(data.ilAdi);
+                    $("#boroughUpdateable").val(data.ilceAdi);
+                    $("#addressUpdateable").val(data.adres);
+                    $("#phoneUpdateable").val(data.telefon);
+                    $("#emailUpdateable").val(data.eposta);
+                    $("#schoolCodeUpdateable").val(data.kurumKodu);
+                    $("#facilityCodeUpdateable").val(data.tesisKodu);
+                    $("#phaseUpdateable").val(data.faz);
+                    $("#lotUpdateable").val(data.kisim);
+                },
+                error: function () {
+
+                }
+            });
+        } else {
+
+        }
+    });
+</script>
+<script type="text/javascript">
+    $("#fault").on("change", function () {
+        if ($("#fault option:selected").text() === 'Diğer') {
+            $("#faultDetail").prop('required', true);
+            $("#faultDetailLabel").append('<span id="faultDetailSpan" class="asteriskField" style="color: red">*</span>');
+        } else {
+            $("#faultDetail").prop('required', false);
+            $("#faultDetailSpan").remove();
+        }
+    });
+</script>
+<script type="text/javascript">
+    function updateSchool() {
+        if ($('#nameSurname').val() === "" && $('#phone').val() === "" && $('#email').val() === "") {
+            $('#updateInfoError').modal('show');
+            document.getElementById("loading").style.display = "none";
+        } else if ($('#schoolUpdateable').val()) {
+            $('#updateSchoolBtn').hide();
+            $('#saveSchoolBtn').show();
+            $('#cancelSchoolBtn').show();
+
+            $('#schoolUpdateable').attr('readonly', false);
+            $('#schoolUpdateable').css('background-color', '#fff');
+
+            $('#cityUpdateable').attr('readonly', false);
+            $('#cityUpdateable').css('background-color', '#fff');
+
+            $('#boroughUpdateable').attr('readonly', false);
+            $('#boroughUpdateable').css('background-color', '#fff');
+
+            $('#addressUpdateable').attr('readonly', false);
+            $('#addressUpdateable').css('background-color', '#fff');
+
+            $('#phoneUpdateable').attr('readonly', false);
+            $('#phoneUpdateable').css('background-color', '#fff');
+
+            $('#emailUpdateable').attr('readonly', false);
+            $('#emailUpdateable').css('background-color', '#fff');
+
+            $('#schoolCodeUpdateable').attr('readonly', false);
+            $('#schoolCodeUpdateable').css('background-color', '#fff');
+
+            $('#phaseUpdateable').attr('readonly', false);
+            $('#phaseUpdateable').attr('type', 'number');
+            $('#phaseUpdateable').css('background-color', '#fff');
+
+            $('#lotUpdateable').attr('readonly', false);
+            $('#lotUpdateable').attr('type', 'number');
+            $('#lotUpdateable').css('background-color', '#fff');
+
+            document.getElementById("loading").style.display = "none";
+        } else {
+            $('#updateSchoolError').modal('show');
+            document.getElementById("loading").style.display = "none";
+        }
+    }
+</script>
+<script type="text/javascript">
+    function cancelSchool() {
+        if ($("#school option:selected").text() !== 'Okul seçiniz.') {
+
+            var citySelected = $("#city option:selected").text();
+            var boroughSelected = $("#borough option:selected").text();
+            var typeSelected = $("#schoolType option:selected").text();
+            var schoolSelected = $("#school option:selected").text();
+            $("#schoolText").val(schoolSelected);
+            $("#schoolUpdateable").val($("#school option:selected").text());
+            $.ajax({
+                type: 'GET',
+                url: '/schoolInfo',
+                contentType: 'application/json; charset=utf-8',
+                data: {cityName: citySelected, boroughName: boroughSelected, schoolType: typeSelected, schoolId: schoolSelected},
+                success: function (data) {
+                    $("#schoolId").val(data.id);
+                    $("#cityUpdateable").val(data.ilAdi);
+                    $("#boroughUpdateable").val(data.ilceAdi);
+                    $("#addressUpdateable").val(data.adres);
+                    $("#phoneUpdateable").val(data.telefon);
+                    $("#emailUpdateable").val(data.email);
+                    $("#schoolCodeUpdateable").val(data.kurumKodu);
+                    $("#facilityCodeUpdateable").val(data.tesisKodu);
+                    $("#phaseUpdateable").val(data.faz);
+                    $("#lotUpdateable").val(data.kisim);
+                    document.getElementById("loading").style.display = "none";
+                },
+                error: function () {
+                    document.getElementById("loading").style.display = "none";
+                }
+            });
+
+
+            $('#updateSchoolBtn').show();
+            $('#saveSchoolBtn').hide();
+            $('#addressErrorDiv').hide();
+            $('#phoneUpdateErrorDiv').hide();
+            $('#emailUpdateErrorDiv').hide();
+            $('#cancelSchoolBtn').hide();
+
+            $('#schoolUpdateable').attr('readonly', true);
+            $('#schoolUpdateable').css('background-color', '#e6e9e9');
+
+
+            $('#cityUpdateable').attr('readonly', true);
+            $('#cityUpdateable').css('background-color', '#e6e9e9');
+
+
+            $('#boroughUpdateable').attr('readonly', true);
+            $('#boroughUpdateable').css('background-color', '#e6e9e9');
+
+
+            $('#addressUpdateable').attr('readonly', true);
+            $('#addressUpdateable').css('background-color', '#e6e9e9');
+
+
+            $('#phoneUpdateable').attr('readonly', true);
+            $('#phoneUpdateable').css('background-color', '#e6e9e9');
+
+
+            $('#emailUpdateable').attr('readonly', true);
+            $('#emailUpdateable').css('background-color', '#e6e9e9');
+
+
+            $('#schoolCodeUpdateable').attr('readonly', true);
+            $('#schoolCodeUpdateable').css('background-color', '#e6e9e9');
+
+
+            $('#facilityCodeUpdateable').attr('readonly', true);
+            $('#facilityCodeUpdateable').css('background-color', '#e6e9e9');
+            $('#facilityCodeUpdateable').attr('type', 'text');
+
+            $('#phaseUpdateable').attr('readonly', true);
+            $('#phaseUpdateable').css('background-color', '#e6e9e9');
+            $('#phaseUpdateable').attr('type', 'text');
+
+            $('#lotUpdateable').attr('readonly', true);
+            $('#lotUpdateable').css('background-color', '#e6e9e9');
+            $('#lotUpdateable').attr('type', 'text');
+
+            document.getElementById("loading").style.display = "none";
+        } else {
+            $('#updateSchoolError').modal('show');
+            document.getElementById("loading").style.display = "none";
+        }
+    }
+</script>
+<script type="text/javascript">
+    function saveSchool() {
+        if ($('#schoolUpdateable').val()) {
+            var schoolId = $("#school option:selected").val();
+            var schoolName = $('#schoolUpdateable').val();
+            var schoolCity = $('#cityUpdateable').val();
+            var schoolBorough = $('#boroughUpdateable').val();
+            var schoolAddress = $('#addressUpdateable').val();
+            var schoolPhone = $('#phoneUpdateable').val();
+            var schoolEmail = $('#emailUpdateable').val();
+            var schoolCode = $('#schoolCodeUpdateable').val();
+            var facilityCode = $('#facilityCodeUpdateable').val();
+            var phase = $('#phaseUpdateable').val();
+            var lot = $('#lotUpdateable').val();
+            var adderName = $('#nameSurname').val();
+            var adderPhone = $('#phone').val();
+            var adderEmail = $('#email').val();
+
+            $.ajax({
+                type: 'GET',
+                url: '/updateschoolbyuser',
+                contentType: 'application/json; charset=utf-8',
+                data: {
+                    schoolId: schoolId,
+                    schoolName: schoolName,
+                    schoolCity: schoolCity,
+                    schoolBorough: schoolBorough,
+                    schoolAddress: schoolAddress,
+                    schoolPhone: schoolPhone,
+                    schoolEmail: schoolEmail,
+                    schoolCode: schoolCode,
+                    facilityCode: facilityCode,
+                    phase: phase,
+                    lot: lot,
+                    adderName: adderName,
+                    adderPhone: adderPhone,
+                    adderEmail: adderEmail
+                },
+                success: function (data) {
+                    if (data.result === "success") {
+
+                        $('#updateSchoolSuccess').modal('show');
+                        $('#updateSchoolBtn').show();
+                        $('#saveSchoolBtn').hide();
+                        $('#cancelSchoolBtn').hide();
+
+                        $('#schoolUpdateable').attr('readonly', true);
+                        $('#schoolUpdateable').css('background-color', '#e6e9e9');
+
+                        $('#cityUpdateable').attr('readonly', true);
+                        $('#cityUpdateable').css('background-color', '#e6e9e9');
+
+                        $('#boroughUpdateable').attr('readonly', true);
+                        $('#boroughUpdateable').css('background-color', '#e6e9e9');
+
+                        $('#addressUpdateable').attr('readonly', true);
+                        $('#addressUpdateable').css('background-color', '#e6e9e9');
+
+                        $('#phoneUpdateable').attr('readonly', true);
+                        $('#phoneUpdateable').css('background-color', '#e6e9e9');
+
+                        $('#emailUpdateable').attr('readonly', true);
+                        $('#emailUpdateable').css('background-color', '#e6e9e9');
+
+                        $('#schoolCodeUpdateable').attr('readonly', true);
+                        $('#schoolCodeUpdateable').css('background-color', '#e6e9e9');
+
+                        $('#phaseUpdateable').attr('readonly', true);
+                        $('#phaseUpdateable').css('background-color', '#e6e9e9');
+
+                        $('#lotUpdateable').attr('readonly', true);
+                        $('#lotUpdateable').css('background-color', '#e6e9e9');
+
+                        $('#updateSchoolBtn').html('Güncelleme İsteği Gönderildi');
+                        $('#updateSchoolBtn').attr("disabled", true);
+                        $('#updateSchoolBtn').removeClass("btn btn-warning").addClass("btn btn-success");
+                        document.getElementById("loading").style.display = "none";
+                    } else {
+                        $('#updateSchoolError').find('.modal-body').text('Lütfen tüm alanları doldurunuz. ');
+                        $('#updateSchoolError').modal('show');
+                        document.getElementById("loading").style.display = "none";
+                    }
+                },
+                error: function (data) {
+                    $('#updateSchoolError').find('.modal-body').text('"Tesis Kodu" bulunamadığı için okul bilgileri güncellenemedi.');
+                    $('#updateSchoolError').modal('show');
+                    document.getElementById("loading").style.display = "none";
+                }
+            });
+        } else {
+            $('#updateSchoolError').find('.modal-body').text('Okul adı hatalı.');
+            $('#updateSchoolError').modal('show');
+            document.getElementById("loading").style.display = "none";
+        }
+    }
+</script>
+<script type="text/javascript">
+    var files = [];
+    $(document).on("change", "#imgInp", function (event) {
+        $("#fileUploadedSuccess").hide();
+        $("#fileUploadAgain").hide();
+        var fileExt = $("#imgInp").val().split('.').pop().toLowerCase();
+        $("#fileSubmit").attr('type', 'button');
+        files = event.target.files;
+        if ($.inArray(fileExt, ['jpeg', 'jpg', 'png', 'gif']) === -1) {
+            $("#extImg").show();
+            $("#fileUploadedExtNote").show();
+            $("#image").hide();
+        } else {
+            $("#extImg").hide();
+            $("#fileUploadedExtNote").hide();
+            $("#image").show();
+
+
+            readURL(this);
+
+        }
+    });
+</script>
+<script type="text/javascript">
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#image').attr('src', e.target.result);
+                $('#imageHidden').val(e.target.result);
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+</script>
+<script type="text/javascript">
+    function validate(phone) {
+        if (phone.length === 11) {
+            if (phone.charAt(0) !== "0" || phone.charAt(1) !== "5")
+            {
+                $('#phoneErrorDiv').show();
+                $('#submitBtn').attr("disabled", true);
+            } else {
+                $('#phoneErrorDiv').hide();
+                $('#submitBtn').attr("disabled", false);
+            }
+        } else {
+            $('#phoneErrorDiv').show();
+            $('#submitBtn').attr("disabled", true);
+        }
+    }
+</script>
+<script type="text/javascript">
+    function validateUpdatePhone(phone) {
+        if (phone.length === 11) {
+            if (phone.charAt(0) !== "0")
+            {
+                $('#phoneUpdateErrorDiv').show();
+            } else {
+                $('#phoneUpdateErrorDiv').hide();
+            }
+        }
+    }
+</script>
+<script type="text/javascript">
+    function validateUpdateEmailAndPhone() {
+        var address = $('#addressUpdateable').val();
+        var email = $('#emailUpdateable').val();
+        var phone = $('#phoneUpdateable').val();
+        var email2 = $('#email').val();
+        var phone2 = $('#phone').val();
+
+        if (address) {
+            if (phone2.length === 11) {
+                if (phone2.charAt(0) === "0") {
+                    if (/@meb.k12.tr\s*$/.test(email2)) {
+                        if (phone.length === 11 || phone.length === 0) {
+                            if (phone.charAt(0) === "0") {
+                                if (/@meb.k12.tr\s*$/.test(email)) {
+                                    $('#emailUpdateErrorDiv').hide();
+                                    $('#addressErrorDiv').hide();
+                                    $('#phoneUpdateErrorDiv').hide();
+                                    $('#phoneErrorDiv').hide();
+                                    $('#emailErrorDiv').hide();
+                                    loading();
+                                    saveSchool();
+                                    return true;
+                                } else {
+                                    $('#emailUpdateErrorDiv').show();
+                                    $('#addressErrorDiv').hide();
+                                    $('#phoneUpdateErrorDiv').hide();
+                                    $('#phoneErrorDiv').hide();
+                                    $('#emailErrorDiv').hide();
+                                    return false;
+                                }
+                            } else {
+                                $('#phoneUpdateErrorDiv').show();
+                                $('#addressErrorDiv').hide();
+                                $('#emailUpdateErrorDiv').hide();
+                                $('#phoneErrorDiv').hide();
+                                $('#emailErrorDiv').hide();
+                                return false;
+                            }
+                        } else {
+                            $('#phoneUpdateErrorDiv').show();
+                            $('#addressErrorDiv').hide();
+                            $('#emailUpdateErrorDiv').hide();
+                            $('#phoneErrorDiv').hide();
+                            $('#emailErrorDiv').hide();
+                            return false;
+                        }
+                    } else {
+                        $('#emailErrorDiv').show();
+                        $('#addressErrorDiv').hide();
+                        $('#emailUpdateErrorDiv').hide();
+                        $('#phoneUpdateErrorDiv').hide();
+                        $('#phoneErrorDiv').hide();
+                        return false;
+                    }
+                } else {
+                    $('#phoneErrorDiv').show();
+                    $('#addressErrorDiv').hide();
+                    $('#emailUpdateErrorDiv').hide();
+                    $('#phoneUpdateErrorDiv').hide();
+                    $('#emailErrorDiv').hide();
+                    $('#phoneErrorDiv').text('Okul telefon numarasını 0XXXXXXXXXX biçiminde giriniz.'); 
+                    return false;
+                }
+            } else {
+                $('#phoneErrorDiv').show();
+                $('#addressErrorDiv').hide();
+                $('#emailUpdateErrorDiv').hide();
+                $('#phoneUpdateErrorDiv').hide();
+                $('#emailErrorDiv').hide();
+                $('#phoneErrorDiv').text('Okul telefon numarasını 0XXXXXXXXXX biçiminde giriniz.'); 
+                return false;
+            }
+        } else {
+            $('#addressErrorDiv').show(); 
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    $(document).on('change', '#fault', function () {
+        if ($('#school').val()) {
+            var schoolId = $('#schoolId').val();
+            $.getJSON('/findSameInfrastructureFault', {schoolId: schoolId}, function (data) {
+                if (data.result !== "notRepeated") {
+                    if (data.result === "error" || data.result === "") {
+                    } else {
+                        $('#repeatedNameSurname').text(data.result);
+                        $('#repeatedFaultDesc').text($('#fault option:selected').text());
+                        $('#duplicateRequest').modal('show');
+                        $('#submitBtn').attr("disabled", false);
+                    }
+                } else {
+                    $('#submitBtn').attr("disabled", false);
+                }
+            });
+        }
+    });
+</script>
+<script type="text/javascript">
+    function findSameInfrastructureUpdateSchool() {
+        if ($('#nameSurname').val() === "" && $('#phone').val() === "" && $('#email').val() === "") {
+            $('#updateInfoError').modal('show');
+            document.getElementById("loading").style.display = "none";
+
+        } else if ($('#schoolUpdateable').val()) {
+            var schoolId = $('#schoolId').val();
+            $.getJSON('/findSameInfrastructureUpdateSchool', {schoolId: schoolId}, function (data) {
+                if (data.result !== "notRepeated") {
+                    if (data.result === "error" || data.result === "") {
+                    } else {
+                        $('#repeatedUpdateSchoolNameSurname').text(data.result);
+                        $('#duplicateUpdateSchoolRequest').modal('show');
+                    }
+                } else {
+                    updateSchool();
+                }
+            });
+        }
+    }
+</script>
+<!--<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6LfryI8UAAAAAPDWEhJK0c9SwGCDl9UQRLkNzPRp', {action: 'infrastructureform'})
+                .then(function (token) {
+                    document.getElementById('recaptchaValidator').value = token;
+                });
+    });
+</script>-->
+</body>
+</html>

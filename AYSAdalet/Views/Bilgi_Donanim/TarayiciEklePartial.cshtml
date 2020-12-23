@@ -1,0 +1,31 @@
+﻿@model AYSAdalet.Models.Modeller.Bilgi_Tarayicilar
+
+@using (Html.BeginForm("TarayiciEkle", "Bilgi_Donanim", FormMethod.Post))
+
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="body">
+            <label>Tarayıcı Markası</label>
+            @Html.TextBoxFor(model => model.TarayiciMarka, htmlAttributes: new { @class = "form-control" })
+
+            <label>Tarayıcı Modeli</label>
+            @Html.TextBoxFor(model => model.TarayiciModel, new { @class = "form-control" })
+
+            <label>Tarayıcı Seri No</label>
+            @Html.TextBoxFor(model => model.TarayiciSeriNo, new { @class = "form-control" })
+
+
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12 ">
+                <button type="submit" class="btn btn-raised btn-primary btn-round waves-effect">Kayıt Ekle</button>
+            </div>
+        </div>
+    </div>
+}
+
