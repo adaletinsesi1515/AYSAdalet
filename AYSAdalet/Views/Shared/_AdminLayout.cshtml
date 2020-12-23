@@ -73,7 +73,7 @@
             <li class="dropdown">
                 <a href="javascript:void(0);" class="dropdown-toggle" title="App" data-toggle="dropdown" role="button"><i class="zmdi zmdi-apps"></i></a>
                 <ul class="dropdown-menu slideUp2">
-                    <li class="header">App Sortcute</li>
+                    <li class="header">Temel Uygulamalar</li>
                     <li class="body">
                         <ul class="menu app_sortcut list-unstyled">
                             <li>
@@ -298,7 +298,7 @@
     <aside id="leftsidebar" class="sidebar">
         <div class="navbar-brand">
             <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-            <a href="/Admin/"><img src="~/Content/AdminAssets/img/logo.svg" width="25" alt="Aero"><span class="m-l-10">Burdur Adliyesi</span></a>
+            <a href="/Admin/Index"><img src="~/Content/AdminAssets/img/logo1.svg" width="60" alt="Adalet"><span class="m-l-10">Burdur Adliyesi</span></a>
         </div>
         <div class="menu">
             <ul class="list">
@@ -312,50 +312,47 @@
                     </div>
                 </li>
                 <li><a href="/admin/index/"><i class="zmdi zmdi-home"></i><span>Anasayfa</span></a></li>
-                <li><a href="my-profile.html"><i class="zmdi zmdi-account"></i><span>Profil Bilgileri</span></a></li>
+                <li><a href="/admin/index/"><i class="zmdi zmdi-account"></i><span>Profil Bilgileri</span></a></li>
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>İdari İşler Müdürlüğü</span></a>
+                    <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Temel Sabit Bilgiler</span></a>
+                    <ul class="ml-menu">
+                        <li><a href="/Personel/Index/">Personel Bilgileri</a></li>
+                        <li><a href="/Birim/Index/">Birim Bilgileri</a></li>
+                        <li><a href="/Unvan/Index/">Unvan Bilgileri</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account-calendar"></i><span>İdari İşler Sistemi</span></a>
                     <ul class="ml-menu">
                         <li><a href="/Talep/List">Talep İşlemleri</a></li>
-                        <li><a href="mail-inbox.html">Maaş İşlemleri</a></li>
-                        <li><a href="chat.html">Yolluk İşlemleri</a></li>
-                        <li><a href="events.html">Rapor Bilirkişi İşlemleri</a></li>
-                        <li><a href="contact.html">Keşif İşlemleri</a></li>
+                        <li><a href="/Talep/List">Maaş İşlemleri</a></li>
+                        <li><a href="/Talep/List">Yolluk İşlemleri</a></li>
+                        <li><a href="/Talep/List">Rapor Bilirkişi İşlemleri</a></li>
+                        <li><a href="/Talep/List">Keşif İşlemleri</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Bilgi İşlem Şefliği</span></a>
+                    <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Bilgi İşlem Sistemi</span></a>
                     <ul class="ml-menu">
                         <li><a href="/Bilgi_Donanim/Index/">Donanım İşlemleri</a></li>
                         <li><a href="/BilgiZimmet/Index/">Zimmet İşlemleri</a></li>
-                        <li><a href="#">Toner İşlemleri</a></li>
-                        <li><a href="#">Arıza İşlemleri</a></li>
+                        <li><a href="/BilgiToner/Index/">Toner İşlemleri</a></li>
+                        <li><a href="/BilgiAriza/Index/">Arıza İşlemleri</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-folder"></i><span>Rehber Sistemi</span></a>
                     <ul class="ml-menu">
                         <li><a href="/Rehber">Rehber</a></li>
-
-                        <li><a href="/Birim/Liste">Birim Listesi</a></li>
-                        <li><a href="/Birim/Ekle">Birim Ekle</a></li>
-                        <hr />
-                        <li><a href="/Unvan/Liste">Ünvan Listesi</a></li>
-                        <li><a href="/Unvan/Ekle">Ünvan Ekle</a></li>
-                        <hr />
-                        <li><a href="/Personel">Personel Listesi</a></li>
-                        <li><a href="/Personel/Ekle">Personel Ekle</a></li>
-
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-blogger"></i><span>Nöbet Sistemi</span></a>
                     <ul class="ml-menu">
-                        <li><a href="blog-dashboard.html">Dashboard</a></li>
-                        <li><a href="blog-post.html">Blog Post</a></li>
-                        <li><a href="blog-list.html">List View</a></li>
-                        <li><a href="blog-grid.html">Grid View</a></li>
-                        <li><a href="blog-details.html">Blog Details</a></li>
+                        <li><a href="/Nobet/">Haftalık Nöbet Belirleme</a></li>
+                        <li><a href="/Nobet/">Genel Nöbet Listesi</a></li>
+                        <li><a href="/Nobet/">Haftalık Nöbet Listesi</a></li>
                     </ul>
                 </li>
 
@@ -387,7 +384,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <h6>Color Skins</h6>
+                        <h6>Renk Seçimi</h6>
                         <ul class="choose-skin list-unstyled">
                             <li data-theme="purple"><div class="purple"></div></li>
                             <li data-theme="blue"><div class="blue"></div></li>
@@ -398,7 +395,7 @@
                         </ul>
                     </div>
                     <div class="card">
-                        <h6>General Settings</h6>
+                        <h6>Genel Ayarlar</h6>
                         <ul class="setting-list list-unstyled">
                             <li>
                                 <div class="checkbox rtl_support">

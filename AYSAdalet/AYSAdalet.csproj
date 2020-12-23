@@ -156,6 +156,7 @@
     <Content Include="Content\AdminAssets\img\lg\avatar6.jpg" />
     <Content Include="Content\AdminAssets\img\loader.svg" />
     <Content Include="Content\AdminAssets\img\logo.svg" />
+    <Content Include="Content\AdminAssets\img\logo1.svg" />
     <Content Include="Content\AdminAssets\img\maintanance.svg" />
     <Content Include="Content\AdminAssets\img\preview.png" />
     <Content Include="Content\AdminAssets\img\profile_av.jpg" />
