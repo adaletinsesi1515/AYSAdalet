@@ -18,6 +18,7 @@ namespace AYSAdalet.Models.DataContext
         public DbSet<Personel> Personel { get; set; }
         public DbSet<Birimler> Birimler { get; set; }
         public DbSet<Unvanlar> Unvanlar { get; set; }
+        public DbSet<Bilgi_Bilgisayarlar> BilgiBilgisayarlar { get; set; }
 
 
     }

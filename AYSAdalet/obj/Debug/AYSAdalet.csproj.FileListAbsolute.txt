@@ -55,3 +55,5 @@ D:\repos\AYSAdalet\AYSAdalet\bin\System.Web.Mvc.xml
 D:\repos\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.CopyComplete
 D:\repos\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.dll
 D:\repos\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.pdb
+D:\repos\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Bilgi_Bilgisayar_Tablosu_Eklendi.resources
+D:\repos\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache

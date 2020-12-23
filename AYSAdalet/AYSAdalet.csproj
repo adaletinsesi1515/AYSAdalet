@@ -421,8 +421,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012231613170_Bilgi_Bilgisayar_Tablosu_Eklendi.cs" />
+    <Compile Include="Migrations\202012231613170_Bilgi_Bilgisayar_Tablosu_Eklendi.designer.cs">
+      <DependentUpon>202012231613170_Bilgi_Bilgisayar_Tablosu_Eklendi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
+    <Compile Include="Models\Modeller\Bilgi_Bilgisayarlar.cs" />
     <Compile Include="Models\Modeller\Birimler.cs" />
     <Compile Include="Models\Modeller\Login.cs" />
     <Compile Include="Models\Modeller\Personel.cs" />
@@ -450,6 +455,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202012231613170_Bilgi_Bilgisayar_Tablosu_Eklendi.resx">
+      <DependentUpon>202012231613170_Bilgi_Bilgisayar_Tablosu_Eklendi.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
