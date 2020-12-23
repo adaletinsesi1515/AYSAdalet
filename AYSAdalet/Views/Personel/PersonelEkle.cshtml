@@ -1,0 +1,67 @@
+﻿@model IEnumerable<AYSAdalet.Models.Modeller.Personel>
+
+
+@{
+    ViewBag.Title = "PersonelEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="col-lg-12 col-md-12 col-sm-12">
+
+    <div class="card">
+        <div class="header">
+            <h2><strong>Personel</strong> Ekle</h2>
+        </div>
+        <div class="body">
+            <h1>@TempData["Uyari"] </h1>
+
+            @Html.Action("PersonelEklePartial", "Personel")
+
+        </div>
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Personel</strong> Listesi</h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <table class="table m-b-0 table-primary" id="birimlistesi">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Sicili</th>
+                        <th scope="col">Adı Soyadı</th>
+                        <th scope="col">Unvanı</th>
+                        <th scope="col">Birimi</th>
+                        <th scope="col">İşlem Türü</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+
+                        <td>@item.PersonelID</td>
+                        <td>@item.PersonelSicil</td>
+                        <td>@item.PersonelAdSoyad</td>
+                        <td>@item.Unvanlar.Unvani</td>
+                        <td>@item.Birimler.BirimAdi</td>
+
+                        <td>
+                            <a title="Düzenle" href="/Personel/PersonelBilgiGetir/@item.PersonelID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
+                            <a title="Pasif Et" href="/Personel/PasifEt/@item.PersonelID" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

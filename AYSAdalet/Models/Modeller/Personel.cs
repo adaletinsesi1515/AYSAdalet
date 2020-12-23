@@ -26,11 +26,11 @@ namespace AYSAdalet.Models.Modeller
         public string DahiliNo2 { get; set; }
         public bool Durum { get; set; }
 
-        public int? UnvanID { get; set; }
-        public Unvanlar Unvanlar { get; set; }
+        public int UnvanID { get; set; }
+        public virtual Unvanlar Unvanlar { get; set; }
 
-        public int? BirimID { get; set; }
-        public Birimler Birimler { get; set; }
+        public int BirimID { get; set; }
+        public virtual Birimler Birimler { get; set; }
 
 
     }

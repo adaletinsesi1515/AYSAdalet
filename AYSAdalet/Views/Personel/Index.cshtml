@@ -1,55 +1,116 @@
-﻿@using AYSAdalet.Models.Modeller
-@model List<Personel>
+﻿
 @{
-    ViewBag.Title = "Liste";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <div class="card">
     <div class="header">
-        <h2><strong>Personel</strong> Listesi</h2>
+        <h2><strong>Personel İşlemleri</strong></h2>
     </div>
     <div class="body">
         <div class="table-responsive">
-            <a href="/Personel/Ekle" class="btn btn-success btn-primary btn-round waves-effect">Personel Ekle</a>
+            <a href="/Personel/PersonelEkle/" class="btn btn-success btn-primary btn-round waves-effect">Personel Ekle</a>
+
             <hr />
-            <table class="table m-b-0 table-primary" id="birimlistesi">
-                <thead class="thead-light">
-                    <tr>
-                        <th scope="col">Kurum Sicil No</th>
-                        <th scope="col">Adı Soyadı</th>
-                        <th scope="col">Birimi</th>
-                        <th scope="col">Unvanı</th>
-
-                        <th scope="col">Cep Telefonu</th>
-                        <th scope="col">Dahili No 1</th>
-                        <th scope="col">Dahili No 2</th>
-                        <th scope="col">#</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                    <tr>
-
-                        <td>@item.PersonelSicil</td>
-                        <td>@item.PersonelAdSoyad</td>
-                        <td>@item.Birimler.BirimAdi</td>
-                        <td>@item.Unvanlar.Unvani</td>
-
-                        <td>@item.CepTelefonu</td>
-                        <td>@item.DahiliNo1</td>
-                        <td>@item.DahiliNo2</td>
-                        <td>
-                            <a title="Detay" href="/Personel/PersonalCard/@item.PersonelID" class="btn btn-success btn-sm"><i class="zmdi zmdi-account-box"></i></a>
-                            <a title="Düzenle" href="#" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
-                            <a title="Sil" href="#" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></a>
-                        </td>
-                    </tr>
-                    }
-                </tbody>
-            </table>
         </div>
     </div>
 </div>
 
+<div class="card">
+    <div class="header">
+        <h2><strong>Personel İstatistiği</strong></h2>
+    </div>
+    <div class="row clearfix">
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 big_icon fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:9px">C.Başsavcısı</h6>
+                    <h2>@ViewBag.bassavci1 <small class="info"> / @ViewBag.bassavci1</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.bassavci1" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.bassavci1%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 big_icon fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:9px">Cumhuriyet Savcıları</h6>
+                    <h2>@ViewBag.savci1 <small class="info"> / @ViewBag.savci1</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.savci1" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.savci1%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 big_icon fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:9px">Mahkeme Başkanları</h6>
+                    <h2>@ViewBag.baskan1 <small class="info"> / @ViewBag.baskan1</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.baskan1" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.baskan1%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="card widget_2 big_icon fa-asterisk" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
+                <div class="body">
+                    <h6 style="font-size:9px">Hakimler</h6>
+                    <h2>@ViewBag.hakim1<small class="info"> / @ViewBag.hakim1</small></h2>
+                    <div class="progress">
+                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="@ViewBag.hakim1" aria-valuemin="0" aria-valuemax="100" style="width:@ViewBag.hakim1%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="card">
+        <div class="header">
+            <h2><strong>Personel</strong> Listesi</h2>
+        </div>
+        <div class="body">
+            <div class="table-responsive">
+                <table class="table m-b-0 table-primary" id="birimlistesi">
+                    <thead class="thead-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Sicili</th>
+                        <th scope="col">Adı Soyadı</th>
+                        <th scope="col">Unvanı</th>
+                        <th scope="col">Birimi</th>
+                        <th scope="col">İşlem Türü</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.PersonelID</td>
+                            <td>@item.PersonelSicil</td>
+                            <td>@item.PersonelAdSoyad</td>
+                            <td>@item.Unvanlar.Unvani</td>
+                            <td>@item.Birimler.BirimAdi</td>
+
+                            <td>
+                                <a title="Düzenle" href="/Personel/PersonelBilgiGetir/@item.PersonelID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
+                                <a title="Pasif Et" href="/Personel/PasifEt/@item.PersonelID" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></a>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
