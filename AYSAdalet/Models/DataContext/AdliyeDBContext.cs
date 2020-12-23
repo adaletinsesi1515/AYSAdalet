@@ -19,6 +19,9 @@ namespace AYSAdalet.Models.DataContext
         public DbSet<Birimler> Birimler { get; set; }
         public DbSet<Unvanlar> Unvanlar { get; set; }
         public DbSet<Bilgi_Bilgisayarlar> BilgiBilgisayarlar { get; set; }
+        public DbSet<Bilgi_Monitorler> BilgiMonitorler { get; set; }
+        public DbSet<Bilgi_Yazicilar> BilgiYazicilar { get; set; }
+        public DbSet<Bilgi_Tarayicilar> BilgiTarayicilar { get; set; }
 
 
     }

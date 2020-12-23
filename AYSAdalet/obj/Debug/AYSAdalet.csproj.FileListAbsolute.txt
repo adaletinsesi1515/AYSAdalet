@@ -57,3 +57,4 @@ D:\repos\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.dll
 D:\repos\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.pdb
 D:\repos\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Bilgi_Bilgisayar_Tablosu_Eklendi.resources
 D:\repos\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
+D:\repos\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.BilgiIslemDonanim_Tablolari_Eklendi.resources

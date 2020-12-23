@@ -7,20 +7,23 @@ using System.Web;
 
 namespace AYSAdalet.Models.Modeller
 {
-    [Table("Bilgi_Bilgisayarlar")]
-    public class Bilgi_Bilgisayarlar
+    [Table("Bilgi_Tarayicilar")]
+    public class Bilgi_Tarayicilar
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int BilgisayarID { get; set; }
+        public int TarayiciID { get; set; }
 
         [Required, StringLength(50)]
-        public string BilgisayarMarka { get; set; }
+
+        public string TarayiciMarka { get; set; }
 
         [Required, StringLength(50)]
-        public string BilgisayarModel { get; set; }
+
+        public string TarayiciModel { get; set; }
 
         [StringLength(50)]
-        public string BilgisayarSeriNo { get; set; }
+
+        public string TarayiciSeriNo { get; set; }
         public bool Durum { get; set; }
     }
 }
