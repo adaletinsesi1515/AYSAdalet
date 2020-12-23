@@ -449,7 +449,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\Bilgi_DonanimController.cs" />
+    <Compile Include="Controllers\BirimController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PersonelController.cs" />
+    <Compile Include="Controllers\UnvanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -476,6 +479,7 @@
     <Compile Include="Models\Modeller\Personel.cs" />
     <Compile Include="Models\Modeller\Unvanlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\PersonelViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -502,6 +506,13 @@
     <Content Include="Views\Bilgi_Donanim\TarayiciEklePartial.cshtml" />
     <Content Include="Views\Bilgi_Donanim\TarayiciBilgiGetir.cshtml" />
     <Content Include="Views\Bilgi_Donanim\TarayiciGuncelle.cshtml" />
+    <Content Include="Views\Birim\Ekle.cshtml" />
+    <Content Include="Views\Birim\Liste.cshtml" />
+    <Content Include="Views\Personel\Index.cshtml" />
+    <Content Include="Views\Personel\Ekle.cshtml" />
+    <Content Include="Views\Personel\PersonalCard.cshtml" />
+    <Content Include="Views\Unvan\Liste.cshtml" />
+    <Content Include="Views\Unvan\Ekle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

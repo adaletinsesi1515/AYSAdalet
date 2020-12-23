@@ -1,0 +1,55 @@
+﻿@using AYSAdalet.Models.Modeller
+@model List<Personel>
+@{
+    ViewBag.Title = "Liste";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Personel</strong> Listesi</h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <a href="/Personel/Ekle" class="btn btn-success btn-primary btn-round waves-effect">Personel Ekle</a>
+            <hr />
+            <table class="table m-b-0 table-primary" id="birimlistesi">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Kurum Sicil No</th>
+                        <th scope="col">Adı Soyadı</th>
+                        <th scope="col">Birimi</th>
+                        <th scope="col">Unvanı</th>
+
+                        <th scope="col">Cep Telefonu</th>
+                        <th scope="col">Dahili No 1</th>
+                        <th scope="col">Dahili No 2</th>
+                        <th scope="col">#</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+
+                        <td>@item.PersonelSicil</td>
+                        <td>@item.PersonelAdSoyad</td>
+                        <td>@item.Birimler.BirimAdi</td>
+                        <td>@item.Unvanlar.Unvani</td>
+
+                        <td>@item.CepTelefonu</td>
+                        <td>@item.DahiliNo1</td>
+                        <td>@item.DahiliNo2</td>
+                        <td>
+                            <a title="Detay" href="/Personel/PersonalCard/@item.PersonelID" class="btn btn-success btn-sm"><i class="zmdi zmdi-account-box"></i></a>
+                            <a title="Düzenle" href="#" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
+                            <a title="Sil" href="#" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

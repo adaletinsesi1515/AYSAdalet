@@ -1,0 +1,42 @@
+﻿@using AYSAdalet.Models.Modeller
+@model List<Birimler>
+@{
+    ViewBag.Title = "Liste";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Birim</strong> Listesi</h2>        
+
+
+
+
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <table class="table m-b-0 table-primary" id="birimlistesi">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">Birim ID</th>
+                    <th scope="col">Birim Adı</th>
+                    @*<th scope="col">Etkileşim</th>*@
+                </tr>   
+                </thead>         
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.BirimID</td>
+                        <td>@item.BirimAdi</td>
+                        @*<td>
+                                <a title="Düzenle" href="#" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
+                            </td>*@                                             
+                    </tr>
+                }                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
