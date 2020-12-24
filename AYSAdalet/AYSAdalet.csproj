@@ -542,8 +542,6 @@
     <Content Include="Views\Bilgi_Donanim\TarayiciEklePartial.cshtml" />
     <Content Include="Views\Bilgi_Donanim\TarayiciBilgiGetir.cshtml" />
     <Content Include="Views\Bilgi_Donanim\TarayiciGuncelle.cshtml" />
-    <Content Include="Views\Unvan\Liste.cshtml" />
-    <Content Include="Views\Unvan\Ekle.cshtml" />
     <Content Include="Views\Personel\PersonelEklePartial.cshtml" />
     <Content Include="Views\Personel\PersonelEkle.cshtml" />
     <Content Include="Views\Personel\Index.cshtml" />
@@ -555,6 +553,11 @@
     <Content Include="Views\Birim\BirimlerEkle.cshtml" />
     <Content Include="Views\Birim\BirimlerBilgiGetir.cshtml" />
     <Content Include="Views\Birim\BirimlerGuncelle.cshtml" />
+    <Content Include="Views\Unvan\UnvanlarBilgiGetir.cshtml" />
+    <Content Include="Views\Unvan\UnvanlarEkle.cshtml" />
+    <Content Include="Views\Unvan\UnvanlarEklePartial.cshtml" />
+    <Content Include="Views\Unvan\UnvanlarGuncelle.cshtml" />
+    <Content Include="Views\Unvan\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
