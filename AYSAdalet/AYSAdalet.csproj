@@ -358,6 +358,11 @@
     <Content Include="Scripts\jquery-3.5.1.min.js" />
     <Content Include="Scripts\jquery-3.5.1.slim.js" />
     <Content Include="Scripts\jquery-3.5.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
@@ -452,6 +457,7 @@
     <Compile Include="Controllers\BirimController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
+    <Compile Include="Controllers\TalepController.cs" />
     <Compile Include="Controllers\UnvanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -519,6 +525,7 @@
     <Content Include="Views\Personel\Index.cshtml" />
     <Content Include="Views\Personel\PersonelBilgiGetir.cshtml" />
     <Content Include="Views\Personel\PersonelGuncelle.cshtml" />
+    <Content Include="Views\Talep\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
