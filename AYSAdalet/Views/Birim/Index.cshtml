@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Birim Tanımlamaları</strong></h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <a href="/Birim/BirimlerEkle/" class="btn btn-success btn-primary btn-round waves-effect">Birim Ekle</a>
+
+            <hr />
+        </div>
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Birim</strong> Listesi</h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <table class="table m-b-0 table-primary" id="birimlistesi">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Birimi</th>
+                        <th scope="col">İşlem Türü</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.BirimID</td>
+                            <td>@item.BirimAdi</td>
+                            <td>
+                                <a title="Düzenle" href="/Birim/BirimlerBilgiGetir/@item.BirimID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
+                                <a title="Pasif Et" href="/Birim/PasifEt/@item.BirimID" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></a>                                
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</div>

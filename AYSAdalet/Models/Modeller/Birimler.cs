@@ -15,6 +15,7 @@ namespace AYSAdalet.Models.Modeller
         [Required, StringLength(100)]
         public string BirimAdi { get; set; }
 
+        public bool Durum { get; set; }
         public virtual List<Personel> Personel { get; set; }
         //
     }

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<AYSAdalet.Models.Modeller.Birimler>
+
+
+@{
+    ViewBag.Title = "BirimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="col-lg-12 col-md-12 col-sm-12">
+
+    <div class="card">
+        <div class="header">
+            <h2><strong>Birim</strong> Ekle</h2>
+        </div>
+        <div class="body">
+            @Html.Action("BirimlerEklePartial", "Birim")
+
+        </div>
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Birim</strong> Listesi</h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <table class="table m-b-0 table-primary" id="birimlistesi">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Birim Adı</th>
+                        <th scope="col">İşlem Türü</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.BirimID</td>
+                            <td>@item.BirimAdi</td>
+                            
+                            <td>
+                                <a title="Düzenle" href="/Birim/BirimlerBilgiGetir/@item.BirimID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
+                                <a title="Pasif Et" href="/Bİrim/PasifEt/@item.BirimID" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
