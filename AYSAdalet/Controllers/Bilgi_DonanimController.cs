@@ -310,10 +310,6 @@ namespace AYSAdalet.Controllers
 
 
 
-
-
-
-
         // Tarayıcı Ekleme işlemlerinin yapıldığı alan
 
         [HttpGet]

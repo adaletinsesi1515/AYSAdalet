@@ -121,3 +121,130 @@ C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.CopyCompl
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.dll
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.pdb
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Personel.resources
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\AYSAdalet.dll.config
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\AYSAdalet.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\AYSAdalet.pdb
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\csc.exe
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\csc.exe.config
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\csc.rsp
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\csi.exe
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\csi.exe.config
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\csi.rsp
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\System.Buffers.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\System.Memory.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\vbc.exe
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\vbc.exe.config
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\vbc.rsp
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\VBCSCompiler.exe
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\EntityFramework.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\EntityFramework.SqlServer.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\System.Web.Helpers.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\System.Web.Mvc.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\System.Web.Razor.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\System.Web.Webpages.Deployment.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\System.Web.Webpages.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\System.Web.Webpages.Razor.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\EntityFramework.xml
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\EntityFramework.SqlServer.xml
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\System.Web.Razor.xml
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\System.Web.Webpages.xml
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\System.Web.Webpages.Deployment.xml
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\System.Web.Webpages.Razor.xml
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\System.Web.Helpers.xml
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\bin\System.Web.Mvc.xml
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csprojAssemblyReference.cache
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Bilgi_Bilgisayar_Tablosu_Eklendi.resources
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.BilgiIslemDonanim_Tablolari_Eklendi.resources
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.BilgiIslemDonanim_Tablolari_Eklendi1.resources
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Personel.resources
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.CoreCompileInputs.cache
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.CopyComplete
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.pdb
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.TalepEkle.resources
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\AYSAdalet.dll.config
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\AYSAdalet.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\AYSAdalet.pdb
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\csc.exe
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\csc.exe.config
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\csc.rsp
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\csi.exe
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\csi.exe.config
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\csi.rsp
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\System.Buffers.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\System.Memory.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\vbc.exe
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\vbc.exe.config
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\vbc.rsp
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\VBCSCompiler.exe
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\EntityFramework.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\System.Web.Helpers.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\System.Web.Mvc.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\System.Web.Razor.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\System.Web.Webpages.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\System.Web.Webpages.Razor.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\EntityFramework.xml
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\System.Web.Razor.xml
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\System.Web.Webpages.xml
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\System.Web.Webpages.Razor.xml
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\System.Web.Helpers.xml
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\bin\System.Web.Mvc.xml
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Bilgi_Bilgisayar_Tablosu_Eklendi.resources
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.BilgiIslemDonanim_Tablolari_Eklendi.resources
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.BilgiIslemDonanim_Tablolari_Eklendi1.resources
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.TalepEkle.resources
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.dll
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.pdb
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.personelgorevyeri.resources
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.xxx.resources
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.pgy2.resources
+C:\Users\Administrator\Desktop\datnet\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.gorevyerison.resources

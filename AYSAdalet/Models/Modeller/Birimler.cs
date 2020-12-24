@@ -15,7 +15,9 @@ namespace AYSAdalet.Models.Modeller
         [Required, StringLength(100)]
         public string BirimAdi { get; set; }
 
-        public ICollection<Personel> Personel { get; set; }
+        public virtual List<Personel> Personel { get; set; }
+
+        public virtual PersonelGorevYerleri PersonelGorevYerleri { get; set; }
 
     }
 }

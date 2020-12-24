@@ -34,11 +34,9 @@ namespace AYSAdalet.Controllers
 
         }
 
-
         [HttpGet]
         public ActionResult PersonelEkle()
         {
-
             var Model = db.Personel.Where(X=>X.Durum == true).ToList();
             return View(Model);
         }

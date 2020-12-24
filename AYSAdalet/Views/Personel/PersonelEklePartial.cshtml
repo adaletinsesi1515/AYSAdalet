@@ -1,6 +1,6 @@
 ﻿@model AYSAdalet.Models.Modeller.Personel
 
-@using (Html.BeginForm("PersonelEkle", "Personel", FormMethod.Post))
+@using (Html.BeginForm("PersonelEkle", "Personel", FormMethod.Post, new { @class="form-control"}))
 
 {
     @Html.AntiForgeryToken()
