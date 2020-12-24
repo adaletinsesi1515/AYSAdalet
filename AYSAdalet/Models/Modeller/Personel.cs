@@ -33,6 +33,7 @@ namespace AYSAdalet.Models.Modeller
         public virtual Birimler Birimler { get; set; }
 
         public virtual List<Talep> Talepler { get; set; }
+        
 
     }
 }
