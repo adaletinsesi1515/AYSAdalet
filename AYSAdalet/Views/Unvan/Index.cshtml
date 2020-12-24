@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Unvan Tanımlamaları</strong></h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <a href="/Unvan/UnvanlarEkle/" class="btn btn-success btn-primary btn-round waves-effect">Unvan Ekle</a>
+
+            <hr />
+        </div>
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Unvan</strong> Listesi</h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <table class="table m-b-0 table-primary" id="birimlistesi">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Unvanı</th>
+                        <th scope="col">İşlem Türü</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.UnvanID</td>
+                            <td>@item.Unvani</td>
+                            <td>
+                                <a title="Düzenle" href="/Unvan/UnvanlarBilgiGetir/@item.UnvanID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
