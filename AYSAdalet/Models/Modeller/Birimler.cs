@@ -16,6 +16,6 @@ namespace AYSAdalet.Models.Modeller
         public string BirimAdi { get; set; }
 
         public virtual List<Personel> Personel { get; set; }
-
+        //
     }
 }
