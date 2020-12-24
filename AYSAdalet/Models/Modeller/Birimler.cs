@@ -17,7 +17,5 @@ namespace AYSAdalet.Models.Modeller
 
         public virtual List<Personel> Personel { get; set; }
 
-        public virtual PersonelGorevYerleri PersonelGorevYerleri { get; set; }
-
     }
 }
