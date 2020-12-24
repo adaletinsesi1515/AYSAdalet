@@ -478,6 +478,10 @@
     <Compile Include="Migrations\202012232152110_Personel.Designer.cs">
       <DependentUpon>202012232152110_Personel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012240634261_TalepEkle.cs" />
+    <Compile Include="Migrations\202012240634261_TalepEkle.Designer.cs">
+      <DependentUpon>202012240634261_TalepEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
     <Compile Include="Models\Modeller\Bilgi_Bilgisayarlar.cs" />
@@ -487,6 +491,7 @@
     <Compile Include="Models\Modeller\Birimler.cs" />
     <Compile Include="Models\Modeller\Login.cs" />
     <Compile Include="Models\Modeller\Personel.cs" />
+    <Compile Include="Models\Modeller\Talep.cs" />
     <Compile Include="Models\Modeller\Unvanlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\PersonelViewModel.cs" />
@@ -554,6 +559,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012232152110_Personel.resx">
       <DependentUpon>202012232152110_Personel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012240634261_TalepEkle.resx">
+      <DependentUpon>202012240634261_TalepEkle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

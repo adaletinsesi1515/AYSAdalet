@@ -183,3 +183,4 @@ C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.Cor
 C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.CopyComplete
 C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.dll
 C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.pdb
+C:\Users\PC GAMER\DotNetProje\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.TalepEkle.resources

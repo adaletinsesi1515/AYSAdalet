@@ -22,7 +22,7 @@ namespace AYSAdalet.Models.DataContext
         public DbSet<Bilgi_Monitorler> BilgiMonitorler { get; set; }
         public DbSet<Bilgi_Yazicilar> BilgiYazicilar { get; set; }
         public DbSet<Bilgi_Tarayicilar> BilgiTarayicilar { get; set; }
-
+        public DbSet<Talep> GelenTalep { get; set; }
 
     }
 }
