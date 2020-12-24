@@ -12,6 +12,7 @@ namespace AYSAdalet.Controllers
         AdliyeDBContext db = new AdliyeDBContext();
 
         int toplampersonel = 200;
+
         public ActionResult Index()
         {
 
