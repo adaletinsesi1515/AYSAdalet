@@ -2,6 +2,9 @@
 
 @*test efe*@
 
+@*test MEMDUH*@
+
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -44,7 +47,7 @@
                             <td>@item.BirimAdi</td>
                             <td>
                                 <a title="Düzenle" href="/Birim/BirimlerBilgiGetir/@item.BirimID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
-                                <a title="Pasif Et" href="/Birim/PasifEt/@item.BirimID" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></a>                                
+                                <a title="Pasif Et" href="/Birim/PasifEt/@item.BirimID" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></a>
                             </td>
                         </tr>
                     }
