@@ -15,7 +15,8 @@ namespace AYSAdalet.Models.Modeller
         [Required, StringLength(100)]
         public string Unvani { get; set; }
 
-        public ICollection<Personel> Personel { get; set; }
+        public virtual List<Personel> Personeller { get; set; }
 
+         
     }
 }

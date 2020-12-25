@@ -99,12 +99,15 @@
                             <td>@item.PersonelSicil</td>
                             <td>@item.PersonelAdSoyad</td>
                             <td>@item.Unvanlar.Unvani</td>
-                            <td>@item.Birimler.BirimAdi</td>
+                            <td>
+                                @{
+                                    Html.RenderAction("BirimListeGetir", "Personel", new {PersonelId = @item.PersonelID});
+                                }
+                            </td>
 
                             <td>
                                 <a title="Düzenle" href="/Personel/PersonelBilgiGetir/@item.PersonelID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
-                                <a title="Pasif Et" href="/Personel/PasifEt/@item.PersonelID" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></a>
-                                @Html.ActionLink("+","PersoneleBirimEkle", new {id= @item.PersonelID }, new {@class= "zmdi zmdi-collection-plus" })
+                                <a title="Pasif Et" href="/Personel/PasifEt/@item.PersonelID" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></a>                              
                                 
                             </td>
                         </tr>
