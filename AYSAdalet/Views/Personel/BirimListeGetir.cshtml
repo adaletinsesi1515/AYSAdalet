@@ -1,0 +1,13 @@
+﻿@model IEnumerable<AYSAdalet.Models.Modeller.PersonelGorevYerleri>
+
+
+
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @Html.DisplayFor(modelItem => item.Birimler.BirimAdi)
+        </li>
+    }
+</ul>

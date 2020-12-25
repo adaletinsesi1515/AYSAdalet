@@ -7,13 +7,13 @@ namespace AYSAdalet.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class BilgiIslemDonanim_Tablolari_Eklendi1 : IMigrationMetadata
+    public sealed partial class personeltablosuguncellendi : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(BilgiIslemDonanim_Tablolari_Eklendi1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(personeltablosuguncellendi));
         
         string IMigrationMetadata.Id
         {
-            get { return "202012231632161_BilgiIslemDonanim_Tablolari_Eklendi1"; }
+            get { return "202012251820077_personeltablosuguncellendi"; }
         }
         
         string IMigrationMetadata.Source

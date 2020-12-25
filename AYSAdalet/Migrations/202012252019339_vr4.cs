@@ -1,9 +1,9 @@
-﻿namespace AYSAdalet.Migrations
+namespace AYSAdalet.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class BilgiIslemDonanim_Tablolari_Eklendi1 : DbMigration
+    public partial class vr4 : DbMigration
     {
         public override void Up()
         {

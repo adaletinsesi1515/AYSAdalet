@@ -569,45 +569,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012231613170_Bilgi_Bilgisayar_Tablosu_Eklendi.cs" />
-    <Compile Include="Migrations\202012231613170_Bilgi_Bilgisayar_Tablosu_Eklendi.designer.cs">
-      <DependentUpon>202012231613170_Bilgi_Bilgisayar_Tablosu_Eklendi.cs</DependentUpon>
+    <Compile Include="Migrations\202012251820077_personeltablosuguncellendi.cs" />
+    <Compile Include="Migrations\202012251820077_personeltablosuguncellendi.designer.cs">
+      <DependentUpon>202012251820077_personeltablosuguncellendi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012231626130_BilgiIslemDonanim_Tablolari_Eklendi.cs" />
-    <Compile Include="Migrations\202012231626130_BilgiIslemDonanim_Tablolari_Eklendi.designer.cs">
-      <DependentUpon>202012231626130_BilgiIslemDonanim_Tablolari_Eklendi.cs</DependentUpon>
+    <Compile Include="Migrations\202012251935027_vr3.cs" />
+    <Compile Include="Migrations\202012251935027_vr3.designer.cs">
+      <DependentUpon>202012251935027_vr3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012231632161_BilgiIslemDonanim_Tablolari_Eklendi1.cs" />
-    <Compile Include="Migrations\202012231632161_BilgiIslemDonanim_Tablolari_Eklendi1.designer.cs">
-      <DependentUpon>202012231632161_BilgiIslemDonanim_Tablolari_Eklendi1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012240634261_TalepEkle.cs" />
-    <Compile Include="Migrations\202012240634261_TalepEkle.Designer.cs">
-      <DependentUpon>202012240634261_TalepEkle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012240813291_personelgorevyeri.cs" />
-    <Compile Include="Migrations\202012240813291_personelgorevyeri.Designer.cs">
-      <DependentUpon>202012240813291_personelgorevyeri.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012240823095_xxx.cs" />
-    <Compile Include="Migrations\202012240823095_xxx.Designer.cs">
-      <DependentUpon>202012240823095_xxx.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012240825329_pgy2.cs" />
-    <Compile Include="Migrations\202012240825329_pgy2.Designer.cs">
-      <DependentUpon>202012240825329_pgy2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012240835038_gorevyerison.cs" />
-    <Compile Include="Migrations\202012240835038_gorevyerison.Designer.cs">
-      <DependentUpon>202012240835038_gorevyerison.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012241052269_Gorevyeri1.cs" />
-    <Compile Include="Migrations\202012241052269_Gorevyeri1.designer.cs">
-      <DependentUpon>202012241052269_Gorevyeri1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012241132207_birimlertablosudaekleme.cs" />
-    <Compile Include="Migrations\202012241132207_birimlertablosudaekleme.Designer.cs">
-      <DependentUpon>202012241132207_birimlertablosudaekleme.cs</DependentUpon>
+    <Compile Include="Migrations\202012252019339_vr4.cs" />
+    <Compile Include="Migrations\202012252019339_vr4.Designer.cs">
+      <DependentUpon>202012252019339_vr4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
@@ -622,8 +594,6 @@
     <Compile Include="Models\Modeller\Talep.cs" />
     <Compile Include="Models\Modeller\Unvanlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\PerBirimEkleVM.cs" />
-    <Compile Include="ViewModels\PersonelViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -667,8 +637,7 @@
     <Content Include="Views\Unvan\UnvanlarGuncelle.cshtml" />
     <Content Include="Views\Unvan\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
-    <Content Include="Views\Personel\PersoneleBirimEkle.cshtml" />
-    <Content Include="Views\Personel\PersoneleBirimiEkle.cshtml" />
+    <Content Include="Views\Personel\BirimListeGetir.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -686,35 +655,14 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012231613170_Bilgi_Bilgisayar_Tablosu_Eklendi.resx">
-      <DependentUpon>202012231613170_Bilgi_Bilgisayar_Tablosu_Eklendi.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012251820077_personeltablosuguncellendi.resx">
+      <DependentUpon>202012251820077_personeltablosuguncellendi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012231626130_BilgiIslemDonanim_Tablolari_Eklendi.resx">
-      <DependentUpon>202012231626130_BilgiIslemDonanim_Tablolari_Eklendi.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012251935027_vr3.resx">
+      <DependentUpon>202012251935027_vr3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012231632161_BilgiIslemDonanim_Tablolari_Eklendi1.resx">
-      <DependentUpon>202012231632161_BilgiIslemDonanim_Tablolari_Eklendi1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012240634261_TalepEkle.resx">
-      <DependentUpon>202012240634261_TalepEkle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012240813291_personelgorevyeri.resx">
-      <DependentUpon>202012240813291_personelgorevyeri.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012240823095_xxx.resx">
-      <DependentUpon>202012240823095_xxx.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012240825329_pgy2.resx">
-      <DependentUpon>202012240825329_pgy2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012240835038_gorevyerison.resx">
-      <DependentUpon>202012240835038_gorevyerison.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012241052269_Gorevyeri1.resx">
-      <DependentUpon>202012241052269_Gorevyeri1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012241132207_birimlertablosudaekleme.resx">
-      <DependentUpon>202012241132207_birimlertablosudaekleme.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012252019339_vr4.resx">
+      <DependentUpon>202012252019339_vr4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

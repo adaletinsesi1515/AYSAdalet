@@ -11,12 +11,15 @@ namespace AYSAdalet.Models.Modeller
     public class PersonelGorevYerleri
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
-        [StringLength(50), Required]
-        //public string  Birimler { get; set; }
+        public int GorevYeriID { get; set; }
 
-        public string GorevYeri { get; set; }
+        public int PersonelID { get; set; }
         public virtual Personel Personel { get; set; }
-        
+
+        public int BirimID { get; set; }
+        public virtual  Birimler Birimler { get; set; }
+        //public virtual List<Birimler> Birimler { get; set; }
+
+
     }
 }

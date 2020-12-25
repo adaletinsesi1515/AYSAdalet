@@ -1,6 +1,8 @@
 ﻿@model AYSAdalet.Models.Modeller.Personel
 
-@using (Html.BeginForm("PersonelEkle", "Personel", FormMethod.Post, new { @class="form-control"}))
+
+
+@using (Html.BeginForm("PersonelEkle", "Personel", FormMethod.Post, new { @class=""}))
 
 {
     @Html.AntiForgeryToken()
@@ -14,13 +16,15 @@
 
             <label>Personel Adı Soyadı</label>
             @Html.TextBoxFor(model => model.PersonelAdSoyad, htmlAttributes: new { @class = "form-control" })
+            <div class="form-group">
+                <label class="control-label">Unvanı</label>
+                @Html.DropDownList("UnvanID", null, htmlAttributes: new { @class = "" })
+            </div>
 
-            <label>Unvanı</label>
-            @Html.DropDownList("UnvanID", null, htmlAttributes: new { @class = "form-control" })
-            
+
 
             <label>Birimi</label>
-            @Html.DropDownList("BirimID", null, htmlAttributes: new { @class = "form-control" })
+            @Html.DropDownList("BirimID", null, htmlAttributes: new { @class = "form-control",multiple="MultiSelectList" })
 
             <label>Cep Telefonu</label>
             @Html.TextBoxFor(model => model.CepTelefonu, htmlAttributes: new { @class = "form-control" })
