@@ -21,20 +21,28 @@ namespace AYSAdalet.Controllers
         [HttpPost]
         public ActionResult Index(Login p)
         {
-            var bilgiler =
-                db.Login.FirstOrDefault(x => x.KullaniciAdi== p.KullaniciAdi&& x.Parola== p.Parola);
-
-            if (bilgiler != null)
+            try
             {
-                FormsAuthentication.SetAuthCookie(bilgiler.KullaniciAdi, false);
-                Session["KULLANICIADI"] = bilgiler.KullaniciAdi.ToString();
+                var bilgiler =
+                db.Login.FirstOrDefault(x => x.KullaniciAdi == p.KullaniciAdi && x.Parola == p.Parola);
 
-                return RedirectToAction("Index", "Admin");
+                if (bilgiler != null)
+                {
+                    FormsAuthentication.SetAuthCookie(bilgiler.KullaniciAdi, false);
+                    Session["KULLANICIADI"] = bilgiler.KullaniciAdi.ToString();
+
+                    return RedirectToAction("Index", "Admin");
+                }
+                else
+                {
+                    return View();
+                }
             }
-            else
+            catch (Exception)
             {
-                return View();
+                return RedirectToAction("Index", "Login");
             }
+            
         }
 
     }
