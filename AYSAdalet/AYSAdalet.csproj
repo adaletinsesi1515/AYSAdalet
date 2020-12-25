@@ -659,17 +659,16 @@
     <Content Include="Views\Birim\BirimlerEkle.cshtml" />
     <Content Include="Views\Birim\BirimlerBilgiGetir.cshtml" />
     <Content Include="Views\Birim\BirimlerGuncelle.cshtml" />
-<<<<<<< Updated upstream
+
     <Content Include="Views\Unvan\UnvanlarBilgiGetir.cshtml" />
     <Content Include="Views\Unvan\UnvanlarEkle.cshtml" />
     <Content Include="Views\Unvan\UnvanlarEklePartial.cshtml" />
     <Content Include="Views\Unvan\UnvanlarGuncelle.cshtml" />
     <Content Include="Views\Unvan\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
-=======
+
     <Content Include="Views\Personel\PersoneleBirimEkle.cshtml" />
     <Content Include="Views\Personel\PersoneleBirimiEkle.cshtml" />
->>>>>>> Stashed changes
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
