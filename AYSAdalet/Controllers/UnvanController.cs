@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,47 +11,54 @@ namespace AYSAdalet.Controllers
 {
     public class UnvanController : Controller
     {
+        // GET: Unvanlar
         AdliyeDBContext db = new AdliyeDBContext();
-
-
-        public ActionResult Liste()
+        public ActionResult Index()
         {
-            ViewBag.kayitToplam = db.Unvanlar.Count();
 
-            return View(db.Unvanlar.ToList());
+            var Model1 = db.Unvanlar.ToList();
+            return View(Model1);
+
         }
-
 
         [HttpGet]
-        public ActionResult Ekle()
+        public ActionResult UnvanlarEkle()
         {
-            return View();
+            var Model = db.Unvanlar.ToList();
+            return View(Model);
         }
 
+
         [HttpPost]
-        public ActionResult Ekle(Unvanlar unvan)
+        public ActionResult UnvanlarEkle(Unvanlar b)
         {
+            
+            db.Unvanlar.Add(b);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
-            //var result = db.TBL_UNVANLAR.Sum(x => x.UNVANID);
-            var toplamKayit = db.Unvanlar.Count();
+        public ActionResult UnvanlarEklePartial()
+        {
+            return PartialView("UnvanlarEklePartial");
+        }
 
-            var KayitVarMi = db.Unvanlar.FirstOrDefault(x => x.Unvani== unvan.Unvani);
+      
+        public ActionResult UnvanlarBilgiGetir(int id)
+        {
+            var iddegeri = db.Unvanlar.Find(id);
 
-            if (KayitVarMi == null)
-            {
-                db.Unvanlar.Add(unvan);
-                db.SaveChanges();
-            }
-            else
-            {
-                TempData["Uyari"] = "Bu ünvan veritabanında kayıtlıdır";
-                //ViewBag.Uyari = "Bu seri no kayıtlıdır";
-                return RedirectToAction("Ekle");
-            }
-            //ViewBag.idToplam = result;
-            ViewBag.kayitToplam = toplamKayit;
-            return RedirectToAction("Liste");
+            return View("UnvanlarBilgiGetir", iddegeri);
+        }
 
+        public ActionResult UnvanlarGuncelle(Unvanlar c)
+        {
+            var deger = db.Unvanlar.Find(c.UnvanID);
+            deger.Unvani= c.Unvani;
+            
+            db.SaveChanges();
+            db.Entry(deger).State = EntityState.Modified;
+            return RedirectToAction("Index");
         }
     }
 }

@@ -92,11 +92,32 @@ namespace AYSAdalet.Controllers
 
 
         }
-
+        
         public ActionResult PersonelEklePartial()
         {
+<<<<<<< HEAD
             ViewBag.UnvanID = new SelectList(db.Unvanlar, "UnvanID", "Unvani");
+=======
+           
+            ////bir list oluştuyoruz selectlistitem tipi alacak
+            //List<SelectListItem> birimlerList = new List<SelectListItem>();
+            ////foreach ile db.Categories deki kategorileri listemize ekliyoruz
+            //foreach (var item in db.Birimler.ToList())
+            //{   //Text = Görünen kısımdır. Kategori ismini yazdıyoruz
+            //    //Value = Değer kısmıdır.ID değerini atıyoruz
+            //    birimlerList.Add(new SelectListItem { Text = item.BirimAdi, Value = item.BirimID.ToString() });
+            //}
+            ////Dinamik bir yapı oluşturup kategoriler list mizi view mize göndereceğiz
+            ////bunun için viewbag kullanıyorum
+            //ViewBag.birimler= birimlerList;
+
+
+            //return View();
+
+            ViewBag.UnvanID=new SelectList(db.Unvanlar, "UnvanID", "Unvani");
+>>>>>>> 8ba686c2c63a4d489fa9170803ab9cf938149580
             ViewBag.BirimID = new SelectList(db.Birimler, "BirimID", "BirimAdi");
+
             return PartialView("PersonelEklePartial");
         }
 
