@@ -4,6 +4,12 @@ using AYSAdalet.ViewModels;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
+<<<<<<< Updated upstream
+=======
+using AYSAdalet.Models.DataContext;
+using AYSAdalet.Models.Modeller;
+using AYSAdalet.ViewModels;
+>>>>>>> Stashed changes
 
 namespace AYSAdalet.Controllers
 {
@@ -35,21 +41,38 @@ namespace AYSAdalet.Controllers
         [HttpGet]
         public ActionResult PersoneleBirimEkle(int id)
         {
+<<<<<<< Updated upstream
             var perlist = db.Personel.Where(x => x.PersonelID == id).ToList();
+=======
+            var perlist = db.Personel.Where(x=>x.PersonelID==id).ToList();
+>>>>>>> Stashed changes
             ViewBag.birimler = db.Birimler.ToList();
             ViewBag.personelid = db.Personel.Where(x => x.PersonelID == id).Select(x => x.PersonelID)
                 .First();
             ViewBag.gelenpersonelismi = db.Personel.Where(x => x.PersonelID == id).Select(x => x.PersonelAdSoyad)
                 .First();
 
+<<<<<<< Updated upstream
            
             return View();
+=======
+            PerBirimEkleVM model = new PerBirimEkleVM
+            {
+                Personeller = perlist,
+                
+            };
+            return View(model);
+>>>>>>> Stashed changes
         }
 
         [HttpPost]
         public ActionResult PersoneleBirimiEkle(int ID)
         {
+<<<<<<< Updated upstream
 
+=======
+            
+>>>>>>> Stashed changes
             PersonelGorevYerleri pgy = new PersonelGorevYerleri
             {
                 Personel = db.Personel.Find(ID),
