@@ -315,7 +315,6 @@ C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.dll
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.pdb
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Gorevyeri1.resources
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.birimlertablosudaekleme.resources
-<<<<<<< Updated upstream
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.TalepEkle.resources
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.personelgorevyeri.resources
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.xxx.resources
@@ -323,7 +322,6 @@ C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.pgy2.
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.gorevyerison.resources
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Gorevyeri1.resources
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.birimlertablosudaekleme.resources
-=======
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\AYSAdalet.dll.config
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\AYSAdalet.dll
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\AYSAdalet.pdb
@@ -392,7 +390,7 @@ C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.csproj
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.csproj.CopyComplete
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.dll
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.pdb
->>>>>>> Stashed changes
+
 D:\GITHUB\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.csprojResolveAssemblyReference.cache
 D:\GITHUB\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Bilgi_Bilgisayar_Tablosu_Eklendi.resources
 D:\GITHUB\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.BilgiIslemDonanim_Tablolari_Eklendi.resources
