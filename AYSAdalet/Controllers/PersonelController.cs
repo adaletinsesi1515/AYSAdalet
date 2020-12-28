@@ -1,10 +1,10 @@
-﻿using AYSAdalet.Models.DataContext;
+﻿using System.Collections.Generic;
+using AYSAdalet.Models.DataContext;
 using AYSAdalet.Models.Modeller;
-using AYSAdalet.ViewModels;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
-
+using System.Xml.Linq;
 
 
 namespace AYSAdalet.Controllers
@@ -30,74 +30,64 @@ namespace AYSAdalet.Controllers
 
 
             var Model = db.Personel.Where(X => X.Durum == true).ToList();
+            var birimlist = db.PersonelGorevYerleri.ToList();
+            ViewBag.birimlist1 = birimlist;
+
+            ViewBag.BirimID1 = new SelectList(db.Birimler, "BirimID", "BirimAdi");
             return View(Model);
-
-        }
-
-        [HttpGet]
-        public ActionResult PersoneleBirimEkle(int id)
-        {
-
-            var perlist = db.Personel.Where(x => x.PersonelID == id).ToList();
-
             
 
-            ViewBag.birimler = db.Birimler.ToList();
-            ViewBag.personelid = db.Personel.Where(x => x.PersonelID == id).Select(x => x.PersonelID)
-                .First();
-            ViewBag.gelenpersonelismi = db.Personel.Where(x => x.PersonelID == id).Select(x => x.PersonelAdSoyad)
-                .First();
-
-
-           
-            return View();
-
-            PerBirimEkleVM model = new PerBirimEkleVM
-            {
-                Personeller = perlist,
-                
-            };
-            return View(model);
-
         }
 
-        [HttpPost]
-        public ActionResult PersoneleBirimiEkle(int ID)
+        public ActionResult BirimListeGetir(int PersonelId)
         {
-            
-
-            PersonelGorevYerleri pgy = new PersonelGorevYerleri
-            {
-                Personel = db.Personel.Find(ID),
-                GorevYeri = "Asliye Ceza Mahkemesi"
-            };
-
-            db.PersonelGorevYerleri.Add(pgy);
-            db.SaveChanges();
-
-            return RedirectToAction("Index");
+            var BirimModel = db.PersonelGorevYerleri.Where(x => x.PersonelID == PersonelId).ToList();
+            return PartialView("BirimListeGetir",BirimModel);
         }
-
 
         [HttpGet]
         public ActionResult PersonelEkle()
         {
             var Model = db.Personel.Where(X => X.Durum == true).ToList();
+            ViewBag.BirimID1 = new SelectList(db.Birimler, "BirimID", "BirimAdi");
+
+
             return View(Model);
         }
 
 
         [HttpPost]
-        public ActionResult PersonelEkle(Personel b)
+        public ActionResult PersonelEkle(Personel b, List<int> BirimID)
         {
+
             //Aynı sicilden kayıtlı başka personel olup olmadığını kontrol ediyor
             var PersonelVarMi = db.Personel.FirstOrDefault(x => x.PersonelSicil == b.PersonelSicil);
 
             if (PersonelVarMi == null)
             {
                 b.Durum = true;
+
+
+                //b.GorevYeriID = c.GorevYeriID;
+              
                 db.Personel.Add(b);
+              
                 db.SaveChanges();
+
+                foreach (var GelenBirimler in BirimID)
+                {
+                    //Mükerrer kayıt olmaması açısından kayıt varmı önce kontrol edilecek. yok ise birim kaydını kaydedecek.
+
+                    PersonelGorevYerleri BirimKaydi = new PersonelGorevYerleri
+                    {
+                        PersonelID = b.PersonelID,
+                        BirimID = GelenBirimler
+                    };
+
+                    db.PersonelGorevYerleri.Add(BirimKaydi);
+                    db.SaveChanges();
+                }
+
             }
             else
             {
@@ -111,10 +101,6 @@ namespace AYSAdalet.Controllers
         
         public ActionResult PersonelEklePartial()
         {
-
-            ViewBag.UnvanID = new SelectList(db.Unvanlar, "UnvanID", "Unvani");
-
-           
             ////bir list oluştuyoruz selectlistitem tipi alacak
             //List<SelectListItem> birimlerList = new List<SelectListItem>();
             ////foreach ile db.Categories deki kategorileri listemize ekliyoruz
@@ -154,7 +140,7 @@ namespace AYSAdalet.Controllers
         {
             var iddegeri = db.Personel.Find(id);
             ViewBag.UnvanID = new SelectList(db.Unvanlar, "UnvanID", "Unvani");
-            ViewBag.BirimID = new SelectList(db.Birimler, "BirimID", "BirimAdi");
+            ViewBag.GorevYeriID = new SelectList(db.PersonelGorevYerleri, "GorevYeriID", "GorevYeriID");
 
             return View("PersonelBilgiGetir", iddegeri);
         }
@@ -163,7 +149,7 @@ namespace AYSAdalet.Controllers
         {
             var deger = db.Personel.Find(c.PersonelID);
             deger.UnvanID = c.UnvanID;
-            deger.BirimID = c.BirimID;
+            //deger.GorevYeriID= c.GorevYeriID;
             //ViewBag.UnvanID1 = new SelectList(db.Unvanlar, "UnvanID", "Unvani");
             //ViewBag.BirimID1 = new SelectList(db.Birimler, "BirimID", "BirimAdi");
             deger.PersonelSicil = c.PersonelSicil;

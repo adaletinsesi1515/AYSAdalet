@@ -35,6 +35,12 @@
     <![endif]-->
 </head>
 <body>
+<div align="right">
+    <a href="/Login/Index/">
+        <img src="~/Content/BilgiIslemForm/uyap.png" width="50px;" height="50px;" />
+    </a>
+
+</div>
     <div class="loading" id="loading" style="display: none"></div>
     <!-- Start Logo Section -->
     <section id="logo-section" class="text-center">
@@ -42,7 +48,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="logo text-center">
-                        <h1>Arıza ve Talep Takip Yönetim Sistemi (v1.0)</h1>
+                        <h1>Adliye Yönetim Sistemi (v1.0)</h1>
                     </div>
                 </div>
             </div>
@@ -63,17 +69,12 @@
                         </div>
 
                         <div class="menu-item light-orange">
-                            <a href="infrastructureform.html" onclick="loading()">
+                            <a href="/Bilgi_Talep/Index/" onclick="loading()">
                                 <i class="fa fa-wifi"></i>
                                 <p><font size="5">Donanım Arıza ve Toner Talep (Bilgi İşlem Şefliği)</font></p>
                             </a>
                         </div>
-                        <div class="menu-item blue">
-                            <a href="/Login/Index/">
-                                <i class="fa fa-user"></i>
-                                <p><font size="5">Yönetim Paneli Giriş</font></p>
-                            </a>
-                        </div>
+                       
                     </div>
 
                     <div class="col-md-6">
@@ -98,74 +99,8 @@
         </div>
     </center>
     <!-- End Main Body Section -->
-    <div class="modal modal-success fade in" id="modal-electricity-control">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="panel-title" style="background-color:#FF432E">
-                    <a class="close" href="Index.cshtml" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </a>
-                    <h4 class="modal-title" style="padding: 10px"><center>.:: KONTROL EDİNİZ ::.</center></h4>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        <center>
-                            <b>
-                                A tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante fusce non varius purus aenean nec magna felis fusce vestibulum velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget sem nulla eu ultricies orci praesent id augue nec lorem pretium congue.
-                            </b>
-                        </center>
-
-                </div>
-                <div class="modal-footer">
-                    <a href="/fatihdestek.eba.gov.tr/infrastructureform.html" style="background-color: #FF432E;" class="btn btn-danger pull-left" onclick="loading()">HAYIR</a>
-                    <a href="/fatihdestek.eba.gov.tr/accessform.html" class="btn btn-info" onclick="loading()">EVET</a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade in" id="modal-red">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header" style="background-color:#72bf48">
-                    <a class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </a>
-                    <h4 class="modal-title" style="padding: 10px"><center>.:: BİLGİLENDİRME ::.</center></h4>
-                </div>
-                <div class="modal-body">
-                    <p><font size="3.5">Etkileşimli Tahta arızaları için lütfen <b>0850 222 4870</b>  veya <b>0850 222 4123</b> numaralı Çağrı Merkezini arayınız.</font></p>
-                    <p><font size="3.5">Çok Fonksiyonlu Yazıcı arızaları için lütfen <b>444 0141</b> numaralı Çağrı Merkezini arayınız.</font></p>
-                    <p><font size="3.5">Tablet arızaları için lütfen <b>pybs.eba.gov.tr</b> adresinden arıza kaydı oluşturunuz.</font></p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal modal-success fade in" id="modal-domainfilter">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="panel-title" style="background-color:red">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" style="padding: 10px"><center>.:: HATA ::.</center></h4>
-                </div>
-                <div class="modal-body">
-                    <p><center><b>Beklenmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyiniz.</b></center>
-                    <p>
-                        <center><b>Hata : </b></center>
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <!--<a href="" data-toggle="modal" data-target="#modal-green" class="btn btn-danger pull-left">HAYIR</a>-->
-                    <a href="/fatihdestek.eba.gov.tr/index.htm" class="btn btn-default" onclick="loading()">Pencereyi Kapat</a>
-
-                </div>
-            </div>
-        </div>
-    </div>
+    
+    
     <script type="text/javascript">
         function loading() {
             document.getElementById("loading").style.display = "block";

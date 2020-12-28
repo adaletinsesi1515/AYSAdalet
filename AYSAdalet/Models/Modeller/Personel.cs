@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Infrastructure.Design;
 using System.Linq;
 using System.Web;
 
@@ -29,11 +30,10 @@ namespace AYSAdalet.Models.Modeller
         public int UnvanID { get; set; }
         public virtual Unvanlar Unvanlar { get; set; }
 
-        public int BirimID { get; set; }
-        public virtual Birimler Birimler { get; set; }
+        //public int GorevYeriID { get; set; }
+        //public virtual PersonelGorevYerleri PersonelGorevYerleri { get; set; }
 
-        public virtual List<Talep> Talepler { get; set; }
-        
+        //public virtual List<PersonelGorevYerleri> PersonelGorevYerleris { get; set; }
 
     }
 }
