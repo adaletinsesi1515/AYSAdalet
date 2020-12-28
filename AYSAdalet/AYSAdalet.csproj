@@ -591,8 +591,13 @@
     <Compile Include="Migrations\202012281538483_perv1.Designer.cs">
       <DependentUpon>202012281538483_perv1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012282031506_bilgitalep1.cs" />
+    <Compile Include="Migrations\202012282031506_bilgitalep1.Designer.cs">
+      <DependentUpon>202012282031506_bilgitalep1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
+    <Compile Include="Models\Modeller\BilgiTalepler.cs" />
     <Compile Include="Models\Modeller\Bilgi_Bilgisayarlar.cs" />
     <Compile Include="Models\Modeller\Bilgi_Monitorler.cs" />
     <Compile Include="Models\Modeller\Bilgi_Tarayicilar.cs" />
@@ -677,6 +682,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012281538483_perv1.resx">
       <DependentUpon>202012281538483_perv1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012282031506_bilgitalep1.resx">
+      <DependentUpon>202012282031506_bilgitalep1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

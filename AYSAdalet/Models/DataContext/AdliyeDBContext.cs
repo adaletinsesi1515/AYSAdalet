@@ -24,6 +24,7 @@ namespace AYSAdalet.Models.DataContext
         public DbSet<Bilgi_Tarayicilar> BilgiTarayicilar { get; set; }
         public DbSet<Talep> GelenTalep { get; set; }
         public DbSet<PersonelGorevYerleri> PersonelGorevYerleri { get; set; }
+        public DbSet<BilgiTalepler> BilgiTalepler { get; set; }
 
     }
 }
