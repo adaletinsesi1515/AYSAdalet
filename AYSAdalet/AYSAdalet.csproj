@@ -587,6 +587,10 @@
     <Compile Include="Migrations\202012252019339_vr4.Designer.cs">
       <DependentUpon>202012252019339_vr4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012281538483_perv1.cs" />
+    <Compile Include="Migrations\202012281538483_perv1.Designer.cs">
+      <DependentUpon>202012281538483_perv1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
     <Compile Include="Models\Modeller\Bilgi_Bilgisayarlar.cs" />
@@ -670,6 +674,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012252019339_vr4.resx">
       <DependentUpon>202012252019339_vr4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012281538483_perv1.resx">
+      <DependentUpon>202012281538483_perv1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
