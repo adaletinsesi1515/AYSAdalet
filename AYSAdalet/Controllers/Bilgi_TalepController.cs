@@ -28,10 +28,11 @@ namespace AYSAdalet.Controllers
         [HttpPost]
         public ActionResult MesajKayit(int PersonelId,string txtMsg)
         {
+
             var UserModel = db.Personel.FirstOrDefault(x => x.PersonelID == PersonelId);
             BilgiTalepler _BlgTlp = new BilgiTalepler
             {
-                PersonelSicili = UserModel.PersonelSicil,
+                PersonelId=UserModel.PersonelID,
                 TalepMesaji = txtMsg,
                 BildirimTarihi = DateTime.Now,
                 Durum = false

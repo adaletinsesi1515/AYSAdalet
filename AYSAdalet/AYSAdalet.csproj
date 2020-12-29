@@ -575,25 +575,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012251820077_personeltablosuguncellendi.cs" />
-    <Compile Include="Migrations\202012251820077_personeltablosuguncellendi.designer.cs">
-      <DependentUpon>202012251820077_personeltablosuguncellendi.cs</DependentUpon>
+    <Compile Include="Migrations\202012290759120_pertalep1.cs" />
+    <Compile Include="Migrations\202012290759120_pertalep1.Designer.cs">
+      <DependentUpon>202012290759120_pertalep1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012251935027_vr3.cs" />
-    <Compile Include="Migrations\202012251935027_vr3.designer.cs">
-      <DependentUpon>202012251935027_vr3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012252019339_vr4.cs" />
-    <Compile Include="Migrations\202012252019339_vr4.Designer.cs">
-      <DependentUpon>202012252019339_vr4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012281538483_perv1.cs" />
-    <Compile Include="Migrations\202012281538483_perv1.Designer.cs">
-      <DependentUpon>202012281538483_perv1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012282031506_bilgitalep1.cs" />
-    <Compile Include="Migrations\202012282031506_bilgitalep1.Designer.cs">
-      <DependentUpon>202012282031506_bilgitalep1.cs</DependentUpon>
+    <Compile Include="Migrations\202012291136155_ver3.cs" />
+    <Compile Include="Migrations\202012291136155_ver3.Designer.cs">
+      <DependentUpon>202012291136155_ver3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
@@ -671,20 +659,11 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012251820077_personeltablosuguncellendi.resx">
-      <DependentUpon>202012251820077_personeltablosuguncellendi.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012290759120_pertalep1.resx">
+      <DependentUpon>202012290759120_pertalep1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012251935027_vr3.resx">
-      <DependentUpon>202012251935027_vr3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012252019339_vr4.resx">
-      <DependentUpon>202012252019339_vr4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012281538483_perv1.resx">
-      <DependentUpon>202012281538483_perv1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012282031506_bilgitalep1.resx">
-      <DependentUpon>202012282031506_bilgitalep1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012291136155_ver3.resx">
+      <DependentUpon>202012291136155_ver3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

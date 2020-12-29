@@ -15,11 +15,20 @@ namespace AYSAdalet.Controllers
 
         public ActionResult Index()
         {
+            var Model = db.BilgiTalepler.Where(X => X.Durum == false).ToList();
+            var birimlist = db.PersonelGorevYerleri.ToList();
+            ViewBag.birimlist1 = birimlist;
+
+            var unvanlist = db.Unvanlar.ToList();
+            ViewBag.urvanlist1 = unvanlist;
+
+            var personellist = db.Personel.ToList();
+            ViewBag.personellist1= personellist;
 
             ViewBag.toplamKayit = db.Personel.Count();
             ViewBag.toplamPersonelYuzdesi = yuzdesi();
             ViewBag.toplampersonel = toplampersonel;
-            return View();
+            return View(Model);
         }
 
         public double yuzdesi()
@@ -31,6 +40,13 @@ namespace AYSAdalet.Controllers
         public ActionResult Notlar()
         {
             return View();
+        }
+
+        public ActionResult Model()
+        {
+            var model1 = db.BilgiTalepler.ToList();
+            return View();
+
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿@using AYSAdalet.Models.Modeller
+﻿@model List<AYSAdalet.Models.Modeller.BilgiTalepler>
+
+@using AYSAdalet.Models.Modeller
 
 @{
     ViewBag.Title = "Index";
@@ -105,40 +107,44 @@
     </div>
 </div>
 <hr />
-<div>
-    <div class="card">
-        <h3 class="card-header">
-            Bilgi İşlem - Talepler
-        </h3>
-        <div class="card-body">
-            <table class="table table-hovered">
-                <thead>
+<div class="card">
+    <div class="header">
+        <h2><strong>Bilgi İşlem </strong> Talep Listesi</h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <table class="table m-b-0 table-primary" id="birimlistesi">
+                <thead class="thead-light">
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Sicili</th>
+                        <th scope="col">Adı Soyadı</th>
+                        <th scope="col">Unvanı</th>
+                        <th scope="col">Birimi</th>
+                        <th scope="col">Mesajı</th>
+                        <th scope="col">Bildirim Tarihi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@@twitter</td>
-                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.TalepID</td>
+                            <td>@item.Personel.PersonelSicil</td>
+                            <td>@item.Personel.PersonelAdSoyad</td>
+                            <td>@item.Personel.Unvanlar.Unvani</td>
+                            <td>@item.Personel.PersonelGorevYerleris.FirstOrDefault(x=>x.PersonelID==item.PersonelId).Birimler.BirimAdi</td>
+                            <td>@item.TalepMesaji</td>
+                            <td>@item.BildirimTarihi</td>
+
+                            <td>
+                                <a title="Düzenle" href="/Admin/Index/@item.TalepID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
+                                <a title="Pasif Et" href="/Admin/PasifEt/@item.TalepID" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></a>
+
+                            </td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>

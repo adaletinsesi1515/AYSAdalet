@@ -31,10 +31,8 @@
         <h3 align="center">Arıza & Donanım & Toner Bildirim Formu</h3>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-12">
                 <div class="form-group">
-
-
                     @using (Html.BeginForm("Index", "Bilgi_Talep", FormMethod.Get))
                     {
                         <input type="text" name="t" class="form-control" placeholder="Sicilinizi 123456 şeklinde yazıp Enter'e basınız" value="" required="" min="6" />
@@ -45,49 +43,30 @@
                         }
                         else if (IsPost == true)
                         {
-
+                            <br />
                             <tr>Adı Soyadı   : @Model.PersonelAdSoyad</tr>
                             <br />
 
                             <tr>Ünvanı         : @Model.Unvanlar.Unvani</tr>
                             <br />
                             <tr>Dahili Nosu  : @Model.DahiliNo1</tr>
-
-
-                            @*<td>@x.PersonelAdSoyad</td>
-                                    <td>@x.Unvanlar.Unvani</td>
-                                </tr>*@
-
-
                         }
-
-
-
                     }
-
                 </div>
-                <div>
-
-
-                </div>
-
-
             </div>
             @{
-               
-
                 if (Model != null)
                 {
                     int UserId = Model.PersonelID;
-                    <div class="col-md-6">
-                        
+                    <div class="col-md-12">
+
                         @using (Html.BeginForm("MesajKayit", "Bilgi_Talep", FormMethod.Post))
                         {
-                            @Html.Hidden("PersonelId",(int) UserId)
+                            @Html.Hidden("PersonelId", (int)UserId)
                             <div class="form-group">
                                 <textarea name="txtMsg" class="form-control" placeholder="Talebiniz veya Sorununuzu yazınız, Toner taleplerinde Yazıcı marka model belirtiniz" style="width: 100%; height: 150px;"></textarea>
                                 <div class="form-group" align="center">
-                                    <input type="submit" name="btnSubmit" class="btnContact" value="Mesaj Gönder"/>
+                                    <input type="submit" name="btnSubmit" class="btnContact" value="Mesaj Gönder" />
                                 </div>
                             </div>
                         }
@@ -110,7 +89,7 @@
         background: #fff;
         margin-top: 5%;
         margin-bottom: 2%;
-        width: 70%;
+        width: 50%;
     }
 
         .contact-form .form-control {
@@ -129,7 +108,7 @@
         }
 
     .contact-form form {
-        padding: 14%;
+        padding: 9%;
     }
 
         .contact-form form .row {
@@ -137,7 +116,7 @@
         }
 
     .contact-form h3 {
-        margin-bottom: 8%;
+        margin-bottom: 2%;
         margin-top: -10%;
         text-align: center;
         color: #0062cc;
@@ -151,7 +130,7 @@
     }
 
     .contact-form .btnContact {
-        width: 50%;
+        width: 70%;
         border: none;
         border-radius: 1rem;
         padding: 1.5%;
