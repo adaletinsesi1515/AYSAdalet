@@ -575,13 +575,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012290759120_pertalep1.cs" />
-    <Compile Include="Migrations\202012290759120_pertalep1.Designer.cs">
-      <DependentUpon>202012290759120_pertalep1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012291136155_ver3.cs" />
-    <Compile Include="Migrations\202012291136155_ver3.Designer.cs">
-      <DependentUpon>202012291136155_ver3.cs</DependentUpon>
+    <Compile Include="Migrations\202012291530086_perv1.cs" />
+    <Compile Include="Migrations\202012291530086_perv1.Designer.cs">
+      <DependentUpon>202012291530086_perv1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
@@ -642,6 +638,7 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Personel\BirimListeGetir.cshtml" />
     <Content Include="Views\Bilgi_Talep\Index.cshtml" />
+    <Content Include="Views\Admin\BilgiTalepFormListe.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -659,11 +656,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012290759120_pertalep1.resx">
-      <DependentUpon>202012290759120_pertalep1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012291136155_ver3.resx">
-      <DependentUpon>202012291136155_ver3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012291530086_perv1.resx">
+      <DependentUpon>202012291530086_perv1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

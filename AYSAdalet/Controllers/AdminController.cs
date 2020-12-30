@@ -48,5 +48,19 @@ namespace AYSAdalet.Controllers
             return View();
 
         }
+
+        public ActionResult BilgiTalepFormListe()
+        {
+            var Model = db.BilgiTalepler.Where(X => X.Durum == false).ToList();
+            var birimlist = db.PersonelGorevYerleri.ToList();
+            ViewBag.birimlist1 = birimlist;
+
+            var unvanlist = db.Unvanlar.ToList();
+            ViewBag.urvanlist1 = unvanlist;
+
+            var personellist = db.Personel.ToList();
+            ViewBag.personellist1 = personellist;
+            return View(Model);
+        }
     }
 }

@@ -13,6 +13,7 @@
 <hr />
 
 
+
 <div class="row clearfix">
     <div class="col-lg-3 col-md-6 col-sm-12">
         <div class="card widget_2 big_icon fa-registered" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
@@ -107,46 +108,16 @@
     </div>
 </div>
 <hr />
-<div class="card">
-    <div class="header">
-        <h2><strong>Bilgi İşlem </strong> Talep Listesi</h2>
-    </div>
-    <div class="body">
-        <div class="table-responsive">
-            <table class="table m-b-0 table-primary" id="birimlistesi">
-                <thead class="thead-light">
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Sicili</th>
-                        <th scope="col">Adı Soyadı</th>
-                        <th scope="col">Unvanı</th>
-                        <th scope="col">Birimi</th>
-                        <th scope="col">Mesajı</th>
-                        <th scope="col">Bildirim Tarihi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
+<div id="sayfayenileme">
+    @Html.Action("BilgiTalepFormListe","Admin")
 
-                            <td>@item.TalepID</td>
-                            <td>@item.Personel.PersonelSicil</td>
-                            <td>@item.Personel.PersonelAdSoyad</td>
-                            <td>@item.Personel.Unvanlar.Unvani</td>
-                            <td>@item.Personel.PersonelGorevYerleris.FirstOrDefault(x=>x.PersonelID==item.PersonelId).Birimler.BirimAdi</td>
-                            <td>@item.TalepMesaji</td>
-                            <td>@item.BildirimTarihi</td>
-
-                            <td>
-                                <a title="Düzenle" href="/Admin/Index/@item.TalepID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
-                                <a title="Pasif Et" href="/Admin/PasifEt/@item.TalepID" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></a>
-
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
-    </div>
 </div>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        setInterval(function() {
+            $('#sayfayenileme').load("/Admin/BilgiTalepFormListe");
+            }, 3000);
+    });
+</script>
