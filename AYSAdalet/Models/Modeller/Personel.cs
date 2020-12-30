@@ -33,7 +33,7 @@ namespace AYSAdalet.Models.Modeller
         //public int GorevYeriID { get; set; }
         //public virtual PersonelGorevYerleri PersonelGorevYerleri { get; set; }
 
-        //public virtual List<PersonelGorevYerleri> PersonelGorevYerleris { get; set; }
+        public virtual List<PersonelGorevYerleri> PersonelGorevYerleris { get; set; }
 
     }
 }

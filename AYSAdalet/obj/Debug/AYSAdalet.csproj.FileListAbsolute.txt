@@ -296,21 +296,10 @@ C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\bin\System.Web.Webpages.Razor.xml
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\bin\System.Web.Helpers.xml
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\bin\System.Web.Mvc.xml
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csprojAssemblyReference.cache
-C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Bilgi_Bilgisayar_Tablosu_Eklendi.resources
-C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.BilgiIslemDonanim_Tablolari_Eklendi.resources
-C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.BilgiIslemDonanim_Tablolari_Eklendi1.resources
-C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.TalepEkle.resources
-C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.personelgorevyeri.resources
-C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.xxx.resources
-C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.pgy2.resources
-C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.gorevyerison.resources
-C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.CoreCompileInputs.cache
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.CopyComplete
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.dll
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.pdb
-C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Gorevyeri1.resources
-C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.birimlertablosudaekleme.resources
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\AYSAdalet.dll.config
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\AYSAdalet.dll
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\AYSAdalet.pdb
@@ -445,7 +434,8 @@ D:\GITHUB\AYSAdaletCont\AYSAdalet\bin\System.Web.Webpages.Deployment.xml
 D:\GITHUB\AYSAdaletCont\AYSAdalet\bin\System.Web.Webpages.Razor.xml
 D:\GITHUB\AYSAdaletCont\AYSAdalet\bin\System.Web.Helpers.xml
 D:\GITHUB\AYSAdaletCont\AYSAdalet\bin\System.Web.Mvc.xml
-C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.personeltablosuguncellendi.resources
+C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.pertalep1.resources
+C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
+C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.ver3.resources
+C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.perv1.resources
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
-C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.vr3.resources
-C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.vr4.resources

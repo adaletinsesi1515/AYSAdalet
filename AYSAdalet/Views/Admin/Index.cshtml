@@ -1,4 +1,6 @@
-﻿@using AYSAdalet.Models.Modeller
+﻿@model List<AYSAdalet.Models.Modeller.BilgiTalepler>
+
+@using AYSAdalet.Models.Modeller
 
 @{
     ViewBag.Title = "Index";
@@ -9,6 +11,7 @@
 <div><span style="color:lightcoral">AYS</span> İstatistikleri</div>
 
 <hr />
+
 
 
 <div class="row clearfix">
@@ -105,42 +108,16 @@
     </div>
 </div>
 <hr />
-<div>
-    <div class="card">
-        <h3 class="card-header">
-            Bilgi İşlem - Talepler
-        </h3>
-        <div class="card-body">
-            <table class="table table-hovered">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@@twitter</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+<div id="sayfayenileme">
+    @Html.Action("BilgiTalepFormListe","Admin")
+
 </div>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        setInterval(function() {
+            $('#sayfayenileme').load("/Admin/BilgiTalepFormListe");
+            }, 3000);
+    });
+</script>
