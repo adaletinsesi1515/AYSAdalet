@@ -39,6 +39,7 @@ namespace AYSAdalet.Controllers
             };
             db.BilgiTalepler.Add(_BlgTlp);
             db.SaveChanges();
+            TempData["mesaj"]= "Mesajınız sisteme iletilmiştir....";
             return Redirect("Index");
         }
     }

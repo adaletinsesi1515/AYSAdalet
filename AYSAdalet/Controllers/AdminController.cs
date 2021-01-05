@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AYSAdalet.Models.DataContext;
+using AYSAdalet.Models.Modeller;
 
 namespace AYSAdalet.Controllers
 {
@@ -61,6 +63,30 @@ namespace AYSAdalet.Controllers
             var personellist = db.Personel.ToList();
             ViewBag.personellist1 = personellist;
             return View(Model);
+        }
+
+        public ActionResult BilgiTalepGetir(int id)
+        {
+            var iddegeri = db.BilgiTalepler.Find(id);
+            ViewBag.TeknikPersonel1 = new SelectList(db.TeknikPersonels, "TeknikPersonelID", "Teknik Personel");
+
+            //ViewBag.BirimID1 = new SelectList(db.Birimler, "BirimID", "BirimAdi");
+
+            return View("BilgiTalepGetir", iddegeri);
+        }
+
+        public ActionResult BilgiTalepGuncelle(BilgiTalepler c)
+        {
+            var deger = db.BilgiTalepler.Find(c.TalepID);
+            deger.TeknikPersonelNotu = c.TeknikPersonelNotu;
+            deger.SonuclanmaTarihi = c.SonuclanmaTarihi;
+            
+            //deger.Durum = true;
+            db.SaveChanges();
+
+            db.Entry(deger).State = EntityState.Modified;
+            return RedirectToAction("Index");
+
         }
     }
 }

@@ -579,6 +579,14 @@
     <Compile Include="Migrations\202012291530086_perv1.Designer.cs">
       <DependentUpon>202012291530086_perv1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101052126124_bilgi_Talepv1.cs" />
+    <Compile Include="Migrations\202101052126124_bilgi_Talepv1.Designer.cs">
+      <DependentUpon>202101052126124_bilgi_Talepv1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101052139261_bilgi_Talepv2.cs" />
+    <Compile Include="Migrations\202101052139261_bilgi_Talepv2.Designer.cs">
+      <DependentUpon>202101052139261_bilgi_Talepv2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
     <Compile Include="Models\Modeller\BilgiTalepler.cs" />
@@ -591,6 +599,7 @@
     <Compile Include="Models\Modeller\Personel.cs" />
     <Compile Include="Models\Modeller\PersonelGorevYerleri.cs" />
     <Compile Include="Models\Modeller\Talep.cs" />
+    <Compile Include="Models\Modeller\TeknikPersonel.cs" />
     <Compile Include="Models\Modeller\Unvanlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -639,6 +648,7 @@
     <Content Include="Views\Personel\BirimListeGetir.cshtml" />
     <Content Include="Views\Bilgi_Talep\Index.cshtml" />
     <Content Include="Views\Admin\BilgiTalepFormListe.cshtml" />
+    <Content Include="Views\Admin\BilgiTalepGetir.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -658,6 +668,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202012291530086_perv1.resx">
       <DependentUpon>202012291530086_perv1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101052126124_bilgi_Talepv1.resx">
+      <DependentUpon>202101052126124_bilgi_Talepv1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101052139261_bilgi_Talepv2.resx">
+      <DependentUpon>202101052139261_bilgi_Talepv2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
