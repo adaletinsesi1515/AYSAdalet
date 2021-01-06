@@ -13,6 +13,9 @@ namespace AYSAdalet.Models.Modeller
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TalepID { get; set; }
 
+
+
+
         public int PersonelId { get; set; }
         public virtual Personel Personel { get; set; }
 
@@ -26,15 +29,14 @@ namespace AYSAdalet.Models.Modeller
         [StringLength(2500)]
         public string TeknikPersonelNotu{ get; set; }
         public Nullable<DateTime> SonuclanmaTarihi { get; set; }
-        public bool  Durum { get; set; }      
+        public bool  Durum { get; set; }
 
-        [Required]
-        public virtual List<TeknikPersonel> TeknikPersonel { get; set; }
-
+        //public virtual ICollection<TeknikPersonel> TeknikPersonels { get; set; }
 
 
-        
 
-        
+        public int? TeknikPersonelID { get; set; }
+        public virtual TeknikPersonel TeknikPersonel { get; set; }
+
     }
 }

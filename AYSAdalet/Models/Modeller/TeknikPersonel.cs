@@ -21,7 +21,7 @@ namespace AYSAdalet.Models.Modeller
         public string PersonelAdSoyad { get; set; }
         public bool Durum { get; set; }
 
-        public virtual BilgiTalepler BilgiTalepler { get; set; }
+        //public virtual BilgiTalepler BilgiTalepler { get; set; }
 
 
 

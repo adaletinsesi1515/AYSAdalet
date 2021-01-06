@@ -8,7 +8,7 @@ namespace AYSAdalet.ViewModels
 {
     public class BilgiTalepTeknikPersonelVM
     {
-        public List<TeknikPersonel> TeknikPersonel { get; set; }
+        public List<TeknikPersonel> TeknikPersonels { get; set; }
         public BilgiTalepler BilgiTalepler { get; set; }
 
     }

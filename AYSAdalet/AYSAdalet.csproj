@@ -583,6 +583,10 @@
     <Compile Include="Migrations\202101061245510_b1.Designer.cs">
       <DependentUpon>202101061245510_b1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101062057299_ver4.cs" />
+    <Compile Include="Migrations\202101062057299_ver4.Designer.cs">
+      <DependentUpon>202101062057299_ver4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
     <Compile Include="Models\Modeller\BilgiTalepler.cs" />
@@ -668,6 +672,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101061245510_b1.resx">
       <DependentUpon>202101061245510_b1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101062057299_ver4.resx">
+      <DependentUpon>202101062057299_ver4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

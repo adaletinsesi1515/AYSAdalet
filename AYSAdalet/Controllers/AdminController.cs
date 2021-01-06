@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using AYSAdalet.Models.DataContext;
 using AYSAdalet.Models.Modeller;
 using AYSAdalet.ViewModels;
+using Microsoft.SqlServer.Server;
 
 namespace AYSAdalet.Controllers
 {
@@ -15,8 +16,8 @@ namespace AYSAdalet.Controllers
         AdliyeDBContext db = new AdliyeDBContext();
 
         int toplampersonel = 200;
-        BilgiTalepTeknikPersonelVM bt;
 
+        public static BilgiTalepTeknikPersonelVM bt;
         public ActionResult Index()
         {
             var Model = db.BilgiTalepler.Where(X => X.Durum == false).ToList();
@@ -72,35 +73,45 @@ namespace AYSAdalet.Controllers
             bt = new BilgiTalepTeknikPersonelVM
             {
                 BilgiTalepler = db.BilgiTalepler.Find(id),
-                TeknikPersonel = db.TeknikPersonels.ToList()
+                TeknikPersonels = db.TeknikPersonels.ToList()
             };
-
-
-
-            //ViewBag.BirimID1 = new SelectList(db.Birimler, "BirimID", "BirimAdi");
 
             return View("BilgiTalepGetir", bt);
         }
 
-        public ActionResult BilgiTalepGuncelle(BilgiTalepler c)
+        //public ActionResult BilgiTalepGuncelle(BilgiTalepler c)
+        //{
+        //    //var deger = 
+
+        //    ////bt.BilgiTalepler.TeknikPersonel = c.TeknikPersonel;
+        //    //deger.TeknikPersonelNotu = c.TeknikPersonelNotu;
+        //    //deger.SonuclanmaTarihi = c.SonuclanmaTarihi;
+
+        //    ////var deger = db.BilgiTalepler.Find(c.TalepID);
+        //    ////deger.TeknikPersID= c.TeknikPersID;
+        //    ////deger.TeknikPersonelNotu = c.TeknikPersonelNotu;
+        //    ////deger.SonuclanmaTarihi = c.SonuclanmaTarihi;
+
+        //    ////deger.Durum = true;
+        //    //db.SaveChanges();
+
+        //    //db.Entry(deger).State = EntityState.Modified;
+        //    //return RedirectToAction("Index");
+
+        //}
+
+        [HttpPost]
+        public ActionResult BilgiTalepGuncelle(/*BilgiTalepler m,string TeknikPersonelNotu,*/ BilgiTalepTeknikPersonelVM m,int TeknikPersonels)
         {
+            var kayit = db.BilgiTalepler.Where(k => k.TalepID== m.BilgiTalepler.TalepID).SingleOrDefault();
 
+            //kayit.TeknikPersonelID = m.TeknikPersonels.;
+            kayit.TeknikPersonelID=TeknikPersonels;
+            kayit.TeknikPersonelNotu = m.BilgiTalepler.TeknikPersonelNotu;
 
-            ViewBag.ccc = c;
-
-            var deger = db.BilgiTalepler.Find(1);
-
-
-
-            //deger.TeknikPersonel.TeknikPersonelID = c.TeknikPersonel.TeknikPersonelID;
-            //deger.TeknikPersonel = 
-            //deger.TeknikPersonelNotu = c.TeknikPersonelNotu;
-            //deger.SonuclanmaTarihi = c.SonuclanmaTarihi;
-
-            //deger.Durum = true;
+            kayit.SonuclanmaTarihi= m.BilgiTalepler.SonuclanmaTarihi;
             db.SaveChanges();
-
-            db.Entry(deger).State = EntityState.Modified;
+            ViewBag.sonuc = "Kayıt Güncelle";
             return RedirectToAction("Index");
 
         }
