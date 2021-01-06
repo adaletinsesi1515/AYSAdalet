@@ -438,5 +438,6 @@ C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.perv1
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.bilgi_Talepv1.resources
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.bilgi_Talepv2.resources
-C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.test1.resources
+C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.enbastan.resources
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
+C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.b1.resources

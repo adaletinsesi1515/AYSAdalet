@@ -575,9 +575,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101061059406_test1.cs" />
-    <Compile Include="Migrations\202101061059406_test1.Designer.cs">
-      <DependentUpon>202101061059406_test1.cs</DependentUpon>
+    <Compile Include="Migrations\202101061236270_enbastan.cs" />
+    <Compile Include="Migrations\202101061236270_enbastan.Designer.cs">
+      <DependentUpon>202101061236270_enbastan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101061245510_b1.cs" />
+    <Compile Include="Migrations\202101061245510_b1.Designer.cs">
+      <DependentUpon>202101061245510_b1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
@@ -594,6 +598,7 @@
     <Compile Include="Models\Modeller\TeknikPersonel.cs" />
     <Compile Include="Models\Modeller\Unvanlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BilgiTalepTeknikPersonelVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -658,8 +663,11 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101061059406_test1.resx">
-      <DependentUpon>202101061059406_test1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101061236270_enbastan.resx">
+      <DependentUpon>202101061236270_enbastan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101061245510_b1.resx">
+      <DependentUpon>202101061245510_b1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

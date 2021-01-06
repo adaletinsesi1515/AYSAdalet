@@ -19,11 +19,11 @@ namespace AYSAdalet.Models.Modeller
 
         [Required, StringLength(50)]
         public string PersonelAdSoyad { get; set; }
-
         public bool Durum { get; set; }
 
-        public int UnvanID { get; set; }
-        public virtual Unvanlar Unvanlar { get; set; }
+        public virtual BilgiTalepler BilgiTalepler { get; set; }
+
+
 
     }
 }

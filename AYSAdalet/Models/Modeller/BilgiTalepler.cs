@@ -26,10 +26,14 @@ namespace AYSAdalet.Models.Modeller
         [StringLength(2500)]
         public string TeknikPersonelNotu{ get; set; }
         public Nullable<DateTime> SonuclanmaTarihi { get; set; }
-        public bool  Durum { get; set; }
+        public bool  Durum { get; set; }      
 
-        //public int TeknikPersonelID { get; set; }
-        public virtual TeknikPersonel TeknikPersonel { get; set; }
+        [Required]
+        public virtual List<TeknikPersonel> TeknikPersonel { get; set; }
+
+
+
+        
 
         
     }

@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using AYSAdalet.Models.DataContext;
 using AYSAdalet.Models.Modeller;
+using AYSAdalet.ViewModels;
 
 namespace AYSAdalet.Controllers
 {
@@ -14,6 +15,7 @@ namespace AYSAdalet.Controllers
         AdliyeDBContext db = new AdliyeDBContext();
 
         int toplampersonel = 200;
+        BilgiTalepTeknikPersonelVM bt;
 
         public ActionResult Index()
         {
@@ -25,7 +27,7 @@ namespace AYSAdalet.Controllers
             ViewBag.urvanlist1 = unvanlist;
 
             var personellist = db.Personel.ToList();
-            ViewBag.personellist1= personellist;
+            ViewBag.personellist1 = personellist;
 
             ViewBag.toplamKayit = db.Personel.Count();
             ViewBag.toplamPersonelYuzdesi = yuzdesi();
@@ -67,20 +69,34 @@ namespace AYSAdalet.Controllers
 
         public ActionResult BilgiTalepGetir(int id)
         {
-            var iddegeri = db.BilgiTalepler.Find(id);
-            ViewBag.TeknikPersonel1 = new SelectList(db.TeknikPersonels, "TeknikPersonelID", "Teknik Personel");
+            bt = new BilgiTalepTeknikPersonelVM
+            {
+                BilgiTalepler = db.BilgiTalepler.Find(id),
+                TeknikPersonel = db.TeknikPersonels.ToList()
+            };
+
+
 
             //ViewBag.BirimID1 = new SelectList(db.Birimler, "BirimID", "BirimAdi");
 
-            return View("BilgiTalepGetir", iddegeri);
+            return View("BilgiTalepGetir", bt);
         }
 
         public ActionResult BilgiTalepGuncelle(BilgiTalepler c)
         {
-            var deger = db.BilgiTalepler.Find(c.TalepID);
-            deger.TeknikPersonelNotu = c.TeknikPersonelNotu;
-            deger.SonuclanmaTarihi = c.SonuclanmaTarihi;
-            
+
+
+            ViewBag.ccc = c;
+
+            var deger = db.BilgiTalepler.Find(1);
+
+
+
+            //deger.TeknikPersonel.TeknikPersonelID = c.TeknikPersonel.TeknikPersonelID;
+            //deger.TeknikPersonel = 
+            //deger.TeknikPersonelNotu = c.TeknikPersonelNotu;
+            //deger.SonuclanmaTarihi = c.SonuclanmaTarihi;
+
             //deger.Durum = true;
             db.SaveChanges();
 
