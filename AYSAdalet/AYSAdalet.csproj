@@ -575,17 +575,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012291530086_perv1.cs" />
-    <Compile Include="Migrations\202012291530086_perv1.Designer.cs">
-      <DependentUpon>202012291530086_perv1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101052126124_bilgi_Talepv1.cs" />
-    <Compile Include="Migrations\202101052126124_bilgi_Talepv1.Designer.cs">
-      <DependentUpon>202101052126124_bilgi_Talepv1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101052139261_bilgi_Talepv2.cs" />
-    <Compile Include="Migrations\202101052139261_bilgi_Talepv2.Designer.cs">
-      <DependentUpon>202101052139261_bilgi_Talepv2.cs</DependentUpon>
+    <Compile Include="Migrations\202101061059406_test1.cs" />
+    <Compile Include="Migrations\202101061059406_test1.Designer.cs">
+      <DependentUpon>202101061059406_test1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
@@ -666,14 +658,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012291530086_perv1.resx">
-      <DependentUpon>202012291530086_perv1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101052126124_bilgi_Talepv1.resx">
-      <DependentUpon>202101052126124_bilgi_Talepv1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101052139261_bilgi_Talepv2.resx">
-      <DependentUpon>202101052139261_bilgi_Talepv2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101061059406_test1.resx">
+      <DependentUpon>202101061059406_test1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
