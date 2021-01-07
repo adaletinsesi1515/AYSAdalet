@@ -15,10 +15,7 @@ namespace AYSAdalet.Models.Modeller
 
         public int PersonelId { get; set; }
         public virtual Personel Personel { get; set; }
-
-        public int PersonelGorevYerleriID { get; set; }
-        public virtual PersonelGorevYerleri PersonelGorevYerleri { get; set; }
-
+                
         public int BilgisayarID { get; set; }
         public virtual Bilgi_Bilgisayarlar Bilgi_Bilgisayarlar { get; set; }
 

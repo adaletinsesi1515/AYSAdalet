@@ -16,8 +16,6 @@ namespace AYSAdalet.ViewModels
         public List<Bilgi_Tarayicilar> Bilgi_Tarayicilars { get; set; }
 
         public List<Personel> personels { get; set; }
-        public List<PersonelGorevYerleri> PersonelGorevYerleris { get; set; }
-
         public List<BilgiZimmet> BilgiZimmets { get; set; }
     }
 }

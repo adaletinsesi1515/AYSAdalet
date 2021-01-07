@@ -600,6 +600,10 @@
     <Compile Include="Migrations\202101071032547_zim2.Designer.cs">
       <DependentUpon>202101071032547_zim2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101071207127_zim12.cs" />
+    <Compile Include="Migrations\202101071207127_zim12.Designer.cs">
+      <DependentUpon>202101071207127_zim12.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
     <Compile Include="Models\Modeller\BilgiTalepler.cs" />
@@ -702,6 +706,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101071032547_zim2.resx">
       <DependentUpon>202101071032547_zim2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101071207127_zim12.resx">
+      <DependentUpon>202101071207127_zim12.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

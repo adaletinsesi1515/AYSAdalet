@@ -445,3 +445,4 @@ C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.ver4
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.zim1.resources
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.zim11.resources
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.zim2.resources
+C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.zim12.resources
