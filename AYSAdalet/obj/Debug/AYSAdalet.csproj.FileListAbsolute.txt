@@ -441,3 +441,4 @@ C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.b1.r
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.enbastan.resources
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.b1.resources
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.ver4.resources
+C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.ver4.resources

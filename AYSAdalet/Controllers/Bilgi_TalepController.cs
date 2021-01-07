@@ -35,7 +35,7 @@ namespace AYSAdalet.Controllers
                 PersonelId=UserModel.PersonelID,
                 TalepMesaji = txtMsg,
                 BildirimTarihi = DateTime.Now,
-                Durum = false
+                Durum = true
             };
             db.BilgiTalepler.Add(_BlgTlp);
             db.SaveChanges();
