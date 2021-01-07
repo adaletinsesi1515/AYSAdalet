@@ -621,7 +621,6 @@
     <Compile Include="Models\Modeller\Unvanlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BilgiTalepTeknikPersonelVM.cs" />
-    <Compile Include="ViewModels\BilgiZimmetVeriVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -670,8 +669,8 @@
     <Content Include="Views\Admin\BilgiTalepFormListe.cshtml" />
     <Content Include="Views\Admin\BilgiTalepGetir.cshtml" />
     <Content Include="Views\Bilgi_Zimmet\Index.cshtml" />
-    <Content Include="Views\Bilgi_Zimmet\ZimmetEklePartial.cshtml" />
-    <Content Include="Views\Bilgi_Zimmet\ZimmetYap.cshtml" />
+    <Content Include="Views\Bilgi_Zimmet\ZimmetEkle.cshtml" />
+    <Content Include="Views\Bilgi_Zimmet\PersonelZimmetGetir.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

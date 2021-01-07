@@ -1,68 +1,54 @@
 ﻿using AYSAdalet.Models.DataContext;
-using AYSAdalet.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AYSAdalet.Models.Modeller;
 
 namespace AYSAdalet.Controllers
 {
     public class Bilgi_ZimmetController : Controller
     {
-        // GET: Bilgi_Zimmet
         AdliyeDBContext db = new AdliyeDBContext();
+
+
 
         public ActionResult Index()
         {
-            var Model= db.BilgiZimmets.Where(x => x.Durum == true).ToList();
-            return View(Model);
+            var ZimmetlerModel = db.ZimmetEnvanters.ToList();
+            return View(ZimmetlerModel);
         }
 
 
-        public ActionResult ZimmetEklePartial()
+        public ActionResult ZimmetEkle()
         {
-            return PartialView("ZimmetEklePartial");
+            ViewBag.PersonelId=new SelectList(db.Personel, "PersonelID", "PersonelAdSoyad");
+
+
+            var EnvModel = db.Envanterlers.ToList();
+            return View(EnvModel);
         }
 
-        [HttpPost]
-        public ActionResult ZimmetYap()
+
+        public ActionResult PersonelZimmetGetir(int Id)
         {
-            return View();
+            var Model = db.ZimmetEnvanters.Where(x => x.PersonelId == Id).ToList();
+            return PartialView(Model);
         }
 
+        public JsonResult ZimmetEkleJson(int Id,int PerId)
+        {
+            ZimmetEnvanter YeniZimmet = new ZimmetEnvanter();
+            YeniZimmet.PersonelId = PerId;
+            YeniZimmet.EnvanterlerId = Id;
+            YeniZimmet.Tarih = DateTime.Now;
+            db.ZimmetEnvanters.Add(YeniZimmet);
+            db.SaveChanges();
 
 
-        //public ActionResult Index(string t)
-        //{
-        //    //var Model = db.Personel.FirstOrDefault(x => x.PersonelSicil.Sta || t != null && x.Durum == true).ToList();
-        //    var Model = db.Personel.FirstOrDefault(x => x.PersonelSicil == t && x.Durum == true);
-        //    ////List<Personel> listemp = db.Personel.Where(x => x.Durum== true).ToList();
-
-        //    return View(Model);
-        //    //return View();
-
-        //}
-
-        //[HttpPost]
-        //public ActionResult MesajKayit(int PersonelId, string txtMsg)
-        //{
-
-        //    var UserModel = db.Personel.FirstOrDefault(x => x.PersonelID == PersonelId);
-        //    BilgiTalepler _BlgTlp = new BilgiTalepler
-        //    {
-        //        PersonelId = UserModel.PersonelID,
-        //        TalepMesaji = txtMsg,
-        //        BildirimTarihi = DateTime.Now,
-        //        Durum = true
-        //    };
-        //    db.BilgiTalepler.Add(_BlgTlp);
-        //    db.SaveChanges();
-        //    TempData["mesaj"] = "Mesajınız sisteme iletilmiştir....";
-        //    return Redirect("Index");
-        //}
-
-
+            return Json(JsonRequestBehavior.AllowGet);
+        }
 
     }
 }
