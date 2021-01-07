@@ -566,6 +566,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\Bilgi_DonanimController.cs" />
     <Compile Include="Controllers\Bilgi_TalepController.cs" />
+    <Compile Include="Controllers\Bilgi_ZimmetController.cs" />
     <Compile Include="Controllers\BirimController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -587,9 +588,22 @@
     <Compile Include="Migrations\202101062057299_ver4.Designer.cs">
       <DependentUpon>202101062057299_ver4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101071028131_zim1.cs" />
+    <Compile Include="Migrations\202101071028131_zim1.Designer.cs">
+      <DependentUpon>202101071028131_zim1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101071029202_zim11.cs" />
+    <Compile Include="Migrations\202101071029202_zim11.Designer.cs">
+      <DependentUpon>202101071029202_zim11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101071032547_zim2.cs" />
+    <Compile Include="Migrations\202101071032547_zim2.Designer.cs">
+      <DependentUpon>202101071032547_zim2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
     <Compile Include="Models\Modeller\BilgiTalepler.cs" />
+    <Compile Include="Models\Modeller\BilgiZimmet.cs" />
     <Compile Include="Models\Modeller\Bilgi_Bilgisayarlar.cs" />
     <Compile Include="Models\Modeller\Bilgi_Monitorler.cs" />
     <Compile Include="Models\Modeller\Bilgi_Tarayicilar.cs" />
@@ -603,6 +617,7 @@
     <Compile Include="Models\Modeller\Unvanlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BilgiTalepTeknikPersonelVM.cs" />
+    <Compile Include="ViewModels\BilgiZimmetVeriVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -650,6 +665,9 @@
     <Content Include="Views\Bilgi_Talep\Index.cshtml" />
     <Content Include="Views\Admin\BilgiTalepFormListe.cshtml" />
     <Content Include="Views\Admin\BilgiTalepGetir.cshtml" />
+    <Content Include="Views\Bilgi_Zimmet\Index.cshtml" />
+    <Content Include="Views\Bilgi_Zimmet\ZimmetEklePartial.cshtml" />
+    <Content Include="Views\Bilgi_Zimmet\ZimmetYap.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -675,6 +693,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101062057299_ver4.resx">
       <DependentUpon>202101062057299_ver4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101071028131_zim1.resx">
+      <DependentUpon>202101071028131_zim1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101071029202_zim11.resx">
+      <DependentUpon>202101071029202_zim11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101071032547_zim2.resx">
+      <DependentUpon>202101071032547_zim2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

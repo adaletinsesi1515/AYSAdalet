@@ -25,5 +25,7 @@ namespace AYSAdalet.Models.Modeller
 
         public string TarayiciSeriNo { get; set; }
         public bool Durum { get; set; }
+
+        public virtual List<BilgiZimmet> BilgiZimmet { get; set; }
     }
 }

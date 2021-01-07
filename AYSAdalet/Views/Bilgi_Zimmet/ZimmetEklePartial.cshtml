@@ -1,0 +1,37 @@
+﻿@model AYSAdalet.ViewModels.BilgiZimmetVeriVM
+
+@using (Html.BeginForm("ZimmetEkle", "Bilgi_Zimmet", FormMethod.Post))
+
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="body">
+
+            <label>Personel Sicili</label>
+            @Html.TextBoxFor(x=>x.personels, SelectList h)
+
+
+
+
+            <label>Bilgisayar Kasa Markası</label>
+            @Html.TextBoxFor(model => model.BilgisayarMarka, htmlAttributes: new { @class = "form-control" })
+
+            <label>Bilgisayar Kasa Modeli</label>
+            @Html.TextBoxFor(model => model.BilgisayarModel, new { @class = "form-control" })
+
+            <label>Bilgisayar Kasa Seri No</label>
+            @Html.TextBoxFor(model => model.BilgisayarSeriNo, new { @class = "form-control" })
+
+
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12 ">
+                <button type="submit" class="btn btn-raised btn-primary btn-round waves-effect">Kayıt Ekle</button>
+            </div>
+        </div>
+    </div>
+}

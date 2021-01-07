@@ -32,5 +32,6 @@ namespace AYSAdalet.Models.Modeller
 
        public virtual List<PersonelGorevYerleri> PersonelGorevYerleris { get; set; }
 
+        public virtual List<BilgiZimmet> BilgiZimmet { get; set; }
     }
 }
