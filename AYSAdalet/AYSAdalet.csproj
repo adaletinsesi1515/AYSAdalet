@@ -563,12 +563,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdliyeRehberController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\Bilgi_DonanimController.cs" />
     <Compile Include="Controllers\Bilgi_TalepController.cs" />
     <Compile Include="Controllers\Bilgi_ZimmetController.cs" />
     <Compile Include="Controllers\BirimController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Idari_TalepController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\TalepController.cs" />
@@ -576,33 +578,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101061236270_enbastan.cs" />
-    <Compile Include="Migrations\202101061236270_enbastan.Designer.cs">
-      <DependentUpon>202101061236270_enbastan.cs</DependentUpon>
+    <Compile Include="Migrations\202101141156511_ver1.cs" />
+    <Compile Include="Migrations\202101141156511_ver1.Designer.cs">
+      <DependentUpon>202101141156511_ver1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101061245510_b1.cs" />
-    <Compile Include="Migrations\202101061245510_b1.Designer.cs">
-      <DependentUpon>202101061245510_b1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101062057299_ver4.cs" />
-    <Compile Include="Migrations\202101062057299_ver4.Designer.cs">
-      <DependentUpon>202101062057299_ver4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101071028131_zim1.cs" />
-    <Compile Include="Migrations\202101071028131_zim1.Designer.cs">
-      <DependentUpon>202101071028131_zim1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101071029202_zim11.cs" />
-    <Compile Include="Migrations\202101071029202_zim11.Designer.cs">
-      <DependentUpon>202101071029202_zim11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101071032547_zim2.cs" />
-    <Compile Include="Migrations\202101071032547_zim2.Designer.cs">
-      <DependentUpon>202101071032547_zim2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101071207127_zim12.cs" />
-    <Compile Include="Migrations\202101071207127_zim12.Designer.cs">
-      <DependentUpon>202101071207127_zim12.cs</DependentUpon>
+    <Compile Include="Migrations\202101141202229_ver11.cs" />
+    <Compile Include="Migrations\202101141202229_ver11.Designer.cs">
+      <DependentUpon>202101141202229_ver11.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
@@ -613,13 +595,14 @@
     <Compile Include="Models\Modeller\Bilgi_Tarayicilar.cs" />
     <Compile Include="Models\Modeller\Bilgi_Yazicilar.cs" />
     <Compile Include="Models\Modeller\Birimler.cs" />
+    <Compile Include="Models\Modeller\IdariTalepler.cs" />
     <Compile Include="Models\Modeller\Login.cs" />
     <Compile Include="Models\Modeller\Personel.cs" />
     <Compile Include="Models\Modeller\PersonelGorevYerleri.cs" />
-    <Compile Include="Models\Modeller\Talep.cs" />
     <Compile Include="Models\Modeller\TeknikPersonel.cs" />
     <Compile Include="Models\Modeller\Unvanlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AdliyeRehberListVM.cs" />
     <Compile Include="ViewModels\BilgiTalepTeknikPersonelVM.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -671,6 +654,10 @@
     <Content Include="Views\Bilgi_Zimmet\Index.cshtml" />
     <Content Include="Views\Bilgi_Zimmet\ZimmetEkle.cshtml" />
     <Content Include="Views\Bilgi_Zimmet\PersonelZimmetGetir.cshtml" />
+    <Content Include="Views\Idari_Talep\Index.cshtml" />
+    <Content Include="Views\Admin\IdariTalepGetir.cshtml" />
+    <Content Include="Views\Admin\IdariTalepFormListe.cshtml" />
+    <Content Include="Views\AdliyeRehber\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -688,26 +675,11 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101061236270_enbastan.resx">
-      <DependentUpon>202101061236270_enbastan.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101141156511_ver1.resx">
+      <DependentUpon>202101141156511_ver1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101061245510_b1.resx">
-      <DependentUpon>202101061245510_b1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101062057299_ver4.resx">
-      <DependentUpon>202101062057299_ver4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101071028131_zim1.resx">
-      <DependentUpon>202101071028131_zim1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101071029202_zim11.resx">
-      <DependentUpon>202101071029202_zim11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101071032547_zim2.resx">
-      <DependentUpon>202101071032547_zim2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101071207127_zim12.resx">
-      <DependentUpon>202101071207127_zim12.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101141202229_ver11.resx">
+      <DependentUpon>202101141202229_ver11.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

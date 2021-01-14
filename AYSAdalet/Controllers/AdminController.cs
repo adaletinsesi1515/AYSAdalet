@@ -33,7 +33,9 @@ namespace AYSAdalet.Controllers
 
             ViewBag.tumariza = db.BilgiTalepler.Count();
             ViewBag.bekleyenariza = db.BilgiTalepler.Where(x => x.Durum == true).Count();
-            
+
+            ViewBag.idaritumariza = db.IdariTaleplers.Count();
+            ViewBag.idaribekleyenariza = db.IdariTaleplers .Where(x => x.Durum == true).Count();
 
 
             ViewBag.toplamKayit = db.Personel.Count();
@@ -104,5 +106,53 @@ namespace AYSAdalet.Controllers
             return RedirectToAction("Index");
 
         }
+
+
+
+
+
+        public ActionResult IdariTalepFormListe()
+        {
+            var Model = db.IdariTaleplers.Where(X => X.Durum == true).ToList();
+            var birimlist = db.PersonelGorevYerleri.ToList();
+            ViewBag.birimlist1 = birimlist;
+
+            var unvanlist = db.Unvanlar.ToList();
+            ViewBag.urvanlist1 = unvanlist;
+
+            var personellist = db.Personel.ToList();
+            ViewBag.personellist1 = personellist;
+            return View(Model);
+        }
+
+        public ActionResult IdariTalepGetir(int id)
+        {
+            bt = new BilgiTalepTeknikPersonelVM
+            {
+                IdariTalepler = db.IdariTaleplers.Find(id),
+                TeknikPersonels = db.TeknikPersonels.ToList()
+            };
+
+            return View("IdariTalepGetir", bt);
+        }
+
+
+        [HttpPost]
+        public ActionResult IdariTalepGuncelle(BilgiTalepTeknikPersonelVM m, int TeknikPersonels)
+        {
+            var kayit = db.IdariTaleplers.Where(k => k.TalepID == m.IdariTalepler.TalepID).SingleOrDefault();
+            kayit.TeknikPersonelID = TeknikPersonels;
+            kayit.TeknikPersonelNotu = m.IdariTalepler.TeknikPersonelNotu;
+            if (kayit.TeknikPersonelNotu != null)
+            {
+                kayit.Durum = false;
+            }
+            kayit.SonuclanmaTarihi = m.IdariTalepler.SonuclanmaTarihi;
+            db.SaveChanges();
+            ViewBag.sonuc = "Kayıt Güncelle";
+            return RedirectToAction("Index");
+
+        }
+
     }
 }

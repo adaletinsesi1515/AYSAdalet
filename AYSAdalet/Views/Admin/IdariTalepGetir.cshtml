@@ -1,0 +1,66 @@
+﻿@model AYSAdalet.ViewModels.BilgiTalepTeknikPersonelVM
+
+@{
+    ViewBag.Title = "IdariTalepGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("IdariTalepGuncelle", "Admin", FormMethod.Post))
+{
+    <div class="card">
+
+
+        @Html.HiddenFor(x => x.IdariTalepler.TalepID)
+
+
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="body">
+            <label>Personel ID Nosu</label>
+            @Html.TextBoxFor(model => model.IdariTalepler.PersonelId, new { @class = "form-control" })
+
+            <label>Personel Sicili</label>
+            @Html.TextBoxFor(model => model.IdariTalepler.Personel.PersonelSicil, htmlAttributes: new { @class = "form-control" })
+
+            <label>Personel Adı Soyadı</label>
+            @Html.TextBoxFor(model => model.IdariTalepler.Personel.PersonelAdSoyad, htmlAttributes: new { @class = "form-control" })
+
+            @*<label>Unvanı</label>
+                @Html.DropDownList("UnvanID", null, htmlAttributes: new { @class = "form-control" })
+
+                <label>Birimi</label>
+                @Html.DropDownList("BirimID", null, htmlAttributes: new { @class = "form-control" })*@
+
+            <label>Talep Mesajı</label>
+            @Html.TextAreaFor(model => model.IdariTalepler.TalepMesaji, htmlAttributes: new { @class = "form-control" })
+
+            <label>Bildirim Tarihi</label>
+            @Html.TextBoxFor(model => model.IdariTalepler.BildirimTarihi, htmlAttributes: new { @class = "form-control" })
+
+            <label>Teknik Personel</label>
+            @Html.DropDownListFor(x => x.TeknikPersonels, new SelectList(Model.TeknikPersonels, "TeknikPersonelID", "PersonelAdSoyad"), new { @class = "form-control" })
+
+
+
+
+
+
+            <label>Teknik Personel Notu</label>
+            @Html.TextAreaFor(model => model.IdariTalepler.TeknikPersonelNotu, htmlAttributes: new { @class = "form-control" })
+
+            <label>Sonuçlanma Tarihi</label>
+            @Html.TextBoxFor(model => model.IdariTalepler.SonuclanmaTarihi, htmlAttributes: new { @class = "form-control" })
+
+
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12 ">
+                <button type="submit" class="btn btn-raised btn-primary btn-round waves-effect">Kayıt Düzenle</button>
+            </div>
+        </div>
+    </div>
+}
+

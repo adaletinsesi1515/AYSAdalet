@@ -44,8 +44,12 @@
         <div class="card widget_2 big_icon sales" style="box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26)">
             <div class="body">
                 <h6>İdari İşler Talep</h6>
-                <h2>12% <small class="info">of 100</small></h2>
-                
+                <h5>
+                    Kayıt: @ViewBag.idaritumariza /
+                    Açık Arıza :@ViewBag.idaribekleyenariza
+                    <small class="info"> </small>
+                </h5>
+
             </div>
         </div>
     </div>
@@ -70,42 +74,9 @@
 
 <hr style="border-color:lightsalmon" />
 <div>
-    <div class="card">
-        <h3 class="card-header">
-            İdari İşler - Talepler
-        </h3>
-        <div class="card-body">
-            <table class="table table-dark">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@@twitter</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div id="sayfayenileme">
+        @Html.Action("IdariTalepFormListe", "Admin")
+
     </div>
 </div>
 <hr />
@@ -115,6 +86,6 @@
     $(document).ready(function () {
         setInterval(function () {
             $('#sayfayenileme').load("/Admin/BilgiTalepFormListe");
-        }, 3000);
+        }, 3000); 
     });
 </script>

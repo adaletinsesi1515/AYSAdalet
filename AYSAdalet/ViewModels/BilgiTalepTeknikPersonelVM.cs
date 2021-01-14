@@ -11,5 +11,7 @@ namespace AYSAdalet.ViewModels
         public List<TeknikPersonel> TeknikPersonels { get; set; }
         public BilgiTalepler BilgiTalepler { get; set; }
 
+        public IdariTalepler IdariTalepler { get; set; }
+
     }
 }

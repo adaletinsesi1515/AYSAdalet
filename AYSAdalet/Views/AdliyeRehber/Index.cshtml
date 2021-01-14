@@ -1,0 +1,64 @@
+﻿@model AYSAdalet.ViewModels.AdliyeRehberListVM
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <h2><strong>Telefon</strong> Rehberi</h2>
+        </div>
+        <div class="body">
+            <div class="table-responsive">
+                <table class="table m-b-0 table-primary" id="birimlistesi">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Adı Soyadı</th>
+                            <th scope="col">Unvanı</th>
+                            <th scope="col">Dahili No-1</th>
+                            <th scope="col">Dahili No-2</th>
+                            <th scope="col">Cep Telefonu</th>
+                            <th scope="col">Birimi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Personels)
+                        {
+                        <tr>
+
+                            <td>@item.PersonelAdSoyad</td>
+                            <td>@item.Unvanlar.Unvani</td>
+                            <td>@item.DahiliNo1</td>
+                            <td>@item.DahiliNo2</td>
+                            <td>@item.CepTelefonu</td>
+                            <td>
+                                @foreach (var item2 in Model.PersonelGorevYerleris.Where(x=>x.PersonelID == item.PersonelID))
+                                {
+                                    <li>
+                                        @item2.Birimler.BirimAdi
+                                    </li>
+                                }
+                            </td>
+                            <td>
+                                <a title="Düzenle" href="/Unvan/UnvanlarBilgiGetir/@item.UnvanID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
