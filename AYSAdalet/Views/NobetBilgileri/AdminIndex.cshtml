@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AYSAdalet.Models.Modeller.NobetSistemi>
+
+@{
+    ViewBag.Title = "Haftalık Nöbet Listesi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Haftalık Nöbet</strong> Listesi</h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <table class="table m-b-0 table-primary" id="birimlistesi">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Sicili</th>
+                        <th scope="col">Adı Soyadı</th>
+                        <th scope="col">Unvanı</th>
+                        <th scope="col">Cep Telefonu</th>
+                        <th scope="col">Nöbet Birimi</th>
+                        <th scope="col">Başlangıç Tarihi</th>
+                        <th scope="col">Bitiş Tarihi</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.Personel.PersonelSicil</td>
+                            <td>@item.Personel.PersonelAdSoyad</td>
+                            <td>@item.Personel.Unvanlar.Unvani</td>
+                            <td>@item.Personel.CepTelefonu</td>
+                            <td>@item.NobetBirimi</td>
+                            <td>@item.BaslamaTarihi.ToString("dd MMMM yyyy")</td>
+                            <td>@item.BitisTarihi.ToString("dd MMMM yyyy")</td>
+
+
+
+                            <td>
+                                <a title="Düzenle" href="/NobetSistemi/Duzenle/@item.Personel.PersonelID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

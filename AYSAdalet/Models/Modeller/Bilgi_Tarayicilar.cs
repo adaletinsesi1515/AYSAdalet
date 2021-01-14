@@ -7,6 +7,7 @@ using System.Web;
 
 namespace AYSAdalet.Models.Modeller
 {
+
     [Table("Bilgi_Tarayicilar")]
     public class Bilgi_Tarayicilar
     {
@@ -25,5 +26,8 @@ namespace AYSAdalet.Models.Modeller
 
         public string TarayiciSeriNo { get; set; }
         public bool Durum { get; set; }
+
+        //public virtual List<BilgiZimmet> BilgiZimmet { get; set; }
     }
+
 }

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<AYSAdalet.Models.Modeller.ZimmetEnvanter>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Envanterler.Marka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Personel.PersonelSicil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Envanterler.Marka)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personel.PersonelSicil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tarih)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ZimmetEnvanterId })
+        </td>
+    </tr>
+}
+
+</table>

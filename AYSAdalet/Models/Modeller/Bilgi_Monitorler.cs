@@ -7,6 +7,8 @@ using System.Web;
 
 namespace AYSAdalet.Models.Modeller
 {
+
+
     [Table("Bilgi_Monitorler")]
     public class Bilgi_Monitorler
     {
@@ -23,5 +25,9 @@ namespace AYSAdalet.Models.Modeller
         public string MonitorSeriNo { get; set; }
 
         public bool Durum { get; set; }
+
+        //public virtual List<BilgiZimmet> BilgiZimmet { get; set; }
     }
+
+
 }

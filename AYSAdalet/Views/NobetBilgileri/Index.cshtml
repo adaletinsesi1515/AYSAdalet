@@ -1,0 +1,89 @@
+﻿@model IEnumerable<AYSAdalet.Models.Modeller.NobetSistemi>
+
+@{
+    ViewBag.Title = "Haftalık Nöbet Listesi";
+    Layout = "~/Views/Shared/_NobetLayout.cshtml";
+}
+
+
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Haftalık Nöbet</strong> Listesi</h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <table class="table m-b-0 table-primary" id="tblrehber">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Sicili</th>
+                        <th scope="col">Adı Soyadı</th>
+                        <th scope="col">Unvanı</th>
+                        <th scope="col">Cep Telefonu</th>
+                        <th scope="col">Nöbet Birimi</th>
+                        <th scope="col">Başlangıç Tarihi</th>
+                        <th scope="col">Bitiş Tarihi</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.Personel.PersonelSicil</td>
+                            <td>@item.Personel.PersonelAdSoyad</td>
+                            <td>@item.Personel.Unvanlar.Unvani</td>
+                            <td>@item.Personel.CepTelefonu</td>
+                            <td>@item.NobetBirimi</td>
+                            <td>@item.BaslamaTarihi.ToString("dd MMMM yyyy")</td>
+                            <td>@item.BitisTarihi.ToString("dd MMMM yyyy")</td>
+
+
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $.noConflict();
+        var table = $('#birimlistesi').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+            }
+        });
+    });</script>
+
+<script>
+    $(document).ready(function () {
+        $("#tblrehber").DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+            },
+            order: [[5, 'asc']],
+            rowGroup: {
+                dataSrc: 5
+            }
+        });
+    });
+
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#taleptablosu").DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+            },
+            order: [[0, 'desc']],
+
+        });
+    });
+
+</script>

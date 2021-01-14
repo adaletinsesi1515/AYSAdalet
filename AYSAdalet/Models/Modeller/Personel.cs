@@ -30,10 +30,9 @@ namespace AYSAdalet.Models.Modeller
         public int UnvanID { get; set; }
         public virtual Unvanlar Unvanlar { get; set; }
 
-        //public int GorevYeriID { get; set; }
-        //public virtual PersonelGorevYerleri PersonelGorevYerleri { get; set; }
+       public virtual List<PersonelGorevYerleri> PersonelGorevYerleris { get; set; }
 
-        public virtual List<PersonelGorevYerleri> PersonelGorevYerleris { get; set; }
-
+        public virtual List<NobetSistemi> NobetSistemis { get; set; }
+        //public virtual List<BilgiZimmet> BilgiZimmet { get; set; }
     }
 }

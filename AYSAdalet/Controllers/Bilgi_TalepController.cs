@@ -35,10 +35,11 @@ namespace AYSAdalet.Controllers
                 PersonelId=UserModel.PersonelID,
                 TalepMesaji = txtMsg,
                 BildirimTarihi = DateTime.Now,
-                Durum = false
+                Durum = true
             };
             db.BilgiTalepler.Add(_BlgTlp);
             db.SaveChanges();
+            TempData["mesaj"]= "Mesajınız sisteme iletilmiştir....";
             return Redirect("Index");
         }
     }

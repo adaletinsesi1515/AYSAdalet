@@ -187,6 +187,13 @@
     <Content Include="Content\AdminAssets\js\popper.js" />
     <Content Include="Content\AdminAssets\js\summernote.js" />
     <Content Include="Content\AdminAssets\js\vendorscripts.bundle.js" />
+    <Content Include="Content\basittema\assets\img\ADALET-1.jpg" />
+    <Content Include="Content\basittema\assets\img\favicon.ico" />
+    <Content Include="Content\basittema\assets\img\logo1.svg" />
+    <Content Include="Content\basittema\assets\img\profile.jpg" />
+    <Content Include="Content\basittema\css\styles.css" />
+    <Content Include="Content\basittema\index.html" />
+    <Content Include="Content\basittema\js\scripts.js" />
     <Content Include="Content\BilgiIslemForm\bootstrap-css.css" />
     <Content Include="Content\BilgiIslemForm\bootstrap.min.css" />
     <Content Include="Content\BilgiIslemForm\bootstrap.min.js" />
@@ -197,6 +204,8 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\DataTables\jquery.dataTables.min.css" />
+    <Content Include="Content\DataTables\jquery.dataTables.min.js" />
     <Content Include="Content\Login\css\animate.css" />
     <Content Include="Content\Login\css\bootstrap.min.css" />
     <Content Include="Content\Login\css\font-awesome.min.css" />
@@ -563,36 +572,46 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdliyeRehberController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\Bilgi_DonanimController.cs" />
     <Compile Include="Controllers\Bilgi_TalepController.cs" />
+    <Compile Include="Controllers\Bilgi_ZimmetController.cs" />
     <Compile Include="Controllers\BirimController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Idari_TalepController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\NobetBilgileriController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\TalepController.cs" />
     <Compile Include="Controllers\UnvanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012291530086_perv1.cs" />
-    <Compile Include="Migrations\202012291530086_perv1.Designer.cs">
-      <DependentUpon>202012291530086_perv1.cs</DependentUpon>
+    <Compile Include="Migrations\202101141917580_calisma1.cs" />
+    <Compile Include="Migrations\202101141917580_calisma1.Designer.cs">
+      <DependentUpon>202101141917580_calisma1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
     <Compile Include="Models\Modeller\BilgiTalepler.cs" />
+    <Compile Include="Models\Modeller\BilgiZimmet.cs" />
     <Compile Include="Models\Modeller\Bilgi_Bilgisayarlar.cs" />
     <Compile Include="Models\Modeller\Bilgi_Monitorler.cs" />
     <Compile Include="Models\Modeller\Bilgi_Tarayicilar.cs" />
     <Compile Include="Models\Modeller\Bilgi_Yazicilar.cs" />
     <Compile Include="Models\Modeller\Birimler.cs" />
+    <Compile Include="Models\Modeller\IdariTalepler.cs" />
     <Compile Include="Models\Modeller\Login.cs" />
+    <Compile Include="Models\Modeller\NobetSistemi.cs" />
     <Compile Include="Models\Modeller\Personel.cs" />
     <Compile Include="Models\Modeller\PersonelGorevYerleri.cs" />
-    <Compile Include="Models\Modeller\Talep.cs" />
+    <Compile Include="Models\Modeller\TeknikPersonel.cs" />
     <Compile Include="Models\Modeller\Unvanlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AdliyeRehberListVM.cs" />
+    <Compile Include="ViewModels\BilgiTalepTeknikPersonelVM.cs" />
+    <Compile Include="ViewModels\NobetBilgiListVm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -639,6 +658,18 @@
     <Content Include="Views\Personel\BirimListeGetir.cshtml" />
     <Content Include="Views\Bilgi_Talep\Index.cshtml" />
     <Content Include="Views\Admin\BilgiTalepFormListe.cshtml" />
+    <Content Include="Views\Admin\BilgiTalepGetir.cshtml" />
+    <Content Include="Views\Bilgi_Zimmet\Index.cshtml" />
+    <Content Include="Views\Bilgi_Zimmet\ZimmetEkle.cshtml" />
+    <Content Include="Views\Bilgi_Zimmet\PersonelZimmetGetir.cshtml" />
+    <Content Include="Views\Idari_Talep\Index.cshtml" />
+    <Content Include="Views\Admin\IdariTalepGetir.cshtml" />
+    <Content Include="Views\Admin\IdariTalepFormListe.cshtml" />
+    <Content Include="Views\AdliyeRehber\Index.cshtml" />
+    <Content Include="Views\Shared\_RehberLayout.cshtml" />
+    <Content Include="Views\NobetBilgileri\Index.cshtml" />
+    <Content Include="Views\NobetBilgileri\AdminIndex.cshtml" />
+    <Content Include="Views\Shared\_NobetLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -656,8 +687,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012291530086_perv1.resx">
-      <DependentUpon>202012291530086_perv1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101141917580_calisma1.resx">
+      <DependentUpon>202101141917580_calisma1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

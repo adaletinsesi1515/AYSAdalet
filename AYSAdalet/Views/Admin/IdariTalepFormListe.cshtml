@@ -1,0 +1,51 @@
+﻿@model List<AYSAdalet.Models.Modeller.IdariTalepler>
+
+@using AYSAdalet.Models.Modeller
+
+
+@{
+    Layout = null;
+}
+
+
+<div class="card">
+    <div class="header">
+        <h2><strong>İdari İşler Müdürlüğü</strong> Talep Listesi</h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <table class="table m-b-0 table-primary" id="birimlistesi">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Sicili</th>
+                        <th scope="col">Adı Soyadı</th>
+                        <th scope="col">Unvanı</th>
+                        <th scope="col">Birimi</th>
+                        <th scope="col">Mesajı</th>
+                        <th scope="col">Bildirim Tarihi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.TalepID</td>
+                            <td>@item.Personel.PersonelSicil</td>
+                            <td>@item.Personel.PersonelAdSoyad</td>
+                            <td>@item.Personel.Unvanlar.Unvani</td>
+                            <td>@item.Personel.PersonelGorevYerleris.FirstOrDefault(x => x.PersonelID == item.PersonelId).Birimler.BirimAdi</td>
+                            <td>@item.TalepMesaji</td>
+                            <td>@item.BildirimTarihi</td>
+
+                            <td>
+                                <a title="Düzenle" href="/Admin/IdariTalepGetir/@item.TalepID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
