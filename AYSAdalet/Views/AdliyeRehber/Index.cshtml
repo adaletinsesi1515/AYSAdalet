@@ -33,12 +33,12 @@
                             <td>@item.DahiliNo1</td>
                             <td>@item.DahiliNo2</td>
                             <td>@item.CepTelefonu</td>
-                            @*<td>
+                            <td>
                                 @foreach (var item2 in Model.PersonelGorevYerleris.Where(x => x.PersonelID == item.PersonelID))
                                 {
                                     @item2.Birimler.BirimAdi
                                 }
-                            </td>*@
+                            </td>
                             <td>
                                 <a title="Düzenle" href="/AdliyeRehber/Detay/@item.PersonelID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
                             </td>
