@@ -7,13 +7,13 @@ namespace AYSAdalet.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ver1 : IMigrationMetadata
+    public sealed partial class calisma1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ver1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(calisma1));
         
         string IMigrationMetadata.Id
         {
-            get { return "202101141156511_ver1"; }
+            get { return "202101141917580_calisma1"; }
         }
         
         string IMigrationMetadata.Source

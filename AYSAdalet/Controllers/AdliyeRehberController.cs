@@ -14,7 +14,7 @@ namespace AYSAdalet.Controllers
         
         public ActionResult Index()
         {
-            AdliyeRehberListVM model = new AdliyeRehberListVM
+            AdliyeRehberListVM  model = new AdliyeRehberListVM
             {
                 PersonelGorevYerleris = db.PersonelGorevYerleri.ToList(),
                 Personels = db.Personel.ToList(),

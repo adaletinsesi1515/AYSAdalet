@@ -29,6 +29,7 @@ namespace AYSAdalet.Models.DataContext
         public DbSet<TeknikPersonel> TeknikPersonels { get; set; }
 
         public DbSet<IdariTalepler> IdariTaleplers { get; set; }
+        public DbSet<NobetSistemi> nobetSistemi { get; set; }
 
         //public DbSet<BilgiZimmet> BilgiZimmets { get; set; }
 
