@@ -197,6 +197,8 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\DataTables\jquery.dataTables.min.css" />
+    <Content Include="Content\DataTables\jquery.dataTables.min.js" />
     <Content Include="Content\Login\css\animate.css" />
     <Content Include="Content\Login\css\bootstrap.min.css" />
     <Content Include="Content\Login\css\font-awesome.min.css" />
@@ -658,6 +660,7 @@
     <Content Include="Views\Admin\IdariTalepGetir.cshtml" />
     <Content Include="Views\Admin\IdariTalepFormListe.cshtml" />
     <Content Include="Views\AdliyeRehber\Index.cshtml" />
+    <Content Include="Views\Shared\_RehberLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

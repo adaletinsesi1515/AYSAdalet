@@ -1,36 +1,31 @@
 ﻿@model AYSAdalet.ViewModels.AdliyeRehberListVM
 @{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Adliye Rehber";
+    Layout = "~/Views/Shared/_RehberLayout.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div class="card">
-        <div class="header">
-            <h2><strong>Telefon</strong> Rehberi</h2>
-        </div>
-        <div class="body">
-            <div class="table-responsive">
-                <table class="table m-b-0 table-primary" id="birimlistesi">
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">Adı Soyadı</th>
-                            <th scope="col">Unvanı</th>
-                            <th scope="col">Dahili No-1</th>
-                            <th scope="col">Dahili No-2</th>
-                            <th scope="col">Cep Telefonu</th>
-                            <th scope="col">Birimi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.Personels)
-                        {
+
+<div class="card">
+    <div class="header">
+        <h2><strong>Telefon</strong> Rehberi</h2>
+    </div>
+    <div class="body">
+        <div class="table-responsive">
+            <table class="table m-b-0 table-primary" id="birimlistesi">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Adı Soyadı</th>
+                        <th scope="col">Unvanı</th>
+                        <th scope="col">Dahili No-1</th>
+                        <th scope="col">Dahili No-2</th>
+                        <th scope="col">Cep Telefonu</th>
+                        <th scope="col">Birimi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Personels)
+                    {
                         <tr>
 
                             <td>@item.PersonelAdSoyad</td>
@@ -38,27 +33,64 @@
                             <td>@item.DahiliNo1</td>
                             <td>@item.DahiliNo2</td>
                             <td>@item.CepTelefonu</td>
-                            <td>
-                                @foreach (var item2 in Model.PersonelGorevYerleris.Where(x=>x.PersonelID == item.PersonelID))
+                            @*<td>
+                                @foreach (var item2 in Model.PersonelGorevYerleris.Where(x => x.PersonelID == item.PersonelID))
                                 {
-                                    <li>
-                                        @item2.Birimler.BirimAdi
-                                    </li>
+                                    @item2.Birimler.BirimAdi
                                 }
-                            </td>
+                            </td>*@
                             <td>
-                                <a title="Düzenle" href="/Unvan/UnvanlarBilgiGetir/@item.UnvanID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
+                                <a title="Düzenle" href="/AdliyeRehber/Detay/@item.PersonelID" class="btn btn-warning btn-sm"><i class="zmdi zmdi-edit"></i></a>
                             </td>
                         </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 
+<script>
+    $(document).ready(function () {
+        var groupColumn = 1;
+        var table = $('#example').DataTable({
+            "columnDefs": [
+                { "visible": false, "targets": groupColumn }
+            ],
+            "order": [[groupColumn, 'asc']],
+            "displayLength": 25,
+            "drawCallback": function (settings) {
+                var api = this.api();
+                var rows = api.rows({ page: 'current' }).nodes();
+                var last = null;
 
+                api.column(groupColumn, { page: 'current' }).data().each(function (group, i) {
+                    if (last !== group) {
+                        $(rows).eq(i).before(
+                            '<tr class="group"><td colspan="5">' + group + '</td></tr>'
+                        );
 
+                        last = group;
+                    }
+                });
+            }
+        });
 
-</body>
-</html>
+        // Order by the grouping
+        $('#example tbody').on('click', 'tr.group', function () {
+            var currentOrder = table.order()[0];
+            if (currentOrder[0] === groupColumn && currentOrder[1] === 'asc') {
+                table.order([groupColumn, 'desc']).draw();
+            }
+            else {
+                table.order([groupColumn, 'asc']).draw();
+            }
+        });
+    });</script>
+
+<style>
+    tr.group,
+    tr.group:hover {
+        background-color: #ddd !important;
+    }
+</style>

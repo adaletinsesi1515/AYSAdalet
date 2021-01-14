@@ -435,13 +435,8 @@ D:\GITHUB\AYSAdaletCont\AYSAdalet\bin\System.Web.Webpages.Razor.xml
 D:\GITHUB\AYSAdaletCont\AYSAdalet\bin\System.Web.Helpers.xml
 D:\GITHUB\AYSAdaletCont\AYSAdalet\bin\System.Web.Mvc.xml
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
-C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.enbastan.resources
-C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.b1.resources
-C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.ver4.resources
-C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.zim1.resources
-C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.zim11.resources
-C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.zim2.resources
-C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.zim12.resources
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.ver1.resources
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.ver11.resources
+C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.ver1.resources
+C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.ver11.resources
