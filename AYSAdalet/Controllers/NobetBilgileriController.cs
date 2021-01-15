@@ -28,5 +28,29 @@ namespace AYSAdalet.Controllers
             return View(liste);
         }
 
+
+        public ActionResult NobetBilgiGetir(int id)
+        {
+            NobetBilgiListVm model = new NobetBilgiListVm
+            {
+                Personels = db.Personel.ToList(),
+                nobetSistemis = db.nobetSistemi.ToList()
+            };
+
+            return View("NobetBilgiGetir", model);
+        }
+
+
+        [HttpPost]
+        public ActionResult NobetBilgiGuncelle(NobetBilgiListVm m)
+        {
+            var kayit = db.nobetSistemi.Where(k => k.Id == m.Personel.PersonelID).SingleOrDefault();
+            
+            db.SaveChanges();
+            ViewBag.sonuc = "Kayıt Güncelle";
+            return RedirectToAction("Index");
+
+        }
+
     }
 }
