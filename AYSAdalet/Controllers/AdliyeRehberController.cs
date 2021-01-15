@@ -22,5 +22,16 @@ namespace AYSAdalet.Controllers
             };
             return View(model);
         }
+
+        public ActionResult AdminIndex()
+        {
+            AdliyeRehberListVM model = new AdliyeRehberListVM
+            {
+                PersonelGorevYerleris = db.PersonelGorevYerleri.ToList(),
+                Personels = db.Personel.ToList(),
+                birimlers = db.Birimler.ToList()
+            };
+            return View(model);
+        }
     }
 }

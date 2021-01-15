@@ -671,6 +671,7 @@
     <Content Include="Views\NobetBilgileri\AdminIndex.cshtml" />
     <Content Include="Views\Shared\_NobetLayout.cshtml" />
     <Content Include="Views\NobetBilgileri\NobetBilgiGetir.cshtml" />
+    <Content Include="Views\AdliyeRehber\AdminIndex.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
