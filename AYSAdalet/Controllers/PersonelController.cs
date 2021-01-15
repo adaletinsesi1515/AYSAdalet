@@ -141,7 +141,7 @@ namespace AYSAdalet.Controllers
             var iddegeri = db.Personel.Find(id);
             ViewBag.UnvanID = new SelectList(db.Unvanlar, "UnvanID", "Unvani");
             ViewBag.GorevYeriID = new SelectList(db.PersonelGorevYerleri, "GorevYeriID", "GorevYeriID");
-
+            ViewBag.BirimID = new SelectList(db.Birimler, "BirimID", "BirimAdi");
             return View("PersonelBilgiGetir", iddegeri);
         }
 

@@ -15,25 +15,28 @@
         @Html.TextBoxFor(model => model.PersonelID, new { @class = "form-control" })
 
         <label>Personel Sicili</label>
-        @Html.TextBoxFor(model => model.PersonelSicil, htmlAttributes: new {@class = "form-control"})
+        @Html.TextBoxFor(model => model.PersonelSicil, htmlAttributes: new { @class = "form-control" })
 
         <label>Personel Adı Soyadı</label>
-        @Html.TextBoxFor(model => model.PersonelAdSoyad, htmlAttributes: new {@class = "form-control"})
+        @Html.TextBoxFor(model => model.PersonelAdSoyad, htmlAttributes: new { @class = "form-control" })
 
         <label>Unvanı</label>
-        @Html.DropDownList("UnvanID", null, htmlAttributes: new {@class = "form-control"})
+        @Html.DropDownList("UnvanID", null, htmlAttributes: new { @class = "form-control" })
 
         <label>Birimi</label>
-        @Html.DropDownList("BirimID", null, htmlAttributes: new {@class = "form-control"})
+        @Html.DropDownList("BirimID", null, htmlAttributes: new { @class = "form-control", multiple = "MultiSelectList" })
+
+        @*<label>Birimi</label>
+        @Html.DropDownList("BirimID", null, htmlAttributes: new { @class = "form-control" })*@
 
         <label>Cep Telefonu</label>
-        @Html.TextBoxFor(model => model.CepTelefonu, htmlAttributes: new {@class = "form-control"})
+        @Html.TextBoxFor(model => model.CepTelefonu, htmlAttributes: new { @class = "form-control" })
 
         <label>Dahili No 1:</label>
-        @Html.TextBoxFor(model => model.DahiliNo1, htmlAttributes: new {@class = "form-control"})
+        @Html.TextBoxFor(model => model.DahiliNo1, htmlAttributes: new { @class = "form-control" })
 
         <label>Dahili No 2:</label>
-        @Html.TextBoxFor(model => model.DahiliNo2, htmlAttributes: new {@class = "form-control"})
+        @Html.TextBoxFor(model => model.DahiliNo2, htmlAttributes: new { @class = "form-control" })
 
 
 

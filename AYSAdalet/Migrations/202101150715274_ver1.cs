@@ -3,7 +3,7 @@ namespace AYSAdalet.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class calisma1 : DbMigration
+    public partial class ver1 : DbMigration
     {
         public override void Up()
         {

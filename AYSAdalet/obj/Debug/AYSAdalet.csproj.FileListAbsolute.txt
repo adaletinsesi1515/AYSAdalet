@@ -434,8 +434,7 @@ D:\GITHUB\AYSAdaletCont\AYSAdalet\bin\System.Web.Webpages.Deployment.xml
 D:\GITHUB\AYSAdaletCont\AYSAdalet\bin\System.Web.Webpages.Razor.xml
 D:\GITHUB\AYSAdaletCont\AYSAdalet\bin\System.Web.Helpers.xml
 D:\GITHUB\AYSAdaletCont\AYSAdalet\bin\System.Web.Mvc.xml
+C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.ver1.resources
 C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
-C:\Users\ab96085\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.ver11.resources
-C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.calisma1.resources
-C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
+C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.ver1.resources

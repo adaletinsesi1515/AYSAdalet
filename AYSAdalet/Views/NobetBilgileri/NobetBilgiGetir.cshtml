@@ -1,0 +1,57 @@
+﻿@model AYSAdalet.ViewModels.NobetBilgiListVm
+
+@{
+    ViewBag.Title = "Nobet Bilgileri Güncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("NobetBilgiGuncelle", "NobetBilgileri", FormMethod.Post))
+{
+    <div class="card">
+
+
+        @Html.HiddenFor(x => x.Personel.PersonelID)
+
+
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="body">
+            <label>Nöbet ID Nosu</label>
+            @Html.TextBoxFor(model => model.NobetSistemi.Id, new { @class = "form-control" })
+
+            <label>Personel Sicili</label>
+            @Html.TextBoxFor(model => model.Personel.PersonelSicil, htmlAttributes: new { @class = "form-control" })
+
+            <label>Personel Adı Soyadı</label>
+            @Html.TextBoxFor(model => model.Personel.PersonelAdSoyad, htmlAttributes: new { @class = "form-control" })
+
+            @*<label>Unvanı</label>
+        @Html.DropDownList("UnvanID", null, htmlAttributes: new { @class = "form-control" })
+
+        <label>Birimi</label>
+        @Html.DropDownList("BirimID", null, htmlAttributes: new { @class = "form-control" })*@
+
+            <label>Nöbet Birimi</label>
+            @Html.TextBoxFor(model => model.NobetSistemi.NobetBirimi, htmlAttributes: new { @class = "form-control" })
+
+            <label>Başlama Tarihi</label>
+            @Html.TextBoxFor(model => model.NobetSistemi.BaslamaTarihi, htmlAttributes: new { @class = "form-control" })
+
+            <label>Bitiş Tarihi</label>
+            @Html.TextBoxFor(model => model.NobetSistemi.BitisTarihi, htmlAttributes: new { @class = "form-control" })
+
+            @*<label>Teknik Personel</label>
+            @Html.DropDownListFor(x => x.TeknikPersonels, new SelectList(Model.TeknikPersonels, "TeknikPersonelID", "PersonelAdSoyad"), new { @class = "form-control" })*@
+
+
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12 ">
+                <button type="submit" class="btn btn-raised btn-primary btn-round waves-effect">Kayıt Düzenle</button>
+            </div>
+        </div>
+    </div>
+}
+
