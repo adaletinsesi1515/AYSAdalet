@@ -13,14 +13,10 @@ namespace AYSAdalet.Models.Modeller
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PersonelID { get; set; }
-
-        [Required, StringLength(10)]
         public string PersonelSicil { get; set; }
 
-        [Required, StringLength(50)]
         public string PersonelAdSoyad { get; set; }
 
-        [Required, StringLength(15)]
         public string CepTelefonu { get; set; }
 
         public string DahiliNo1 { get; set; }
