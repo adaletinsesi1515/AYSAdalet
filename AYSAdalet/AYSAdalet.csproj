@@ -588,9 +588,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101150715274_ver1.cs" />
-    <Compile Include="Migrations\202101150715274_ver1.Designer.cs">
-      <DependentUpon>202101150715274_ver1.cs</DependentUpon>
+    <Compile Include="Migrations\202101172107383_per1.cs" />
+    <Compile Include="Migrations\202101172107383_per1.Designer.cs">
+      <DependentUpon>202101172107383_per1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101172116320_per11.cs" />
+    <Compile Include="Migrations\202101172116320_per11.Designer.cs">
+      <DependentUpon>202101172116320_per11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101172117288_per12.cs" />
+    <Compile Include="Migrations\202101172117288_per12.Designer.cs">
+      <DependentUpon>202101172117288_per12.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
@@ -689,8 +697,14 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101150715274_ver1.resx">
-      <DependentUpon>202101150715274_ver1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101172107383_per1.resx">
+      <DependentUpon>202101172107383_per1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101172116320_per11.resx">
+      <DependentUpon>202101172116320_per11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101172117288_per12.resx">
+      <DependentUpon>202101172117288_per12.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

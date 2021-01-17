@@ -25,7 +25,7 @@ namespace AYSAdalet.Controllers
             var baskanlar = db.Personel.Where(x => x.Unvanlar.Unvani == "Ağır Ceza Mahkemesi Başkanı" && x.Durum == true).Count();
             ViewBag.baskan1 = baskanlar;
 
-            var hakimler = db.Personel.Where(x => x.Unvanlar.Unvani == "Hakim" && x.Durum == true).Count();
+            var hakimler = db.Personel.Where(x => x.Unvanlar.UnvanID == 4 && x.Durum == true).Count();
             ViewBag.hakim1 = hakimler;
 
 
@@ -154,6 +154,7 @@ namespace AYSAdalet.Controllers
             //ViewBag.BirimID1 = new SelectList(db.Birimler, "BirimID", "BirimAdi");
             deger.PersonelSicil = c.PersonelSicil;
             deger.PersonelAdSoyad = c.PersonelAdSoyad;
+            
 
             //deger.Birimler.BirimAdi = c.Birimler.BirimAdi;
             //deger.Unvanlar.Unvani = c.Unvanlar.Unvani;

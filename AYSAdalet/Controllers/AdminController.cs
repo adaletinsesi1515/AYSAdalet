@@ -15,7 +15,7 @@ namespace AYSAdalet.Controllers
     {
         AdliyeDBContext db = new AdliyeDBContext();
 
-        int toplampersonel = 200;
+        int toplampersonel = 300;
        // int toplamariza = 200;
 
         public static BilgiTalepTeknikPersonelVM bt;
