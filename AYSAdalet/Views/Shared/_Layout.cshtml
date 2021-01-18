@@ -14,7 +14,8 @@
 
     <link href="~/Content/Giris/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Giris/css/loading.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="~/Content/json/all.css" rel="stylesheet" />
+
 
     <link href="~/Content/Giris/css/animate.css" rel="stylesheet" />
     <link href="~/Content/Giris/css/form-style.css" rel="stylesheet" />
@@ -85,7 +86,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade in" id="modal-red">
+    @*<div class="modal fade in" id="modal-red">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header" style="background-color:#72bf48">
@@ -102,9 +103,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>*@
 
-    <div class="modal modal-success fade in" id="modal-domainfilter">
+    <!--<div class="modal modal-success fade in" id="modal-domainfilter">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="panel-title" style="background-color:red">
@@ -117,14 +118,14 @@
                     <p><center><b>Beklenmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyiniz.</b></center>
                     <p><center><b>Hata : </b></center>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer">-->
                     <!--<a href="" data-toggle="modal" data-target="#modal-green" class="btn btn-danger pull-left">HAYIR</a>-->
-                    <a href="/" class="btn btn-default" onclick="loading()">Pencereyi Kapat</a>
+                    <!--<a href="/" class="btn btn-default" onclick="loading()">Pencereyi Kapat</a>
 
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <script type="text/javascript">
         function loading() {
             document.getElementById("loading").style.display = "block";

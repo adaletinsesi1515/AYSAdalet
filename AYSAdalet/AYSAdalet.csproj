@@ -206,6 +206,17 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\DataTables\jquery.dataTables.min.css" />
     <Content Include="Content\DataTables\jquery.dataTables.min.js" />
+    <Content Include="Content\json\all.css" />
+    <Content Include="Content\json\all.js" />
+    <Content Include="Content\json\bootstrap.bundle.min.js" />
+    <Content Include="Content\json\bootstrap.min.css" />
+    <Content Include="Content\json\bootstrap.min.js" />
+    <Content Include="Content\json\dataTables.rowGroup.min.js" />
+    <Content Include="Content\json\dataTables.semanticui.min.js" />
+    <Content Include="Content\json\jquery.dataTables.min.js" />
+    <Content Include="Content\json\jquery.easing.min.js" />
+    <Content Include="Content\json\jquery.min.js" />
+    <Content Include="Content\json\popper.min.js" />
     <Content Include="Content\Login\css\animate.css" />
     <Content Include="Content\Login\css\bootstrap.min.css" />
     <Content Include="Content\Login\css\font-awesome.min.css" />
@@ -471,6 +482,7 @@
     <Content Include="Login_v3\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
     <Content Include="Login_v3\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="Login_v3\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\json\Turkish.json" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -568,7 +580,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Views\Shared\_TalepLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -583,7 +594,6 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NobetBilgileriController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
-    <Compile Include="Controllers\TalepController.cs" />
     <Compile Include="Controllers\UnvanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -628,7 +638,6 @@
     <Content Include="Scripts\jquery-3.5.1.min.map" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Admin\Notlar.cshtml" />
     <Content Include="Views\Bilgi_Donanim\Index.cshtml" />
     <Content Include="Views\Bilgi_Donanim\BilgisayarEkle.cshtml" />
     <Content Include="Views\Bilgi_Donanim\BilgisayarEklePartial.cshtml" />
@@ -651,7 +660,6 @@
     <Content Include="Views\Personel\Index.cshtml" />
     <Content Include="Views\Personel\PersonelBilgiGetir.cshtml" />
     <Content Include="Views\Personel\PersonelGuncelle.cshtml" />
-    <Content Include="Views\Talep\Index.cshtml" />
     <Content Include="Views\Birim\Index.cshtml" />
     <Content Include="Views\Birim\BirimlerEklePartial.cshtml" />
     <Content Include="Views\Birim\BirimlerEkle.cshtml" />
