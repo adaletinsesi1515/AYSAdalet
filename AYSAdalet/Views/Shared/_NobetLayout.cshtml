@@ -8,10 +8,11 @@
     <title>Burdur Adliyesi Haftalık Nöbet Bilgileri</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <script src="~/Content/json/all.js" crossorigin="anonymous"></script>
+   
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    @*<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />*@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="~/Content/basittema/css/styles.css" rel="stylesheet" />
 </head>
@@ -19,7 +20,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            
+
             <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="~/Content/basittema/assets/img/ADALET-1.jpg" alt="" /></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -29,19 +30,21 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/Idari_Talep/Index/">Arıza (İdari İşler)</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/AdliyeRehber/Index/">Rehber</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/NobetBilgileri/Index/">Nöbet Bilgileri</a></li>
-                
+
             </ul>
         </div>
     </nav>
     <!-- Page Content-->
     <div class="container-fluid p-0">
-       @RenderBody()
+        @RenderBody()
     </div>
     <!-- Bootstrap core JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/json/jquery.min.js"></script>
+    <script src="~/Content/json/bootstrap.bundle.min.js"></script>
+
     <!-- Third party plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="~/Content/json/jquery.easing.min.js"></script>
+   
     <!-- Core theme JS-->
     <script src="~/Content/basittema/js/scripts.js"></script>
 </body>

@@ -21,6 +21,8 @@ namespace AYSAdalet.Controllers
             ////List<Personel> listemp = db.Personel.Where(x => x.Durum== true).ToList();
             
             return View(Model);
+            
+            
             //return View();
 
         }

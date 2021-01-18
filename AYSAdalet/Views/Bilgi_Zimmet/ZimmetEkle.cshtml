@@ -116,12 +116,7 @@
                 PerId:PersonelId
             },
             success: function(data) {
-                $('#TempZimmetList').load("/Bilgi_Zimmet/PersonelZimmetGetir/" + PersonelId);
-
-                //Eğer işlem başarılı ise zimmetler sayfasınıda güncelle üstteki gibi partial içerisine atıp load laman yeterli.
-                //Controller tarafında döngü ile o envanter kullanımda ise listeye atmazsın ve ekrana basarsın mükerrer kaydın önüne geçebilirsin.
-                //Takılırsan yarın devam ederiz.
-                //Tamamdır çok sağol kardeşim kolay  gelsin :)
+                $('#TempZimmetList').load("/Bilgi_Zimmet/PersonelZimmetGetir/" + PersonelId);               
             },
             error: function(err) {
                 alert("Hata. Sayfayı Yenileyin");

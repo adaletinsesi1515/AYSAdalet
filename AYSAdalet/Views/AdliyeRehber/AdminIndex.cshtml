@@ -12,7 +12,7 @@
     </div>
     <div class="body">
         <div class="table-responsive">
-            <table class="table m-b-0 table-primary" id="birimlistesi">
+            <table class="table m-b-0 table-primary" id="example">
                 <thead class="thead-light">
                     <tr>
                         <th scope="col">Adı Soyadı</th>
@@ -38,7 +38,7 @@
 
                                 @foreach (var item3 in Model.PersonelGorevYerleris.Where(x => x.PersonelID == item.PersonelID).ToList())
                                 {
-                                @item3.Birimler.BirimAdi <b>,</b>
+                                @item3.Birimler.BirimAdi <b>-</b>
 
                                 }
                             </th>
@@ -54,7 +54,7 @@
 
     <script>
         $(document).ready(function () {
-            var groupColumn = 1;
+            var groupColumn = 5;
             var table = $('#example').DataTable({
                 "columnDefs": [
                     { "visible": false, "targets": groupColumn }
@@ -80,8 +80,8 @@
 
             // Order by the grouping
             $('#example tbody').on('click', 'tr.group', function () {
-                var currentOrder = table.order()[0];
-                if (currentOrder[0] === groupColumn && currentOrder[1] === 'asc') {
+                var currentOrder = table.order()[1];
+                if (currentOrder[0] === groupColumn && currentOrder[0] === 'asc') {
                     table.order([groupColumn, 'desc']).draw();
                 }
                 else {

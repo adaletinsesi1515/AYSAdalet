@@ -55,7 +55,8 @@
         $.noConflict();
         var table = $('#birimlistesi').DataTable({
             "language": {
-                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+                "url": "~/Content/json/Turkish.json"
+                   
             }
         });
     });</script>
@@ -64,7 +65,7 @@
     $(document).ready(function () {
         $("#tblrehber").DataTable({
             "language": {
-                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+                "url": "~/Content/json/Turkish.json"
             },
             order: [[5, 'asc']],
             rowGroup: {
@@ -79,7 +80,7 @@
     $(document).ready(function () {
         $("#taleptablosu").DataTable({
             "language": {
-                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+                "url": "~/Content/json/Turkish.json"
             },
             order: [[0, 'desc']],
 

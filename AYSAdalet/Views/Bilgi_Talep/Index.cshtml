@@ -35,10 +35,13 @@
                 <div class="form-group">
                     @using (Html.BeginForm("Index", "Bilgi_Talep", FormMethod.Get))
                     {
+
                         <input type="text" name="t" class="form-control" placeholder="Sicilinizi 123456 şeklinde yazıp Enter'e basınız" value="" required="" min="6" />
 
+
+
                         <a href="/Home/Index/">Anasayfa için tıklayınız</a>
-                        <div style="color: red", align="center">
+                        <div style="color: red" , align="center">
                             @TempData["mesaj"]
                         </div>
                         if (IsPost == false)
@@ -47,14 +50,18 @@
                         }
                         else if (IsPost == true)
                         {
-                            <br />
-                            <tr>Adı Soyadı   : @Model.PersonelAdSoyad</tr>
-                            <br />
+                            
+                                <br />
+                                <tr>Adı Soyadı   : @Model.PersonelAdSoyad</tr>
+                                <br />
 
-                            <tr>Ünvanı         : @Model.Unvanlar.Unvani</tr>
-                            <br />
-                            <tr>Dahili Nosu  : @Model.DahiliNo1</tr>
+                                <tr>Ünvanı         : @Model.Unvanlar.Unvani</tr>
+                                <br />
+                                <tr>Dahili Nosu  : @Model.DahiliNo1</tr>
+                           
+
                         }
+
                     }
                 </div>
             </div>
