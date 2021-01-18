@@ -46,21 +46,22 @@
                         </div>
                         if (IsPost == false)
                         {
-                            @*@Html.Label("Test")*@
+                            <p>-</p>
                         }
                         else if (IsPost == true)
                         {
-                            
-                                <br />
-                                <tr>Adı Soyadı   : @Model.PersonelAdSoyad</tr>
-                                <br />
 
-                                <tr>Ünvanı         : @Model.Unvanlar.Unvani</tr>
-                                <br />
-                                <tr>Dahili Nosu  : @Model.DahiliNo1</tr>
-                           
+                            <br />
+                            <tr>Adı Soyadı   : @Model.PersonelAdSoyad</tr>
+                            <br />
+
+                            <tr>Ünvanı         : @Model.Unvanlar.Unvani</tr>
+                            <br />
+                            <tr>Dahili Nosu  : @Model.DahiliNo1</tr>
+
 
                         }
+                     
 
                     }
                 </div>
