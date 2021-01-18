@@ -353,16 +353,6 @@ C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\System.Web.Webpages.Ra
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\System.Web.Helpers.xml
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\System.Web.Mvc.xml
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.csprojAssemblyReference.cache
-C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Bilgi_Bilgisayar_Tablosu_Eklendi.resources
-C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.BilgiIslemDonanim_Tablolari_Eklendi.resources
-C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.BilgiIslemDonanim_Tablolari_Eklendi1.resources
-C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.TalepEkle.resources
-C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.personelgorevyeri.resources
-C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.xxx.resources
-C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.pgy2.resources
-C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.gorevyerison.resources
-C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.Gorevyeri1.resources
-C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.birimlertablosudaekleme.resources
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.csproj.CoreCompileInputs.cache
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.csproj.CopyComplete
@@ -440,3 +430,6 @@ C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.per1.
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.GenerateResource.cache
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.per11.resources
 C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.per12.resources
+C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.per1.resources
+C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.per11.resources
+C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.per12.resources
