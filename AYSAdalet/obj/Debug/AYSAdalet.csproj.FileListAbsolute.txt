@@ -433,3 +433,4 @@ C:\Users\Burdur\Desktop\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.Migrations.per12
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.per1.resources
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.per11.resources
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.per12.resources
+C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\obj\Debug\AYSAdalet.Migrations.personelgorevyeri.resources

@@ -35,5 +35,8 @@ namespace AYSAdalet.Controllers
             TempData["mesaj"] = "Mesajınız sisteme iletilmiştir....";
             return Redirect("Index");
         }
+
+
+
     }
 }

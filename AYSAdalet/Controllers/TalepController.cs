@@ -36,12 +36,42 @@ namespace AYSAdalet.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
+        [HttpGet]
         public ActionResult KaydaYolla()
         {
-            ViewBag.mesaj = Request.Form["mesaj"];   
-            
+
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult KaydaYolla(int PersonelId, string mesaj, string Birimler)
+        {
+
+            var model = db.Personel.Where(x => x.PersonelID == PersonelId).FirstOrDefault();
+            if (model.PersonelID>0)
+            {
+                IdariTalepler tlp = new IdariTalepler
+                {
+                    BildirimTarihi = DateTime.Now,
+                    PersonelId = model.PersonelID,
+                    Durum = true,
+                    TalepMesaji = mesaj,
+                    PersonelGorevYeri = Birimler
+                };
+
+                db.IdariTaleplers.Add(tlp);
+                int sonuc = db.SaveChanges();
+
+                if (sonuc==1)
+                {
+                    ViewBag.success = "Talebiniz Başarılı Bir Şekilde Oluşturuldu";
+                } else if (sonuc==2)
+                {
+                    ViewBag.hata = "Talebiniz İletilemedi";
+                }
+            }
+
+            return RedirectToAction("Index");
         }
 
     }

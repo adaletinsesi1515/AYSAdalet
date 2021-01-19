@@ -17,23 +17,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500" rel="stylesheet">
     <link href="~/Content/TalepAssets/css/Search.css" rel="stylesheet" />
     <link href="~/Content/TalepAssets/css/Talep.css" rel="stylesheet" />
+
+    <link href="~/Content/TalepAssets/Search/css/Search.css" rel="stylesheet" />
+    <script src="~/Content/TalepAssets/Search/js/Search.js"></script>
+
+
 </head>
 <body>
-    <div id="wrap">
+<div id="wrap">
         <form action="" autocomplete="on">
-            <input title="Telefon Rehberi" style="font-size:25px" id="search" name="search" type="text" placeholder="Telefona, birime ve görev yerine göre arama yapabilirsiniz"><input id="search_submit" value="Rehber" type="submit">
+            <input title="Telefon Rehberi" style="font-size: 25px" id="search" name="search" type="text" placeholder="Telefona, birime ve görev yerine göre arama yapabilirsiniz"><input id="search_submit" value="Rehber" type="submit">
         </form>
     </div>
-    <div class="" style="clear:both"></div>
+    <div class="" style="clear: both"></div>
+
+
 
     <!-- Main Content -->
     <div class="container-fluid">
         <div class="row main-content bg-success text-center">
             <div class="col-md-4 text-center company__info">
-                <span class="company__logo">
-                    <h2><span class="fa fa-home fa-4x"></span></h2>
+                <span padding:10px" class="company__logo">
+                    <img width="70%" src="~/Content/TalepAssets/img/bakanliklogoter.png" />
+
                 </span>
-                <h4 class="company_title">Burdur Adliyesi - ays</h4>
+                <h3 style="font-weight: bold" class="company_title">Burdur Adliyesi</h3>
             </div>
             <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
                 <div class="container-fluid">
@@ -63,9 +71,9 @@
                                     </div>
                                     @{
 
-                                        if (Model.Personel.PersonelGorevYerleris.Count > 1)
+                                        if (Model.Personel.PersonelGorevYerleris.Count > 0)
                                         {
-                                            <div style="margin: 5px; padding: 5px" class="alert-danger">Sistem kayıtlarında birden fazla birimde görevlisiniz. Açılan kutudan talep veya arıza bildireceğiniz birimi seçiniz</div><br />
+                                            <div style="margin: 5px; padding: 5px" class="alert-danger">Eğer birden fazla birimde görevliyseniz, açılan kutudan talep veya arıza bildireceğiniz birimi seçiniz</div><br />
 
                                             List<Birimler> birimler = new List<Birimler>();
 
@@ -76,20 +84,27 @@
                                                     birimler.Add(gorevyerleri.Birimler);
                                                 }
                                             }
-                                            @Html.DropDownListFor(x => x.Personel.PersonelID, new SelectList(birimler, "BirimID", "BirimAdi"), new { @class = "form-control" })
+                                            
+                                            
+                                            using (Html.BeginForm("KaydaYolla", "Talep", FormMethod.Post))
+                                            {
+                                                @Html.DropDownListFor(x => x.Birimler, new SelectList(birimler, "BirimAdi", "BirimAdi"), new { @class = "form-control" })
+
+                                                <div style="margin: 10px">
+                                                    <input type="hidden" name="PersonelId" value="@Model.Personel.PersonelID" />
+                                                    <div class="row">
+                                                        <textarea name="mesaj" class="form-control" rows="10" placeholder="Talebinizi bu alana girin"> </textarea>
+                                                    </div>
+                                                    <div class="row">
+                                                        <input type="submit" value="Talep Gönder" class="btn">
+                                                    </div>
+                                                </div>
                                         }
                                     }
 
-                                    @using (Html.BeginForm("KaydaYolla", "Talep", FormMethod.Post))
-                                    {
-                                        <div style="margin: 10px">
-                                            <div class="row">
-                                                <textarea name="mesaj" class="form-control" rows="10" placeholder="Talebinizi bu alana girin"> </textarea>
-                                            </div>
-                                            <div class="row">
-                                                <input type="submit" value="Talep Gönder" class="btn">
-                                            </div>
-                                        </div>
+                                   
+
+                                        
                                     }
                                 </div>
                             }

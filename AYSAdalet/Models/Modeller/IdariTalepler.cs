@@ -32,5 +32,7 @@ namespace AYSAdalet.Models.Modeller
 
         public int? TeknikPersonelID { get; set; }
         public virtual TeknikPersonel TeknikPersonel { get; set; }
+        public string PersonelGorevYeri { get; set; }
+
     }
 }

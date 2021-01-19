@@ -231,7 +231,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\TalepAssets\css\Search.css" />
     <Content Include="Content\TalepAssets\css\Talep.css" />
+    <Content Include="Content\TalepAssets\img\bakanliklogo.png" />
+    <Content Include="Content\TalepAssets\img\bakanliklogoter.png" />
     <Content Include="Content\TalepAssets\img\bg.jpg" />
+    <Content Include="Content\TalepAssets\Search\css\Search.css" />
     <Content Include="fatihdestek.eba.gov.tr\accessform.html" />
     <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\bootstrap\css\bootstrap.min.css" />
     <Content Include="fatihdestek.eba.gov.tr\assets\ats\bower_components\bootstrap\dist\js\bootstrap.min.js" />
@@ -602,6 +605,10 @@
     <Compile Include="Migrations\202101172117288_per12.Designer.cs">
       <DependentUpon>202101172117288_per12.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101192154258_personelgorevyeri.cs" />
+    <Compile Include="Migrations\202101192154258_personelgorevyeri.Designer.cs">
+      <DependentUpon>202101192154258_personelgorevyeri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\AdliyeDBContext.cs" />
     <Compile Include="Models\Modeller\BilgiTalepler.cs" />
@@ -693,6 +700,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\TalepAssets\Search\js\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
@@ -709,6 +717,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101172117288_per12.resx">
       <DependentUpon>202101172117288_per12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101192154258_personelgorevyeri.resx">
+      <DependentUpon>202101192154258_personelgorevyeri.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
