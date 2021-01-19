@@ -8,3 +8,5 @@ AYSAdalet/obj/Debug/AYSAdalet.dll
 AYSAdalet/obj/Debug/AYSAdalet.pdb
 *.21
 /.vs/VSWorkspaceState.json
+.vs/AYSAdalet/v16/.suo
+*.cache
