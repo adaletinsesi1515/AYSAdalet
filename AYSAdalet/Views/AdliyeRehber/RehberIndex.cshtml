@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/rowgroup/1.1.2/css/rowGroup.dataTables.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link href="~/Content/RehberAssets/css/HavaDurumu.css" rel="stylesheet" />
     <link href="~/Content/RehberAssets/css/Hour.css" rel="stylesheet" />
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
@@ -28,7 +28,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 
     <script src="~/Content/RehberAssets/js/Hour.js"></script>
-    <script src="~/Content/RehberAssets/js/HavaDurumu.js"></script>
+
 </head>
 <body>
 
@@ -41,7 +41,7 @@
                     <div class="profile__picture"><img id="saatigor" src="~/Content/TalepAssets/img/bakanliklogo.png" alt="ananddavis" /> </div>
                     <div class="profile__header">
                         <div style="margin-top: 5px; font-size: 30px; font-family: Anton" class="profile__account">
-                            Burdur <span style="color: #E72F36">Adliyesi</span>
+                            <a target="_blank" title="Hava Durumunu Öğrenmek İçin Tıkla" href="HavaDurumu">Burdur</a> <span style="color: #E72F36">Adliyesi</span>
                             <div>
 
                             </div>
@@ -144,57 +144,41 @@
         </div>
     </div>
 
+    <div class="container-fluid">
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
 
-<div id="havadurumu">
-    @Html.Partial("HavaDurumu")
-</div>
 
 
-<div class="container-fluid">
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
 
-           
-            
+                <div class="modal-header">
+                    <h4 class="modal-title">Personel Bilgileri</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                </div><!-- Modal content-->
 
-            <div class="modal-header">
-                <h4 class="modal-title">Personel Bilgileri</h4>
+
             </div>
-            <div class="modal-body">
-                <p>Some text in the modal.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
-            </div><!-- Modal content-->
-
-
         </div>
     </div>
+    <div id="saat" style="display:none">
+        @Html.Partial("_HappyBirthday")
+    </div>
+    <script>
+        $("#saatigor").mouseover(function () {
+            $("#saat").show();
+        });
 
-</div>
+        $("#saatigor").mouseout(function () {
+            $("#saat").hide();
+        })
+    </script>
 
-
-
-
-<div id="saat" style="display:none">
-    @Html.Partial("_HappyBirthday")
-</div>
-
-
-
-    
-<script>
-
-    $("#saatigor").mouseover(function() {
-        $("#saat").show();
-    });
-
-    $("#saatigor").mouseout(function () {
-        $("#saat").hide();
-    })
-</script>
-
-<script src="~/Content/RehberAssets/js/RehberTablo.js"></script>
+    <script src="~/Content/RehberAssets/js/RehberTablo.js"></script>
 </body>
 </html>
 
