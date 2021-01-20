@@ -1,0 +1,115 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HavaDurumu</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" />
+    
+
+
+    <link href="~/Content/RehberAssets/css/HavaDurumu.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="~/Content/RehberAssets/js/HavaDurumu.js"></script>
+</head>
+<body>
+<div class="loading">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+    <section id="main">
+        <div class="bg-primary w-section text-shadow">
+            <div class="container">
+                <div class="row text-white w-header">
+                    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                        <div class="row">
+                            <div class="col-xs-7">
+                                <form id="f_locator">
+                                    <div id="w-search-tip" class="tooltiptext text-light">
+                                        <p>Hava durumunu öğrenmek istediğiniz şehrin ismini kutucuğa yazarak hava durumunu öğrenebilirsiniz.</p>
+                                        <h5>Örnek:</h5>
+                                        <p class="text-white"><strong>İstanbul</strong></p>
+                                    </div>
+                                    <input type="text" id="location" data-tooltip="#w-search-tip">
+                                </form>
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                            </div>
+                            <div class="col-xs-5 text-right"><span id="date"></span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 col-xs-offset-9 text-right">
+                                <div class="unit-block text-accent text-left">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="unit-switch" checked>
+                                        <label class="onoffswitch-label" for="unit-switch">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-white w-main">
+                    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                        <div class="text-center">
+                            <i id="wicon-main" class="wi wi-main"></i>
+                            <span id="temperature"></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 w-desc-box">
+                                <p id="description" class="text-capitalize"></p>
+                                <p><span id="humidity"></span> <i class="wi wi-humidity"></i> Nem</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container card-section">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                    <div class="days-box row text-center bg-white">
+                        <div class="col-xs-3 day-first">
+                            <p class="day"></p>
+                            <hr class="hr-title hr-title-primary">
+                            <p><i class="wi"></i></p>
+                            <p><span class="d-min-temp"></span> <span class="d-max-temp"></span></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <p class="day"></p>
+                            <hr class="hr-title hr-title-primary">
+                            <p><i class="wi"></i></p>
+                            <p><span class="d-min-temp"></span> <span class="d-max-temp"></span></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <p class="day"></p>
+                            <hr class="hr-title hr-title-primary">
+                            <p><i class="wi"></i></p>
+                            <p><span class="d-min-temp"></span> <span class="d-max-temp"></span></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <p class="day"></p>
+                            <hr class="hr-title hr-title-primary">
+                            <p><i class="wi"></i></p>
+                            <p><span class="d-min-temp"></span> <span class="d-max-temp"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+</html>

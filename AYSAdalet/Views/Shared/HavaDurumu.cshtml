@@ -1,0 +1,112 @@
+﻿<body>
+    <main>
+        <div class="weather__container">
+            <div id="units__toggle">
+                <button id="celsius" class="active">C</button>
+                <button id="fahrenheit">F</button>
+            </div>
+            <div id="weather__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 290 290">
+                    <defs>
+                        <linearGradient id="linear-gradient" x1="145.2" y1="17.8" x2="145.2" y2="315.1" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#f2c94c" />
+                            <stop offset="1" stop-color="#f2994a" />
+                        </linearGradient>
+                        <linearGradient id="linear-gradient-2" x1="123.9" y1="29.7" x2="123.9" y2="283.5" xlink:href="#linear-gradient" />
+                        <linearGradient id="linear-gradient-3" x1="178" y1="308.5" x2="107.6" y2="89.4" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#b8e9e6" />
+                            <stop offset="1" stop-color="#fff" />
+                        </linearGradient>
+                        <linearGradient id="linear-gradient-4" x1="205" y1="270.8" x2="80.8" y2="54.8" xlink:href="#linear-gradient-3" />
+                        <linearGradient id="linear-gradient-5" x1="137.8" y1="171.3" x2="62.7" y2="26.6" xlink:href="#linear-gradient-3" />
+                        <linearGradient id="linear-gradient-6" x1="189" y1="306.7" x2="125.4" y2="109" xlink:href="#linear-gradient-3" />
+                        <linearGradient id="linear-gradient-7" x1="205" y1="230.2" x2="80.8" y2="14.2" xlink:href="#linear-gradient-3" />
+                        <linearGradient id="linear-gradient-9" x1="145.2" y1="127.7" x2="145.2" y2="326.2" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#ffca00" />
+                            <stop offset="1" stop-color="#fff" />
+                        </linearGradient>
+                        <linearGradient id="linear-gradient-10" x1="203.7" y1="230.2" x2="79.4" y2="14.2" xlink:href="#linear-gradient-3" />
+                        <linearGradient id="linear-gradient-11" x1="109.6" y1="235.6" x2="73.3" y2="150.4" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#a4bcda" />
+                            <stop offset="1" stop-color="#d2e1ff" />
+                        </linearGradient>
+                        <linearGradient id="linear-gradient-13" x1="194.2" y1="191.7" x2="157.9" y2="106.6" xlink:href="#linear-gradient-11" />
+                        <linearGradient id="linear-gradient-15" x1="194.2" y1="280.4" x2="157.9" y2="195.3" xlink:href="#linear-gradient-11" />
+                        <clipPath id="clip-path">
+                            <path id="mask-thunder" fill="none" d="M110 112h71v169h-71z" />
+                        </clipPath>
+                    </defs>
+
+                    <g id="weather-icons">
+                        <circle class="show" id="clear-sky" cx="145.2" cy="145.2" r="145.2" fill="url(#linear-gradient)" />
+                        <g id="broken-clouds">
+                            <path id="broken-clouds-1" d="M180 69A62 62 0 0063 94h-1a62 62 0 000 125h115a75 75 0 003-150z" fill="url(#linear-gradient-5)" />
+                            <path id="broken-clouds-2" d="M216 135a64 64 0 00-121 27 64 64 0 100 128h118a78 78 0 003-155z" fill="url(#linear-gradient-6)" />
+                        </g>
+                        <g id="rain">
+                            <path d="M206 37A71 71 0 0073 67a71 71 0 100 142h130a86 86 0 003-172z" fill="url(#linear-gradient-7)" />
+                            <path class="raindrops" fill="none" stroke="#9bdadd" stroke-linecap="round" stroke-miterlimit="10" stroke-width="8" stroke-dasharray="32 21" d="M90 190l-68 68" />
+                            <path class="raindrops" fill="none" stroke="#9bdadd" stroke-linecap="round" stroke-miterlimit="10" stroke-width="8" stroke-dasharray="32 21" d="M133 190l-68 68" />
+                            <path class="raindrops" fill="none" stroke="#9bdadd" stroke-linecap="round" stroke-miterlimit="10" stroke-width="8" stroke-dasharray="32 21" d="M177 190l-69 68" />
+
+                        </g>
+                        <g id="thunderstorm">
+                            <path id="thunderstorm-cloud" d="M208 37A71 71 0 0074 67a71 71 0 100 142h130a86 86 0 004-172z" fill="url(#linear-gradient-7)" />
+                            <g clip-path="url(#clip-path)">
+                                <path id="thunderstorm-thunder" fill="url(#linear-gradient-9)" d="M175 112l-65 62 33 44-27 63 65-64-35-43 29-62z" />
+                            </g>
+                        </g>
+                        <g id="snow">
+                            <path id="snow-cloud" d="M206 37A71 71 0 0073 67a71 71 0 100 142h130a86 86 0 003-172z" fill="url(#linear-gradient-10)" />
+                            <g class="snow-1" fill="url(#linear-gradient-11)">
+                                <path d="M98 199l-7 4a1 1 0 00-1 1v8a1 1 0 001 1l7 4a1 1 0 001 0l6-4a1 1 0 001-1v-8a1 1 0 00-1-1l-6-4a1 1 0 00-1 0zm6 6v7l-6 3-6-3v-7l6-3z" />
+                                <path d="M125 215l-9 3-4-3v-13l4-3 9 2a1 1 0 000-2l-6-1 6-4a1 1 0 00-1-2l-6 4 1-7a1 1 0 10-2 0l-2 8-4 3-12-7v-5l6-6a1 1 0 000-2 1 1 0 00-1 0l-5 5v-7a1 1 0 00-2 0v7l-5-5a1 1 0 00-1 0 1 1 0 000 2l6 6v5l-11 7-5-3-2-8a1 1 0 00-2-1 1 1 0 000 1l1 7-6-4a1 1 0 10-1 2l6 4-6 1a1 1 0 000 2l9-2 4 3v13l-4 3-9-3a1 1 0 000 2l6 2-6 4a1 1 0 001 2l6-4-1 7a1 1 0 000 1 1 1 0 001 0 1 1 0 001-1l2-9 5-2 11 6v6l-6 6a1 1 0 000 2 1 1 0 001 0l5-5v7a1 1 0 002 0v-7l5 5a1 1 0 001 0 1 1 0 000-2l-6-6v-6l12-6 4 3 3 8a1 1 0 001 1 1 1 0 001-1l-2-7 6 4a1 1 0 001-1 1 1 0 000-1l-6-4 6-2a1 1 0 000-2zm-16 0l-11 7-11-7v-13l11-7 11 7z" />
+                            </g>
+                            <g class="snow-1" fill="url(#linear-gradient-11)">
+                                <path d="M98 199l-7 4a1 1 0 00-1 1v8a1 1 0 001 1l7 4a1 1 0 001 0l6-4a1 1 0 001-1v-8a1 1 0 00-1-1l-6-4a1 1 0 00-1 0zm6 6v7l-6 3-6-3v-7l6-3z" />
+                                <path d="M125 215l-9 3-4-3v-13l4-3 9 2a1 1 0 000-2l-6-1 6-4a1 1 0 00-1-2l-6 4 1-7a1 1 0 10-2 0l-2 8-4 3-12-7v-5l6-6a1 1 0 000-2 1 1 0 00-1 0l-5 5v-7a1 1 0 00-2 0v7l-5-5a1 1 0 00-1 0 1 1 0 000 2l6 6v5l-11 7-5-3-2-8a1 1 0 00-2-1 1 1 0 000 1l1 7-6-4a1 1 0 10-1 2l6 4-6 1a1 1 0 000 2l9-2 4 3v13l-4 3-9-3a1 1 0 000 2l6 2-6 4a1 1 0 001 2l6-4-1 7a1 1 0 000 1 1 1 0 001 0 1 1 0 001-1l2-9 5-2 11 6v6l-6 6a1 1 0 000 2 1 1 0 001 0l5-5v7a1 1 0 002 0v-7l5 5a1 1 0 001 0 1 1 0 000-2l-6-6v-6l12-6 4 3 3 8a1 1 0 001 1 1 1 0 001-1l-2-7 6 4a1 1 0 001-1 1 1 0 000-1l-6-4 6-2a1 1 0 000-2zm-16 0l-11 7-11-7v-13l11-7 11 7z" />
+                            </g>
+                            <g class="snow-1" fill="url(#linear-gradient-11)">
+                                <path d="M98 199l-7 4a1 1 0 00-1 1v8a1 1 0 001 1l7 4a1 1 0 001 0l6-4a1 1 0 001-1v-8a1 1 0 00-1-1l-6-4a1 1 0 00-1 0zm6 6v7l-6 3-6-3v-7l6-3z" />
+                                <path d="M125 215l-9 3-4-3v-13l4-3 9 2a1 1 0 000-2l-6-1 6-4a1 1 0 00-1-2l-6 4 1-7a1 1 0 10-2 0l-2 8-4 3-12-7v-5l6-6a1 1 0 000-2 1 1 0 00-1 0l-5 5v-7a1 1 0 00-2 0v7l-5-5a1 1 0 00-1 0 1 1 0 000 2l6 6v5l-11 7-5-3-2-8a1 1 0 00-2-1 1 1 0 000 1l1 7-6-4a1 1 0 10-1 2l6 4-6 1a1 1 0 000 2l9-2 4 3v13l-4 3-9-3a1 1 0 000 2l6 2-6 4a1 1 0 001 2l6-4-1 7a1 1 0 000 1 1 1 0 001 0 1 1 0 001-1l2-9 5-2 11 6v6l-6 6a1 1 0 000 2 1 1 0 001 0l5-5v7a1 1 0 002 0v-7l5 5a1 1 0 001 0 1 1 0 000-2l-6-6v-6l12-6 4 3 3 8a1 1 0 001 1 1 1 0 001-1l-2-7 6 4a1 1 0 001-1 1 1 0 000-1l-6-4 6-2a1 1 0 000-2zm-16 0l-11 7-11-7v-13l11-7 11 7z" />
+                            </g>
+                        </g>
+                        <g id="mist" fill="none" stroke="#9bdadd" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+                            <path class="mist-line" d="M94 97h140" />
+                            <path class="mist-line" d="M61 71h139" />
+                            <path class="mist-line" d="M43 123h219" />
+                            <path class="mist-line" d="M60 150h141" />
+                            <path class="mist-line" d="M47 176h136" />
+                            <path class="mist-line" d="M107 202h114" />
+                            <path class="mist-line" d="M79 229h114" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="box1">
+                <div class="box__left">
+                    <div id="location__name">Tokyo</div>
+                    <div id="weather__condition">Clear Sky</div>
+                </div>
+                <div class="box__right">
+                    <div id="current__temperature">23°</div>
+                </div>
+            </div>
+
+            <div class="box2">
+                <div id="minmax__temperature">23° / 27°</div>
+                <div id="humidity">50%</div>
+            </div>
+        </div>
+
+        <div class="search__input">
+            <form id="city__form">
+                <div class="form__group">
+                    <input type="text" id="city" class="form__control" required />
+                </div>
+                <div id="error__text">Enter your city here</div>
+            </form>
+        </div>
+    </main>
+
+</body>

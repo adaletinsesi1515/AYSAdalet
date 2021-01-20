@@ -51,5 +51,12 @@ namespace AYSAdalet.Controllers
 
             return View(db.Birimler.ToList());
         }
+
+
+        public ActionResult HavaDurumu()
+        {
+
+            return View();
+        }
     }
 }
