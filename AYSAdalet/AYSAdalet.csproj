@@ -227,7 +227,11 @@
     <Content Include="Content\Login\js\select2.min.js" />
     <Content Include="Content\Login\js\tilt.jquery.min.js" />
     <Content Include="Content\BilgiIslemForm\uyap.png" />
+    <Content Include="Content\RehberAssets\css\RehberStats.css" />
+    <Content Include="Content\RehberAssets\css\RehberTablo.css" />
     <Content Include="Content\RehberAssets\img\rehber.jpg" />
+    <Content Include="Content\RehberAssets\js\RehberStats.js" />
+    <Content Include="Content\RehberAssets\js\RehberTablo.js" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\TalepAssets\css\Search.css" />
     <Content Include="Content\TalepAssets\css\Talep.css" />
@@ -691,6 +695,7 @@
     <Content Include="Views\NobetBilgileri\NobetBilgiGetir.cshtml" />
     <Content Include="Views\AdliyeRehber\AdminIndex.cshtml" />
     <Content Include="Views\Talep\KaydaYolla.cshtml" />
+    <Content Include="Views\AdliyeRehber\RehberIndex.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

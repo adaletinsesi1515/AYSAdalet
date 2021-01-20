@@ -33,5 +33,13 @@ namespace AYSAdalet.Controllers
             };
             return View(model);
         }
+
+        public ActionResult RehberIndex()
+        {
+            ViewBag.bassavci = db.Personel.Where(x => x.Unvanlar.Unvani == "Cumhuriyet Başsavcısı").Select(y => y.Unvanlar.Unvani).Count();
+            ViewBag.hakim = db.Personel.Where(x => x.Unvanlar.Unvani == "HÂKİM").Select(y => y.Unvanlar.Unvani).Count();
+            ViewBag.savci = db.Personel.Where(x => x.Unvanlar.Unvani == "CUMHURİYET SAVCISI").Select(y => y.Unvanlar.Unvani).Count();
+            return View(db.Personel.ToList());
+        }
     }
 }

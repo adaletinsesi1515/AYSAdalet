@@ -1,0 +1,108 @@
+﻿@model List<AYSAdalet.Models.Modeller.Personel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RehberIndex</title>
+
+    <link href="~/Content/RehberAssets/css/RehberTablo.css" rel="stylesheet" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+    <script>
+        $(function () {
+
+            $("#personelgoster").on('mouseover', function () {
+                alert("ttamama");
+            })
+
+        })
+    </script>
+
+
+
+
+</head>
+<body>
+    <div>
+
+
+    </div>
+
+    <div class="row">
+        <div id="admin" class="col s12">
+            <div class="card material-table">
+                <div class="table-header">
+                    <span class="table-title">Adliye Rehber</span>
+                    <div class="actions">
+                        <a href="#add_users" class="modal-trigger waves-effect btn-flat nopadding"><i class="material-icons">person_add</i></a>
+                        <a href="#" class="search-toggle waves-effect btn-flat nopadding"><i class="material-icons">search</i></a>
+                    </div>
+                </div>
+                <p>merhaba</p>
+                <table id="datatable">
+                    <thead>
+                        <tr>
+                            <th>Adı Soyadı</th>
+                            <th>Sicili</th>
+                            <th>Ünvanı</th>
+                            <th>Dahili Numarası</th>
+                            <th>Cep Telefonu</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @if (item.PersonelSicil.Length > 1)
+                                    {
+                                        <a id="personelgoster" href="#">@item.PersonelAdSoyad</a>
+                                    }
+                                    else
+                                    {
+                                        @item.PersonelAdSoyad
+                                    }
+                                </td>
+                                <td>@item.PersonelSicil</td>
+                                <td>@item.Unvanlar.Unvani</td>
+                                <td>@item.DahiliNo1</td>
+                                <td>@item.CepTelefonu</td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div style="" id="personelgoster">
+        bla bla bla
+    </div>
+
+    <script src="~/Content/RehberAssets/js/RehberTablo.js"></script>
+
+
+
+
+
+</body>
+</html>
+
+
+
