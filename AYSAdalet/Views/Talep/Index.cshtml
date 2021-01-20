@@ -17,14 +17,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500" rel="stylesheet">
     <link href="~/Content/TalepAssets/css/Search.css" rel="stylesheet" />
     <link href="~/Content/TalepAssets/css/Talep.css" rel="stylesheet" />
-
     <link href="~/Content/TalepAssets/Search/css/Search.css" rel="stylesheet" />
     <script src="~/Content/TalepAssets/Search/js/Search.js"></script>
 
 
 </head>
 <body>
-<div id="wrap">
+    <div id="wrap">
         <form action="" autocomplete="on">
             <input title="Telefon Rehberi" style="font-size: 25px" id="search" name="search" type="text" placeholder="Telefona, birime ve görev yerine göre arama yapabilirsiniz"><input id="search_submit" value="Rehber" type="submit">
         </form>
@@ -37,18 +36,20 @@
     <div class="container-fluid">
         <div class="row main-content bg-success text-center">
             <div class="col-md-4 text-center company__info">
-                <span padding:10px" class="company__logo">
-                    <img width="70%" src="~/Content/TalepAssets/img/bakanliklogoter.png" />
+                <span style="padding:10px; margin-top:10px;" class="company__logo">
+                    <img width="65%" src="~/Content/TalepAssets/img/bakanliklogoter.png" />
 
                 </span>
                 <h3 style="font-weight: bold" class="company_title">Burdur Adliyesi</h3>
             </div>
-            <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+
+            <div id="bosmu" class="col-md-8 col-xs-12 col-sm-12 login_form ">
                 <div class="container-fluid">
                     <div class="row">
                         <h2 style="border-radius: 15px; padding: 5px; font-family: Anton; background-color: red; box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.14)">İdari İşler Müdürlüğü - Talep Ekranı</h2>
                     </div>
                     <div class="row">
+
                         @using (Html.BeginForm("Index", "Talep", FormMethod.Post))
                         {
                             <div class="row">
@@ -56,9 +57,14 @@
                                     <input type="text" required="true" tabindex="0" name="sicil" id="username" class="form__input" placeholder="Kurum Sicil No">
                                 </div>
                                 <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary">Sorgula</button>
+                                    <button id="btnsorgula" type="submit" class="btn btn-primary">Sorgula</button>
                                 </div>
                             </div>
+
+
+
+
+
                         }
                         @{
                             if (IsPost)
@@ -84,8 +90,6 @@
                                                     birimler.Add(gorevyerleri.Birimler);
                                                 }
                                             }
-                                            
-                                            
                                             using (Html.BeginForm("KaydaYolla", "Talep", FormMethod.Post))
                                             {
                                                 @Html.DropDownListFor(x => x.Birimler, new SelectList(birimler, "BirimAdi", "BirimAdi"), new { @class = "form-control" })
@@ -99,23 +103,17 @@
                                                         <input type="submit" value="Talep Gönder" class="btn">
                                                     </div>
                                                 </div>
+                                            }
                                         }
-                                    }
-
-                                   
-
-                                        
                                     }
                                 </div>
                             }
                             else if (!IsPost)
                             {
-                                <div style="padding: 20px" class="alert-danger">Veritabanında bu Sicil bulunamadı<br /> Doğru bir şekilde girdiğinizden emin olun</div>
+
+
                             }
                         }
-                    </div>
-                    <div class="row">
-                        <p><a href="#">Anasayfa</a></p>
                     </div>
                 </div>
             </div>

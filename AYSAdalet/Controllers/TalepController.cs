@@ -31,9 +31,14 @@ namespace AYSAdalet.Controllers
                 pt.Personel = sicilbul;
                 pt.GorevYerleri = gorevyeribul;
                 pt.Birimler = db.Birimler.ToList();
+                ViewBag.sonuc = 1;
                 return View(pt);
-            }
-            return RedirectToAction("Index");
+            } 
+                ViewBag.sonuc = 0;
+                return HttpNotFound("Sicil Bulunamadı");
+
+
+
         }
 
         [HttpGet]
@@ -60,15 +65,7 @@ namespace AYSAdalet.Controllers
                 };
 
                 db.IdariTaleplers.Add(tlp);
-                int sonuc = db.SaveChanges();
-
-                if (sonuc==1)
-                {
-                    ViewBag.success = "Talebiniz Başarılı Bir Şekilde Oluşturuldu";
-                } else if (sonuc==2)
-                {
-                    ViewBag.hata = "Talebiniz İletilemedi";
-                }
+                db.SaveChanges();
             }
 
             return RedirectToAction("Index");
