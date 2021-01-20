@@ -1,81 +1,190 @@
-﻿@import "bourbon";
+﻿@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700");
 
-@import url(//fonts.googleapis.com/css?family=Oswald:400);
-
-body {
-    background-color:red;
-    font-family: "Oswald", sans-serif;
+* {
+    box-sizing: border-box;
 }
 
-.chart {
-    position: absolute;
-    width: 450px;
-    height: 450px;
-    top: 50%;
-    left: 50%;
-    margin: -225px 0 0 -225px;
+html, body {
+    background: #f9fafb;
+    height: 70vh;
+    position: relative;
+    z-index: -2;
 }
 
-.doughnutTip {
-    position: absolute;
-    min-width: 30px;
-    max-width: 300px;
-    padding: 5px 15px;
-    border-radius: 1px;
-    background: rgba(0,0,0,.8);
-    color: #ddd;
-    font-size: 17px;
-    text-shadow: 0 1px 0 #000;
-    text-transform: uppercase;
+.layout {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+}
+
+@keyframes popUp {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(5px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.profile {
+    animation: popUp ease-in-out 350ms;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.17);
+    margin-top: 40px;
+    padding: 28px 30px 30px 35px;
+    position: relative;
+    width: 1050px;
+}
+
+.profile__account {
+    align-self: center;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    padding-left: 135px;
+}
+
+.profile__button {
+    border-radius: 50px;
+    border: 1px solid #000000;
+    color: #000000;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    padding: 10px;
     text-align: center;
-    line-height: 1.3;
-    letter-spacing: .06em;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    pointer-events: none;
-    &::after
-
-{
-    position: absolute;
-    left: 50%;
-    bottom: -6px;
-    content: "";
-    height: 0;
-    margin: 0 0 0 -6px;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    border-top: 6px solid rgba(0,0,0,.7);
-    line-height: 0;
+    text-decoration: none;
+    transition: ease-in-out 250ms background, ease-in-out 250ms color;
 }
 
+    .profile__button:hover {
+        background: #000000;
+        color: #ffffff;
+    }
+
+.profile__edit {
+    flex: none;
+    margin-left: 30px;
+    width: 140px;
 }
 
-.doughnutSummary {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: #d5d5d5;
+.profile__header {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.profile__icon {
+    flex: none;
+    font-size: 1.5em;
+    margin-right: 10px;
+    padding-top: 3px;
+}
+
+.profile__icon--gold {
+    color: #eab100;
+}
+
+.profile__icon--blue {
+    color: #8faae8;
+}
+
+.profile__icon--pink {
+    color: #ff86af;
+}
+
+.profile__key {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
     text-align: center;
-    text-shadow: 0 -1px 0 #111;
-    cursor: default;
 }
 
-.doughnutSummaryTitle {
+.profile__picture {
+    background: #ffffff;
+    border-radius: 100px;
+    border: 10px solid #ffffff;
+    height: 125px;
     position: absolute;
-    top: 50%;
-    width: 100%;
-    margin-top: -27%;
-    font-size: 22px;
-    letter-spacing: .06em;
+    top: -40px;
+    width: 125px;
 }
 
-.doughnutSummaryNumber {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    margin-top: -15%;
-    font-size: 55px;
+    .profile__picture:before {
+        border-radius: 100px;
+        box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.17);
+        content: "";
+        height: calc(100% + 20px);
+        left: -10px;
+        position: absolute;
+        top: -10px;
+        width: calc(100% + 20px);
+        z-index: -1;
+    }
+
+    .profile__picture img {
+        border-radius: 100px;
+        height: 100%;
+        width: 100%;
+    }
+
+.profile__stat {
+    animation: slideUp ease-in-out 350ms forwards;
+    border-right: 1px solid #e9e9e9;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    opacity: 0;
+    padding: 10px 4px;
+    transform: translateY(5px);
 }
 
-.chart path:hover {
-    opacity: 0.65;
+    .profile__stat:last-of-type {
+        border-right: none;
+    }
+
+    .profile__stat:nth-child(1) {
+        animation-delay: 400ms;
+    }
+
+    .profile__stat:nth-child(2) {
+        animation-delay: 500ms;
+    }
+
+    .profile__stat:nth-child(3) {
+        animation-delay: 600ms;
+    }
+
+.profile__stats {
+    display: flex;
+}
+
+.profile__username {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    text-align: right;
+}
+
+.profile__value {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
 }

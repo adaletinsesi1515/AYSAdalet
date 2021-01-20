@@ -1,0 +1,29 @@
+﻿@using AYSAdalet.Models.Modeller
+@model List<AYSAdalet.Models.Modeller.Birimler>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Birim Listesi</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+@{
+    List<string> liste = new List<string>();
+}
+
+@foreach (var i in Model)
+{
+    liste.Add(i.BirimAdi);
+}
+
+@Html.DropDownList("Liste", new SelectList(liste), new {@class="form-control"})
+
+
+</body>
+</html>

@@ -181,10 +181,15 @@
 })(window, document);
 
 $(document).ready(function () {
-    $('#datatable').dataTable({        
+    $('#datatable').dataTable({
         "language": {
             "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
         },
-        bAutoWidth: false
-    });
+        bAutoWidth: false,
+        
+        order: [[5, 'asc']],
+        rowGroup: {
+            dataSrc: 5
+        }
+});
 });
