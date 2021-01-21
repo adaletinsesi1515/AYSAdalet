@@ -496,14 +496,12 @@ C:\Users\Administrator\Desktop\AYS\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.cspro
 C:\Users\Administrator\Desktop\AYS\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.CopyComplete
 C:\Users\Administrator\Desktop\AYS\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.dll
 C:\Users\Administrator\Desktop\AYS\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.pdb
-<<<<<<< HEAD
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\tr\System.Web.Razor.resources.dll
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\tr\System.Web.Webpages.resources.dll
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\tr\System.Web.Webpages.Deployment.resources.dll
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\tr\System.Web.Webpages.Razor.resources.dll
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\tr\System.Web.Helpers.resources.dll
 C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\tr\System.Web.Mvc.resources.dll
-=======
 D:\GITHUB\AYSAdalet\AYSAdalet\bin\AYSAdalet.dll.config
 D:\GITHUB\AYSAdalet\AYSAdalet\bin\AYSAdalet.dll
 D:\GITHUB\AYSAdalet\AYSAdalet\bin\AYSAdalet.pdb
@@ -566,4 +564,3 @@ D:\GITHUB\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.CoreCompileInputs.cache
 D:\GITHUB\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.CopyComplete
 D:\GITHUB\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.dll
 D:\GITHUB\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.pdb
->>>>>>> 31790e457a991c3a2a5ce2af8c88a5aa07068383
