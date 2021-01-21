@@ -705,6 +705,7 @@
     <Content Include="Views\Shared\_HappyBirthday.cshtml" />
     <Content Include="Views\Shared\HavaDurumu.cshtml" />
     <Content Include="Views\AdliyeRehber\HavaDurumu.cshtml" />
+    <Content Include="Views\Shared\PersonelCard.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -496,3 +496,9 @@ C:\Users\Administrator\Desktop\AYS\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.cspro
 C:\Users\Administrator\Desktop\AYS\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.csproj.CopyComplete
 C:\Users\Administrator\Desktop\AYS\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.dll
 C:\Users\Administrator\Desktop\AYS\AYSAdalet\AYSAdalet\obj\Debug\AYSAdalet.pdb
+C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\tr\System.Web.Razor.resources.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\tr\System.Web.Webpages.resources.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\tr\System.Web.Webpages.Deployment.resources.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\tr\System.Web.Webpages.Razor.resources.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\tr\System.Web.Helpers.resources.dll
+C:\Users\PC GAMER\DotNetProje\AYSAdaletCont\AYSAdalet\bin\tr\System.Web.Mvc.resources.dll
